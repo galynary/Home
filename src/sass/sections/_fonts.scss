@@ -1,35 +1,45 @@
 @font-face {
-    font-family: 'Transit Cat';
-    src: local('Transit Cat Regular'), local('TransitCat-Regular'),
-        url(../../fonts/AnyConv.com__Transit\ CAT.woff2) format('woff2'),
-        url(../../fonts/AnyConv.com__Transit\ CAT.woff) format('woff'),
-        url(../../fonts/AnyConv.com__Transit\ CAT.eot) format('eot'),
-        url(../../fonts/AnyConv.com__Transit\ CAT.ttf) format('ttf');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Transit Cat';
+  src: local('Transit Cat Regular'), local('TransitCat-Regular'),
+    url(../fonts/Transit\ CAT.woff2) format('woff2'),
+    url(../fonts/Transit\ CAT.woff) format('woff'),
+    url(../fonts/Transit\ CAT.eot) format('eot'),
+    url(../fonts/Transit-CAT.ttf) format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'deserta';
-    src: local('deserta Regular'), local('deserta-Regular'),
-        url(../../fonts/deserta.woff2) format('woff2'),
-        url(../../fonts/deserta.woff) format('woff'),
-        url(../../fonts/deserta.eot) format('eot'),
-        url(../../fonts/deserta.ttf) format('ttf');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'deserta';
+  src: local('deserta Regular'), local('deserta-Regular'),
+    url(../fonts/deserta.woff2) format('woff2'),
+    url(../fonts/deserta.woff) format('woff'),
+    url(../fonts/deserta.eot) format('eot'),
+    url(../fonts/deserta.ttf) format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'JournalSans';
-    src: local('JournalSans Regular'), local('JournalSans-Regular'),
-        url(../../fonts/JournalSans.woff2) format('woff2'),
-        url(../../fonts/JournalSans.woff) format('woff'),
-        url(../../fonts/JournalSans.eot) format('eot'),
-        url(../../fonts/JournalSans.ttf) format('ttf');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'JournalSans';
+  src: local('JournalSans Regular'), local('JournalSans-Regular'),
+    url(../fonts/journalSans.woff2) format('woff2'),
+    url(../fonts/JournalSans.woff) format('woff'),
+    url(../fonts/JournalSans.eot) format('eot'),
+    url(../fonts/JournalSans.ttf) format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fiver';
+  src: local('Fiver Regular'), local('Fiver-Regular'),
+    url(../fonts/Fiver.woff2) format('woff2'),
+    /* Legacy iOS */ url(../fonts/Fiver.woff) format('woff'),
+    /* Safari, Android, iOS */ url(../fonts/Fiver.eot) format('eot'),
+    /* Modern Browsers */ url(../fonts/Fiver.ttf) format('ttf'); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
 }
