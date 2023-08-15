@@ -3,14 +3,19 @@
   z-index: 1;
   background-color: black;
 }
-
+.img-slide__mob {
+  display: none;
+}
 .wrap__slide {
+  width: 100%;
   position: absolute;
   z-index: 2;
   display: flex;
   justify-content: space-between;
 }
-
+.img__left-slide {
+  position: relative;
+}
 .wrap__img {
   position: relative;
 }
@@ -24,14 +29,16 @@
 .wrap__rigth-slide {
   background-position: right;
 }
-.img__slide {
+.img-slide__desc {
   position: relative;
 }
-.text-overlay__right {
+.title__right {
+  top: 0%;
   padding-left: 0%;
   font-size: 130px;
+  line-height: 0.5;
   width: 100%;
-  height: auto;
+  height: 100%;
   padding: 50% 0%;
   font-family: 'Fiver';
   background-color: rgba(47, 48, 58, 0.4);
@@ -39,24 +46,23 @@
   font-weight: 400;
   text-transform: uppercase;
   position: absolute;
-  z-index: 22;
 }
-.text-overlay__left {
-  padding-right: 0%;
-}
-.text-overlay__left {
+
+.title__left {
   /* @include font(400, 130px, 1.5, null);*/
+  top: 0;
   font-size: 130px;
   width: 100%;
-  height: auto;
-  padding: 50% 0%;
+  height: 100%;
+  line-height: 0.5;
+  padding-top: 50%;
   font-family: 'Fiver';
   background-color: rgba(47, 48, 58, 0.4);
   color: #fff;
   font-weight: 400;
   text-transform: uppercase;
   position: absolute;
-  z-index: 22;
+  text-align: right;
 }
 .logo {
   position: absolute;
