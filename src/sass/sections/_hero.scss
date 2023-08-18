@@ -1,12 +1,7 @@
 .hero__section {
-  position: relative;
-  width: 100%;
-  position: relative;
   background-color: #000;
 }
 .hero {
-  width: 100%;
-  position: relative;
   background-color: #000;
 }
 .hero > .hero__container {
@@ -18,8 +13,9 @@
 }
 .hero__menu {
   width: 100%;
-  height: 950px;
+  height: 900px;
   position: relative;
+  padding: 20px;
 }
 .logo__content {
   position: absolute;
@@ -68,12 +64,18 @@
   line-height: 1.2;
   color: #fff;
 }
-.button__menu-open {
+.wrap__button {
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: 125px;
-  height: 125px;
+  left: 48%;
+}
+#toggleButton {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 48%;
+  width: 127px;
+  height: 127px;
   border-radius: 100%;
   background-color: rgb(0, 0, 0, 70%);
   display: flex;
@@ -81,35 +83,9 @@
   align-items: center;
   cursor: pointer;
   z-index: 2;
-  border: none;
-  transition-property: transform;
-  transition-duration: 500ms;
-  transition-timing-function: linear;
-  transition-delay: 0;
-}
-.button__menu-open:focus {
-  transform: rotate(90deg);
-}
-.button__menu-open:focus + .wrap__rigth-slide {
-  transform: translateX(100%);
+  border: 3px solid #fff;
 }
 
-.button__menu-open:focus + .wrap__left-slide {
-  transform: translateX(-100%);
-}
-
-/*.button__menu-open:hover,
-.button__menu-open:focus + .wrap__rigth-slide {
-  transform: translateX(100%);
-}*/
-.icon__menu-button {
-  justify-content: center;
-  align-items: center;
-  top: 50%;
-  left: 50%;
-  width: 125px;
-  height: 125px;
-}
 .menu__page {
   position: absolute;
   padding: 20px 0px;
@@ -130,7 +106,6 @@
   text-transform: uppercase;
 }
 .swiper__hero {
-  width: 100%;
   position: absolute;
   top: 0px;
 }
@@ -138,50 +113,42 @@
   display: none;
 }
 .wrap__slide {
-  width: 100%;
   position: relative;
   z-index: 1;
   display: flex;
+  overflow: hidden;
+  height: 900px;
   justify-content: space-between;
 }
-.img__left-slide {
+.left-slide {
   position: relative;
 }
 .wrap__img {
   position: relative;
 }
+
 .wrap__rigth-slide {
-  display: block;
   position: relative;
-  width: 50%;
   background-position: right;
-  transition-property: transform;
+
+  /*transition-property: transform;
   transition-duration: 500ms;
   transition-timing-function: linear;
-  transition-delay: 0;
-}
-.wrap__rigth-slide:focus {
-  transform: translateX(100%);
+  transition-delay: 0;*/
 }
 
 .wrap__left-slide {
-  display: block;
   position: relative;
-  width: 50%;
   background-position: left;
-  transition-property: transform;
+
+  /* transition-property: transform;
   transition-duration: 500ms;
   transition-timing-function: linear;
-  transition-delay: 0;
+  transition-delay: 0;*/
 }
 
-.wrap__left-slide:focus {
-  transform: translateX(-100%);
-}
-.img-slide__desc {
-  position: relative;
-}
 .title__right {
+  max-width: 1920px;
   top: 0%;
   padding-left: 0%;
   font-size: 130px;

@@ -149,21 +149,20 @@
           </svg>
         </li>
       </ul>
-      <button class="button__menu-open">
+      <button class="button__menu-open" id="toggleButton">
         <svg
           class="icon__menu-button"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="82px"
+          height="41px"
         >
           <image
             x="0px"
             y="0px"
-            xlink:href="data:img/png;base64,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"
-          />
-          <image
-            x="20px"
-            y="41px"
-            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAApCAQAAAAMwLYSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCA8VCjkQgdsUAAAAU0lEQVRYw+3W0QkAIRBDQT3sv2X9vwZMcF4Fw8JC5t4jvu82ABLy1yz4m45LQkKmBQmZFuRTyDUKFkbFJSGfQlrmkGlBQqYFCZlWBdIyh0yrAnkAnuQGTrW/ckAAAAAASUVORK5CYII="
+            width="82px"
+            height="41px"
+            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAApCAQAAAAMwLYSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBERAiLl8hCAAAAAU0lEQVRYw+3W0QkAIRBDQT3sv2X9vwZMcF4Fw8JC5t4jvu82ABLy1yz4m45LQkKmBQmZFuRTyDUKFkbFJSGfQlrmkGlBQqYFCZlWBdIyh0yrAnkAnuQGTrW/ckAAAAAASUVORK5CYII="
           />
         </svg>
       </button>
@@ -179,7 +178,7 @@
     <div class="swiper__hero">
       <div class="wrap__slide">
         <div class="wrap__left-slide">
-          <div class="img__left-slide">
+          <div class="left-slide">
             <div class="wrap__img">
               <picture class="img__slide"
                 ><source
@@ -191,41 +190,54 @@
                   media="(min-width:480px)"
                   type="image/webp" />
                 <img src="./images/1Up-mob.jpg" class="img-slide__mob" />
-                <img src="./images/1Up.jpg" class="img-slide__desc"
+                <img
+                  src="./images/1Up.jpg"
+                  class="img-slide__desc"
+                  loading="lazy"
+                  alt="house"
               /></picture>
+
+              <span class="title__left">Find yo</span>
             </div>
-            <span class="title__left">Find yo</span>
-          </div>
-          <div class="wrap__img">
-            <picture class="img__slide"
-              ><source
-                srcet="./images/2Up.jpg"
-                media="(min-width:1200px)"
-                type="image/webp" />
-              <source
-                srcet="./images/2Up-mob.jpg"
-                media="(min-width:480px)"
-                type="image/webp" />
-              <img src="./images/2Up-mob.jpg" class="img-slide__mob" />
-              <img src="./images/2Up.jpg" class="img-slide__desc"
-            /></picture>
-            <span class="title__left">Vast proper</span>
-          </div>
-          <div class="wrap__img">
-            <picture class="img__slide"
-              ><source
-                srcet="./images/3Up.jpg"
-                media="(min-width:1200px)"
-                type="image/webp"
-              />
-              <img src="./images/3Up.jpg" class="img-slide__desc" />
-            </picture>
-            <span class="title__left">Trusted de</span>
+            <div class="wrap__img">
+              <picture class="img__slide"
+                ><source
+                  srcet="./images/2Up.jpg"
+                  media="(min-width:1200px)"
+                  type="image/webp" />
+                <source
+                  srcet="./images/2Up-mob.jpg"
+                  media="(min-width:480px)"
+                  type="image/webp" />
+                <img src="./images/2Up-mob.jpg" class="img-slide__mob" />
+                <img
+                  src="./images/2Up.jpg"
+                  class="img-slide__desc"
+                  loading="lazy"
+                  alt="house"
+              /></picture>
+              <span class="title__left">Vast proper</span>
+            </div>
+            <div class="wrap__img">
+              <picture class="img__slide"
+                ><source
+                  srcet="./images/3Up.jpg"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <img
+                  src="./images/3Up.jpg"
+                  class="img-slide__desc"
+                  loading="lazy"
+                  alt="house"
+                />
+              </picture>
+              <span class="title__left">Trusted de</span>
+            </div>
           </div>
         </div>
-
         <div class="wrap__rigth-slide">
-          <div class="wrap__img">
+          <div class="rigth__slide">
             <p class="title__right">ur home</p>
             <picture class="img__slide"
               ><source
@@ -237,7 +249,11 @@
                 media="(min-width:480px)"
                 type="image/webp" />
               <img src="./images/1Down-mob.jpg" class="img-slide__mob" />
-              <img src="./images/1Down.jpg" class="img-slide__desc"
+              <img
+                src="./images/1Down.jpg"
+                class="img-slide__desc"
+                loading="lazy"
+                alt="house"
             /></picture>
             <span class="title__right">ur home</span>
           </div>
@@ -252,7 +268,11 @@
                 media="(min-width:480px)"
                 type="image/webp" />
               <img src="./images/2Down-mob.jpg" class="img-slide__mob" />
-              <img src="./images/2Down.jpg" class="img-slide__desc"
+              <img
+                src="./images/2Down.jpg"
+                class="img-slide__desc"
+                loading="lazy"
+                alt="house"
             /></picture>
             <span class="title__right">ty database</span>
           </div>
@@ -262,7 +282,11 @@
                 srcet="./images/3Down.jpg"
                 media="(min-width:1200px)"
                 type="image/webp" />
-              <img src="./images/3Down.jpg" class="img-slide__desc"
+              <img
+                src="./images/3Down.jpg"
+                class="img-slide__desc"
+                loading="lazy"
+                alt="house"
             /></picture>
             <span class="title__right">velopers</span>
           </div>
@@ -271,3 +295,4 @@
     </div>
   </div>
 </section>
+<script src="./js/menu__buttom.js"></script>
