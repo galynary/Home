@@ -11,10 +11,12 @@
   display: flex;
   justify-content: space-between;
 }
-.hero__menu {
+.hero__inner {
   width: 100%;
   height: 900px;
   position: relative;
+  justify-content: space-between;
+  display: flex;
   padding: 20px;
 }
 .logo__content {
@@ -69,7 +71,7 @@
   top: 50%;
   left: 48%;
 }
-#toggleButton {
+.button__menu-open {
   position: absolute;
   display: block;
   top: 50%;
@@ -86,18 +88,58 @@
   border: 3px solid #fff;
 }
 
-.menu__page {
+.page__menu {
+  width: 50%;
   position: absolute;
-  padding: 20px 0px;
-  right: 20px;
+  padding: 20px;
+  right: 0;
   top: 0px;
   height: 100%;
-  bottom: 20%;
+}
+.page__list {
+  text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  height: 100%;
 }
+
+.page__inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 20px 0px;
+  padding-left: 67px;
+  top: 0px;
+}
+.addres__inner {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 480px;
+}
+.mail__link,
+.phone__link,
+.address__description {
+  font-family: inherit;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+.phone__link {
+  margin-bottom: 0px;
+}
+.mail__link {
+  margin-bottom: 0px;
+}
+.phone__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contacts-toggle,
 .page__link {
   font-size: 2, 4rem;
   font-weight: 400;
@@ -105,10 +147,50 @@
   color: #fff;
   text-transform: uppercase;
 }
+.contacts__date {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+.contacts-toggle::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  z-index: 1;
+  transform: translateY(-50%) rotate(0deg);
+}
+.contacts-toggle {
+  right: 60px;
+  bottom: 50px;
+  cursor: pointer;
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 2;
+  border: none;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+.icon__link {
+  fill: inherit;
+  width: 30px;
+  height: 30px;
+}
 .swiper__hero {
   position: absolute;
   top: 0px;
 }
+
 .img-slide__mob {
   display: none;
 }
@@ -116,36 +198,81 @@
   position: relative;
   z-index: 1;
   display: flex;
+  justify-content: space-between;
   overflow: hidden;
   height: 900px;
-  justify-content: space-between;
 }
 .left-slide {
   position: relative;
 }
 .wrap__img {
   position: relative;
+  object-fit: cover;
 }
-
 .wrap__rigth-slide {
-  position: relative;
   background-position: right;
-
-  /*transition-property: transform;
-  transition-duration: 500ms;
-  transition-timing-function: linear;
-  transition-delay: 0;*/
-}
-
-.wrap__left-slide {
   position: relative;
-  background-position: left;
-
-  /* transition-property: transform;
-  transition-duration: 500ms;
-  transition-timing-function: linear;
-  transition-delay: 0;*/
+  animation: animationRight 10s linear infinite forwards alternate;
 }
+/*
+@keyframes animationRight {
+  0% {
+    transform: translateY(-250%);
+  }
+  14% {
+    transform: translateY(-200%);
+  }
+  28% {
+    transform: translateY(-100%);
+  }
+  42% {
+    transform: translateY(0%);
+  }
+  58% {
+    transform: translateY(-100%);
+  }
+  72% {
+    transform: translateY(-200%);
+  }
+  86% {
+    transform: translateY(-250%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}*/
+.wrap__left-slide {
+  background-position: left;
+  position: relative;
+  animation: animationLeft 10s linear infinite forwards alternate;
+}
+
+/*@keyframes animationLeft {
+  0% {
+    transform: translateY(0%);
+  }
+  14% {
+    transform: translateY(-100%);
+  }
+  28% {
+    transform: translateY(-200%);
+  }
+  42% {
+    transform: translateY(-250%);
+  }
+  58% {
+    transform: translateY(-250%);
+  }
+  72% {
+    transform: translateY(-200%);
+  }
+  86% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}*/
 
 .title__right {
   max-width: 1920px;
@@ -166,12 +293,12 @@
 
 .title__left {
   /* @include font(400, 130px, 1.5, null);*/
-  top: 0;
+  top: 0%;
+  padding-top: 300px;
   font-size: 130px;
   width: 100%;
   height: 100%;
   line-height: 0.5;
-  padding-top: 300px;
   font-family: 'Fiver';
   background-color: rgba(47, 48, 58, 0.4);
   color: #fff;

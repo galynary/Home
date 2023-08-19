@@ -25,7 +25,8 @@
     "notiflix": "^3.2.5",
     "onlyscroll": "^1.0.5",
     "pixabay": "0.0.1",
-    "simplelightbox": "^2.11.0"
+    "simplelightbox": "^2.11.0",
+    "swiper": "^10.2.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",

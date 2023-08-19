@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <section class="hero__section section">
-  <div class="container hero__container">
-    <div class="hero__menu">
+  <div class="hero__container container">
+    <div class="hero__inner">
       <div class="logo__content">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +149,74 @@
           </svg>
         </li>
       </ul>
-      <button class="button__menu-open" id="toggleButton">
+
+      <div class="page__menu">
+        <ul class="page__list">
+          <li class="page__item">
+            <a href="#" class="page__link">contacts</a>
+          </li>
+          <li class="page__item">
+            <a href="#" class="page__link" target="_blank">adout us</a>
+          </li>
+        </ul>
+        <div class="page__inner">
+          <div class="page__contacts">
+            <div class="page-contacts__container">
+              <button
+                type="button"
+                class="contacts-toggle js-open-contacts"
+                aria-expanded="false"
+                aria-controls="contacts-toggle"
+              >
+                contacts
+              </button>
+              <address class="addres__inner">
+                <div class="addres__vancouver">
+                  <p class="address__description">
+                    Nameless AVE, Vancouver, Canada
+                  </p>
+                  <ul class="phone__list list">
+                    <li class="phone__item">
+                      <a href="tel:647 555 555 555" class="phone__link link"
+                        >647 555 555 555</a
+                      >
+                    </li>
+                    <li class="phone__item">
+                      <a href="tel:647 555 555 555" class="phone__link link"
+                        >647 555 555 555</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="addres__toronto">
+                  <p class="address__description">
+                    Nameless AVE, Vancouver, Canada
+                  </p>
+                  <div class="contacts__date">
+                    <ul class="phone__list list">
+                      <li class="phone__item">
+                        <a href="tel:647 555 555 555" class="phone__link link"
+                          >647 555 555 555</a
+                        >
+                      </li>
+                      <li class="phone__item">
+                        <a href="tel:647 555 555 555" class="phone__link link"
+                          >647 555 555 555</a
+                        >
+                      </li>
+                    </ul>
+                    <a href="" class="mail__link link">info@vd-re.com</a>
+                  </div>
+                </div>
+              </address>
+            </div>
+          </div>
+          <div class="page__about-us"></div>
+        </div>
+      </div>
+    </div>
+    <!--- <div class="swiper__hero">
+      <button class="button__menu-open" id="toggle-button">
         <svg
           class="icon__menu-button"
           xmlns="http://www.w3.org/2000/svg"
@@ -166,86 +233,73 @@
           />
         </svg>
       </button>
-      <ul class="menu__page">
-        <li class="page__item">
-          <a href="#" class="page__link" target="_blank">contacts</a>
-        </li>
-        <li class="page__item">
-          <a href="#" class="page__link" target="_blank">adout us</a>
-        </li>
-      </ul>
-    </div>
-    <div class="swiper__hero">
       <div class="wrap__slide">
         <div class="wrap__left-slide">
-          <div class="left-slide">
-            <div class="wrap__img">
-              <picture class="img__slide"
-                ><source
-                  srcet="./images/1Up.jpg"
-                  media="(min-width:1200px)"
-                  type="image/webp" />
-                <source
-                  srcet="./images/1Up-mob.jpg"
-                  media="(min-width:480px)"
-                  type="image/webp" />
-                <img src="./images/1Up-mob.jpg" class="img-slide__mob" />
-                <img
-                  src="./images/1Up.jpg"
-                  class="img-slide__desc"
-                  loading="lazy"
-                  alt="house"
-              /></picture>
+          <div class="wrap__img">
+            <picture class="img__slide"
+              ><source
+                srcet="./images/1Up.jpg"
+                media="(min-width:1200px)"
+                type="image/webp" />
+              <source
+                srcet="./images/1Up-mob.jpg"
+                media="(min-width:480px)"
+                type="image/webp" />
+              <img src="./images/1Up-mob.jpg" class="img-slide__mob" />
+              <img
+                src="./images/1Up.jpg"
+                class="img-slide__desc"
+                loading="lazy"
+                alt="house"
+            /></picture>
 
-              <span class="title__left">Find yo</span>
-            </div>
-            <div class="wrap__img">
-              <picture class="img__slide"
-                ><source
-                  srcet="./images/2Up.jpg"
-                  media="(min-width:1200px)"
-                  type="image/webp" />
-                <source
-                  srcet="./images/2Up-mob.jpg"
-                  media="(min-width:480px)"
-                  type="image/webp" />
-                <img src="./images/2Up-mob.jpg" class="img-slide__mob" />
-                <img
-                  src="./images/2Up.jpg"
-                  class="img-slide__desc"
-                  loading="lazy"
-                  alt="house"
-              /></picture>
-              <span class="title__left">Vast proper</span>
-            </div>
-            <div class="wrap__img">
-              <picture class="img__slide"
-                ><source
-                  srcet="./images/3Up.jpg"
-                  media="(min-width:1200px)"
-                  type="image/webp"
-                />
-                <img
-                  src="./images/3Up.jpg"
-                  class="img-slide__desc"
-                  loading="lazy"
-                  alt="house"
-                />
-              </picture>
-              <span class="title__left">Trusted de</span>
-            </div>
+            <span class="title__left">Find yo</span>
+          </div>
+          <div class="wrap__img">
+            <picture class="img__slide"
+              ><source
+                srcet="./images/2Up.jpg"
+                media="(min-width:1200px)"
+                type="image/webp" />
+              <source
+                srcet="./images/2Up-mob.jpg"
+                media="(min-width:480px)"
+                type="image/webp" />
+              <img src="./images/2Up-mob.jpg" class="img-slide__mob" />
+              <img
+                src="./images/2Up.jpg"
+                class="img-slide__desc"
+                loading="lazy"
+                alt="house"
+            /></picture>
+            <span class="title__left">Vast proper</span>
+          </div>
+          <div class="wrap__img">
+            <picture class="img__slide"
+              ><source
+                srcet="./images/3Up.jpg"
+                media="(min-width:1200px)"
+                type="image/webp"
+              />
+              <img
+                src="./images/3Up.jpg"
+                class="img-slide__desc"
+                loading="lazy"
+                alt="house"
+              />
+            </picture>
+            <span class="title__left">Trusted de</span>
           </div>
         </div>
         <div class="wrap__rigth-slide">
-          <div class="rigth__slide">
-            <p class="title__right">ur home</p>
+          <div class="wrap__img">
             <picture class="img__slide"
               ><source
                 srcet="./images/1Down.jpg"
                 media="(min-width:1200px)"
                 type="image/webp" />
               <source
-                srcet="./images/1Down.jpg"
+                srcet="./images/1Down-mob.jpg"
                 media="(min-width:480px)"
                 type="image/webp" />
               <img src="./images/1Down-mob.jpg" class="img-slide__mob" />
@@ -292,7 +346,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </section>
 <script src="./js/menu__buttom.js"></script>
+<script src="./js/slider.js"></script>
+<script type="module" src="./js/slider.js"></script>
