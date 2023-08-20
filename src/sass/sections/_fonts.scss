@@ -43,3 +43,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Arial-Black';
+  src: local('Arial Black'), local('Arial-Black'),
+    url(../fonts/Arial/Arial-Black.woff) format('woff'),
+    url(../fonts/Arial/Arial-Black.eot) format('eot'),
+    url(../fonts/Arial/Arial-Black.ttf) format('ttf'); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
