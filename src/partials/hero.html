@@ -151,18 +151,22 @@
       </ul>
 
       <div class="page__menu">
-        <ul class="page__list">
-          <li class="page__item page__item-contacts">
-            <a href="#" class="page__link page-link-contact"> contacts</a>
-          </li>
-          <li class="page__item page__about-us">
-            <a href="#" class="page__link" target="_blank">adout us</a>
-          </li>
-        </ul>
-        <div class="page__inner">
-          <!---- <div class="page__contacts">
+        <div class="wrap__sections">
+          <section class="page__contacts">
             <div class="page-contacts__container">
               <div class="wrap__button-contacts">
+                <div class="button__contacts">
+                  <button
+                    type="button"
+                    class="contacts-toggle"
+                    id="js-open-contacts"
+                  >
+                    contacts
+                  </button>
+                </div>
+              </div>
+
+              <address class="addres__inner">
                 <div class="contacts__icon">
                   <svg
                     class="contacts__icon"
@@ -180,13 +184,6 @@
                     />
                   </svg>
                 </div>
-
-                <button type="button" class="contacts-toggle js-open-contacts">
-                  contacts
-                </button>
-              </div>
-
-              <address class="addres__inner">
                 <div class="addres__vancouver">
                   <p class="address__description">
                     Nameless AVE, Vancouver, Canada
@@ -237,226 +234,237 @@
                 </div>
               </address>
             </div>
-          </div>-->
-          <div class="page__about-us">
+          </section>
+
+          <section class="page__about-us">
             <div class="wrap__button-about-us">
               <div class="button__about-us">
-                <button type="button" class="js-open-about-us">about-us</button>
+                <button
+                  type="button"
+                  class="js-open-about-us"
+                  id="openAboutButton"
+                >
+                  About Us
+                </button>
+              </div>
+            </div>
+
+            <div class="wrap__about-us-container">
+              <div class="icon__about-us">
                 <svg
-                  class="icon__about-us"
+                  class="icon-about-us"
                   xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                  width="24px"
-                  height="11px"
+                  width="28px"
+                  height="15px"
                 >
                   <image
                     x="0px"
                     y="0px"
                     width="24px"
                     height="11px"
-                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAALCAQAAADPPIVGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBQOGzZEjHmaAAAA60lEQVQoz33QPyiEcRgH8N+5/Cv5MzDchY3FJIuyWG6yyA2SwWhQMtwgg1IGik3JpAxu0S0WpXSTQRmltxhkujBQN1x3PiaU9z3Psz3f51NPT0pIqM6wHnrDYYhCPZaJd8ayCHfy8TS+nrahruETZQv6/gdZ+97V7FhxhUfzOpqDMXs+VGwZEow6w5u1ZJAyqIgXhZ/ZuANVTwqG42BCCQ9/TsjY9qpqU7+WX9Am5xxlM7pjb1hVUXNk4Bu0mnKNS7mEJwc9Zt1rODEpBF2WRCjKJq4HQbtFNyjJB3NOPds1It0UBMG0C7eOvwBXRS0ryi8n3AAAAABJRU5ErkJggg=="
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAALCAQAAADPPIVGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBQOGzZEjHmaAAAA60lEQVQoz33QPyiEcRgH8N+5/Cv5MzDchY3FJIuyWG6yyA2SwWhQMtwgg1IGik3JpAxu0S0WpXSTQRmltxhkujBQN1x3PiaU9z3Psz3f51NPT0pIqM6wHnrDYYhCPZaJd8ayCHfy8TS+nrahruETZQv6/gdZ+97V7FhxhUfzOpqDMXs+VGwZEow6w5u1ZJAyqIgXhZ/ZuANVTwqG42BCCQ9/TsjY9qpqU7+WX9Am5xxlM7pjb1hVUXNk4Bu0mnKNS7mEJwc9Zt1rODEpBF2WRCjKJq4HQbtFNyjJB3NOPds1It0UBMG0C7eOvwBXRS0ryi8n3AAAAABJRU5ErkJggg=="
                   />
                 </svg>
               </div>
-
-              <!----  <div class="icon__about-us">
-                <svg
-                  class="icon__about-us"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  width="24px"
-                  height="11px"
-                >
-                  <image
-                    x="0px"
-                    y="0px"
-                    width="24px"
-                    height="11px"
-                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAALCAQAAADPPIVGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBQOGzZEjHmaAAAA60lEQVQoz33QPyiEcRgH8N+5/Cv5MzDchY3FJIuyWG6yyA2SwWhQMtwgg1IGik3JpAxu0S0WpXSTQRmltxhkujBQN1x3PiaU9z3Psz3f51NPT0pIqM6wHnrDYYhCPZaJd8ayCHfy8TS+nrahruETZQv6/gdZ+97V7FhxhUfzOpqDMXs+VGwZEow6w5u1ZJAyqIgXhZ/ZuANVTwqG42BCCQ9/TsjY9qpqU7+WX9Am5xxlM7pjb1hVUXNk4Bu0mnKNS7mEJwc9Zt1rODEpBF2WRCjKJq4HQbtFNyjJB3NOPds1It0UBMG0C7eOvwBXRS0ryi8n3AAAAABJRU5ErkJggg=="
-                  />
-                </svg>
-              </div>-->
-            </div>
-            <div class="page-about-us__container">
               <div class="about-us__inner">
                 <p class="about-us__text">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Maxime consectetur officia cumque, asperiores vitae, odit
-                  perferendis sunt, quidem libero tempore deleniti sed.
+                  perferendis sunt, quidem libero tempore deleniti sed.Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                  consectetur officia cumque, asperiores vitae, odit perferendis
+                  sunt, quidem libero tempore deleniti sed. Maxime officia
+                  cumque, asperiores vitae.
                 </p>
                 <p class="about-us__text">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Maxime consectetur officia cumque, asperiores vitae, odit
-                  perferendis sunt, quidem libero tempore deleniti sed.
+                  perferendis sunt, quidem libero tempore deleniti sed.Maxime
+                  consectetur officia cumque.
                 </p>
-                <div class="about-us__list">
+                <ul class="about-us__list">
                   <li class="about-us__item">
-                    <p class="about-us__text">Lorem ipsum dolor sit amet.</p>
+                    <p class="about-us-item__text">
+                      Lorem ipsum dolor sit amet.
+                    </p>
                   </li>
                   <li class="about-us__item">
-                    <p class="about-us__text">Lorem ipsum dolor sit amet.</p>
+                    <p class="about-us-item__text">
+                      Lorem ipsum dolor sit amet.
+                    </p>
                   </li>
                   <li class="about-us__item">
-                    <p class="about-us__text">Lorem ipsum dolor sit amet.</p>
+                    <p class="about-us-item__text">
+                      Lorem ipsum dolor sit amet.
+                    </p>
                   </li>
                   <li class="about-us__item">
-                    <p class="about-us__text">Lorem ipsum dolor sit amet.</p>
+                    <p class="about-us-item__text">
+                      Lorem ipsum dolor sit amet.
+                    </p>
                   </li>
                   <li class="about-us__item">
-                    <p class="about-us__text">Lorem ipsum dolor sit amet.</p>
+                    <p class="about-us-item__text">
+                      Lorem ipsum dolor sit amet.
+                    </p>
                   </li>
                   <li class="about-us__item">
-                    <p class="about-us__text">Lorem ipsum dolor sit amet.</p>
+                    <p class="about-us-item__text">
+                      Lorem ipsum dolor sit amet.
+                    </p>
                   </li>
-                </div>
+                </ul>
               </div>
               <div class="ceo__block">
-                <img src="./images/ceo.jpg" class="ceo__photo" alt="ceo man" />
+                <img src="./images/ceo.jpg" class="ceo__photo" alt="CEO man" />
                 <div class="ceo__description">
                   <p class="ceo__text ceo__text1">Best regards,</p>
                   <p class="ceo__text ceo__role">VD-Real Estate CEO,</p>
-                  <p class="ceo__text ceo__name">JOHN DOE</p>
+                  <p class="ceo__text ceo__name">John Doe</p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </div>
-    <!--   <div class="swiper__hero">
-      <button class="button__menu-open" id="toggle-button">
-        <svg
-          class="icon__menu-button"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
+  </div>
+
+  <!-- <div class="swiper__hero">
+    <button class="button__menu-open" id="toggle-button">
+      <svg
+        class="icon__menu-button"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="82px"
+        height="41px"
+      >
+        <image
+          x="0px"
+          y="0px"
           width="82px"
           height="41px"
-        >
-          <image
-            x="0px"
-            y="0px"
-            width="82px"
-            height="41px"
-            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAApCAQAAAAMwLYSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBERAiLl8hCAAAAAU0lEQVRYw+3W0QkAIRBDQT3sv2X9vwZMcF4Fw8JC5t4jvu82ABLy1yz4m45LQkKmBQmZFuRTyDUKFkbFJSGfQlrmkGlBQqYFCZlWBdIyh0yrAnkAnuQGTrW/ckAAAAAASUVORK5CYII="
-          />
-        </svg>
-      </button>
-      <div class="wrap__slide">
-        <div class="wrap__left-slide">
-          <div class="wrap__img">
-            <picture class="img__slide"
-              ><source
-                srcet="./images/1Up.jpg"
-                media="(min-width:1200px)"
-                type="image/webp" />
-              <source
-                srcet="./images/1Up-mob.jpg"
-                media="(min-width:480px)"
-                type="image/webp" />
-              <img src="./images/1Up-mob.jpg" class="img-slide__mob" />
-              <img
-                src="./images/1Up.jpg"
-                class="img-slide__desc"
-                loading="lazy"
-                alt="house"
-            /></picture>
+          xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAApCAQAAAAMwLYSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBERAiLl8hCAAAAAU0lEQVRYw+3W0QkAIRBDQT3sv2X9vwZMcF4Fw8JC5t4jvu82ABLy1yz4m45LQkKmBQmZFuRTyDUKFkbFJSGfQlrmkGlBQqYFCZlWBdIyh0yrAnkAnuQGTrW/ckAAAAAASUVORK5CYII="
+        />
+      </svg>
+    </button>
+    <div class="wrap__slide">
+      <div class="wrap__left-slide">
+        <div class="wrap__img">
+          <picture class="img__slide"
+            ><source
+              srcet="./images/1Up.jpg"
+              media="(min-width:1200px)"
+              type="image/webp" />
+            <source
+              srcet="./images/1Up-mob.jpg"
+              media="(min-width:480px)"
+              type="image/webp" />
+            <img src="./images/1Up-mob.jpg" class="img-slide__mob" />
+            <img
+              src="./images/1Up.jpg"
+              class="img-slide__desc"
+              loading="lazy"
+              alt="house"
+          /></picture>
 
-            <span class="title__left">Find yo</span>
-          </div>
-          <div class="wrap__img">
-            <picture class="img__slide"
-              ><source
-                srcet="./images/2Up.jpg"
-                media="(min-width:1200px)"
-                type="image/webp" />
-              <source
-                srcet="./images/2Up-mob.jpg"
-                media="(min-width:480px)"
-                type="image/webp" />
-              <img src="./images/2Up-mob.jpg" class="img-slide__mob" />
-              <img
-                src="./images/2Up.jpg"
-                class="img-slide__desc"
-                loading="lazy"
-                alt="house"
-            /></picture>
-            <span class="title__left">Vast proper</span>
-          </div>
-          <div class="wrap__img">
-            <picture class="img__slide"
-              ><source
-                srcet="./images/3Up.jpg"
-                media="(min-width:1200px)"
-                type="image/webp"
-              />
-              <img
-                src="./images/3Up.jpg"
-                class="img-slide__desc"
-                loading="lazy"
-                alt="house"
-              />
-            </picture>
-            <span class="title__left">Trusted de</span>
-          </div>
+          <span class="title__left">Find yo</span>
         </div>
-        <div class="wrap__rigth-slide">
-          <div class="wrap__img">
-            <picture class="img__slide"
-              ><source
-                srcet="./images/1Down.jpg"
-                media="(min-width:1200px)"
-                type="image/webp" />
-              <source
-                srcet="./images/1Down-mob.jpg"
-                media="(min-width:480px)"
-                type="image/webp" />
-              <img src="./images/1Down-mob.jpg" class="img-slide__mob" />
-              <img
-                src="./images/1Down.jpg"
-                class="img-slide__desc"
-                loading="lazy"
-                alt="house"
-            /></picture>
-            <span class="title__right">ur home</span>
-          </div>
-          <div class="wrap__img">
-            <picture class="img__slide"
-              ><source
-                srcet="./images/2Down.jpg"
-                media="(min-width:1200px)"
-                type="image/webp" />
-              <source
-                srcet="./images/2Down.jpg"
-                media="(min-width:480px)"
-                type="image/webp" />
-              <img src="./images/2Down-mob.jpg" class="img-slide__mob" />
-              <img
-                src="./images/2Down.jpg"
-                class="img-slide__desc"
-                loading="lazy"
-                alt="house"
-            /></picture>
-            <span class="title__right">ty database</span>
-          </div>
-          <div class="wrap__img">
-            <picture class="img__slide"
-              ><source
-                srcet="./images/3Down.jpg"
-                media="(min-width:1200px)"
-                type="image/webp" />
-              <img
-                src="./images/3Down.jpg"
-                class="img-slide__desc"
-                loading="lazy"
-                alt="house"
-            /></picture>
-            <span class="title__right">velopers</span>
-          </div>
+        <div class="wrap__img">
+          <picture class="img__slide"
+            ><source
+              srcet="./images/2Up.jpg"
+              media="(min-width:1200px)"
+              type="image/webp" />
+            <source
+              srcet="./images/2Up-mob.jpg"
+              media="(min-width:480px)"
+              type="image/webp" />
+            <img src="./images/2Up-mob.jpg" class="img-slide__mob" />
+            <img
+              src="./images/2Up.jpg"
+              class="img-slide__desc"
+              loading="lazy"
+              alt="house"
+          /></picture>
+          <span class="title__left">Vast proper</span>
+        </div>
+        <div class="wrap__img">
+          <picture class="img__slide"
+            ><source
+              srcet="./images/3Up.jpg"
+              media="(min-width:1200px)"
+              type="image/webp"
+            />
+            <img
+              src="./images/3Up.jpg"
+              class="img-slide__desc"
+              loading="lazy"
+              alt="house"
+            />
+          </picture>
+          <span class="title__left">Trusted de</span>
         </div>
       </div>
-    </div>-->
-  </div>
+      <div class="wrap__rigth-slide">
+        <div class="wrap__img">
+          <picture class="img__slide"
+            ><source
+              srcet="./images/1Down.jpg"
+              media="(min-width:1200px)"
+              type="image/webp" />
+            <source
+              srcet="./images/1Down-mob.jpg"
+              media="(min-width:480px)"
+              type="image/webp" />
+            <img src="./images/1Down-mob.jpg" class="img-slide__mob" />
+            <img
+              src="./images/1Down.jpg"
+              class="img-slide__desc"
+              loading="lazy"
+              alt="house"
+          /></picture>
+          <span class="title__right">ur home</span>
+        </div>
+        <div class="wrap__img">
+          <picture class="img__slide"
+            ><source
+              srcet="./images/2Down.jpg"
+              media="(min-width:1200px)"
+              type="image/webp" />
+            <source
+              srcet="./images/2Down.jpg"
+              media="(min-width:480px)"
+              type="image/webp" />
+            <img src="./images/2Down-mob.jpg" class="img-slide__mob" />
+            <img
+              src="./images/2Down.jpg"
+              class="img-slide__desc"
+              loading="lazy"
+              alt="house"
+          /></picture>
+          <span class="title__right">ty database</span>
+        </div>
+        <div class="wrap__img">
+          <picture class="img__slide"
+            ><source
+              srcet="./images/3Down.jpg"
+              media="(min-width:1200px)"
+              type="image/webp" />
+            <img
+              src="./images/3Down.jpg"
+              class="img-slide__desc"
+              loading="lazy"
+              alt="house"
+          /></picture>
+          <span class="title__right">velopers</span>
+        </div>
+      </div>
+    </div>
+  </div>-->
 </section>
+
 <script src="./js/menu__buttom.js"></script>
 <script src="./js/slider.js"></script>
 <script type="module" src="./js/slider.js"></script>

@@ -1,4 +1,4 @@
-const toggleButton = document.querySelector('.button__menu-open');
+/*const toggleButton = document.querySelector('.button__menu-open');
 const slideLeft = document.querySelector('.wrap__left-slide');
 const slideRight = document.querySelector('.wrap__rigth-slide');
 
@@ -18,4 +18,4 @@ toggleButton.addEventListener('click', () => {
   slideRight.style.transition = 'transform 0.9s';
 
   rotatedButton = !rotatedButton;
-});
+});*/

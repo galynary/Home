@@ -8,6 +8,7 @@
   padding: 20px;
   width: 100%;
   position: absolute;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
 }
@@ -66,6 +67,15 @@
   line-height: 1.2;
   color: #fff;
 }
+.wrap__sections {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
 .wrap__button {
   position: absolute;
   top: 50%;
@@ -110,19 +120,26 @@
   position: absolute;
   top: 0px;
 }
+.js-open-contacts:focus + .page__contacts {
+  transform: translateY(2%);
+}
 .page__contacts {
-  padding-left: 87px;
+  width: 100%;
   height: 100%;
-  padding-top: 50px;
+  transform: translateY(-97%);
+  transition: transform 0.8s ease;
 }
 .page-contacts__container {
   padding-left: 50px;
+  padding-bottom: 60px;
+  position: relative;
 }
 
 .addres__inner {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  bottom: 40px;
 }
 .mail__link,
 .phone__link,
@@ -151,116 +168,115 @@
   right: 20px;
   top: 20px;
 }
-.page__about-us {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-}
-.contacts-toggle,
-.page__link {
-  font-size: 2, 4rem;
-  font-weight: 400;
-  line-height: 1.2;
-  color: #fff;
-  text-transform: uppercase;
-  display: flex;
-  cursor: pointer;
-}
+
 .contacts__date {
   display: flex;
   flex-direction: row;
-  gap: 300px;
+  gap: 30%;
 }
 .wrap__button-contacts {
-  bottom: 50px;
-  z-index: 1;
-  width: 100px;
-  right: 30px;
-  height: 50px;
-  gap: 10px;
+  right: 10px;
+  bottom: 0px;
   position: absolute;
 }
-.contacts-toggle::before {
+.button__contacts {
+  flex-direction: column;
+  /*align-items: self-end;*/
+  align-items: flex-end;
+  gap: 5px;
+  display: flex;
+  position: relative;
+}
+.contacts-toggle:focus:before {
   content: '';
-  font-family: 'Arial Narrow', Arial, sans-serif;
-  display: block;
-  width: 500px;
+  width: 720px;
   height: 2px;
-  margin-bottom: 27px;
-  background-color: #fff;
-  position: absolute;
   z-index: 1;
-  background-position: right;
-  transform: translateX(-83%);
-  text-align: center;
+  background-color: #fff;
+  margin-bottom: 5px;
+  display: block;
 }
 .contacts__icon {
-  display: block;
+  cursor: pointer;
+
   position: absolute;
-  right: 0px;
+  bottom: 20px;
+  right: 10px;
 }
 
 .contacts-toggle {
-  padding: 0;
-  width: 100px;
-  right: 0px;
-  bottom: 0px;
-  fill: #fff;
-  cursor: pointer;
-  z-index: 2;
-  border: none;
-  background-color: transparent;
   text-align: right;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  position: absolute;
-  padding-left: 13%;
-}
-.icon__link {
-  fill: inherit;
-  width: 30px;
-  height: 30px;
-}
-.page-about-us__container {
-  padding-top: 120px;
-  width: 100%;
-  height: 100%;
-  padding-left: 100px;
-}
-.page__about-us {
-  left: 50px;
-  height: 100%;
-}
-.wrap__button-about-us {
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
   z-index: 1;
-  width: 100px;
-  position: absolute;
-  top: 120px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.icon__about-us {
-  display: none;
-  position: absolute;
-  right: 0px;
-  transform: translateY(120%) rotate(180deg);
-}
-.button__about-us {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
-.js-open-about-us:visited,
-.js-open-about-us:focus,
-.js-open-about-us:hover + .icon__about-us {
-  display: block;
+/*----------page__about-us----------*/
+.page__about-us {
+  width: 100%;
+  height: 100%;
+
+  /* position: absolute;*/
+  transform: translateY(5%);
+  position: relative;
+  transition: transform 0.5s ease;
 }
+
+.wrap__about-us-container {
+  padding-top: 80px;
+  padding-right: 20px;
+  width: 100%;
+  padding-left: 50px;
+}
+.page-about-us__container {
+  padding-left: 100px;
+  /* transform: translateY(-150%);*/
+  transition: transform 4.5s ease;
+}
+
+/*.button__about-us:focus + .wrap__button-about-us {
+  top: 20px;
+  bottom: 0px;
+}*/
+
+.wrap__button-about-us {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.icon__about-us {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.button__about-us {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /*align-items: self-end;*/
+}
+
+.js-open-about-us:focus + .icon__about-us {
+  display: block;
+  /* transform: rotate(180deg);*/
+}
+
 .js-open-about-us {
-  font-size: 16px;
+  font-size: 24px;
+  text-align: right;
+  background-color: transparent;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 400;
@@ -268,39 +284,39 @@
   padding: 0;
   color: #fff;
   z-index: 1;
-  background-color: #0000;
   border: none;
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
-.js-open-about-us:hover::after {
+.js-open-about-us:visited,
+.js-open-about-us:focus::after {
   content: '';
-  width: 800px;
-  bottom: -5px;
+  width: 720px;
+  margin-bottom: -5px;
   height: 2px;
   background-color: #fff;
   z-index: 1;
-  font-family: Arial Narrow, Arial, sans-serif;
   display: block;
-  position: absolute;
-  transform: translateX(-90%);
 }
 .about-us__inner {
-  padding-top: 50px;
-  max-width: 520px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
 }
+.about-us-item__text,
 .about-us__text {
   font-family: JournalSans;
   font-weight: 400;
   color: #fff;
-  font-size: 15px;
-  line-height: 1.9;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.about-us__list {
+  padding-left: 20px;
+}
+.about-us-item__text {
+  line-height: 1.6;
 }
 .ceo__block {
+  padding-top: 20px;
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -322,6 +338,7 @@
   font-size: 24px;
   line-height: 1.5;
 }
+
 .swiper__hero {
   position: absolute;
   top: 0px;
