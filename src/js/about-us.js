@@ -1,23 +1,14 @@
-const buttonAboutUs = document.querySelector('#openAboutButton');
-
+const wrapButtonAboutUs = document.querySelector('.wrap__button-about-us');
 const buttonIconAboutUs = document.querySelector('.icon__about-us');
 const pageAboutUs = document.querySelector('.page__about-us');
+const buttonAboutUs = document.querySelector('.js-open-about-us');
 
-buttonIconAboutUs.style.display = 'none';
-
-buttonAboutUs.addEventListener('click', () => {
-  if (pageAboutUs.style.transform === 'translateY(-100%)') {
-    pageAboutUs.style.transform = 'translateY(6%)';
-    buttonIconAboutUs.style.display = 'none';
-  } else {
-    pageAboutUs.style.transform = 'translateY(-90%)';
+wrapButtonAboutUs.addEventListener('click', () => {
+  if (buttonAboutUs.style.transform === 'translateY(-4%)') {
+    buttonAboutUs.style.transform = 'translateY(-92%)';
     buttonIconAboutUs.style.display = 'block';
-    buttonIconAboutUs.style.transform = 'rotate(180deg)';
+  } else {
+    buttonAboutUs.style.transform = 'translateY(-4%)';
+    buttonIconAboutUs.style.display = 'none';
   }
-});
-
-buttonIconAboutUs.addEventListener('click', () => {
-  pageAboutUs.style.transform = 'translateY(6%)';
-  buttonIconAboutUs.style.display = 'none';
-  buttonIconAboutUs.style.transform = 'rotate(-90deg)';
 });

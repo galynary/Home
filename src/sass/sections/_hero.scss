@@ -1,5 +1,6 @@
 .hero__section {
   background-color: #000;
+  overflow: hidden;
 }
 .hero {
   background-color: #000;
@@ -67,14 +68,14 @@
   line-height: 1.2;
   color: #fff;
 }
-.wrap__sections {
+/*.wrap__sections {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
-}
+}*/
 
 .wrap__button {
   position: absolute;
@@ -120,26 +121,29 @@
   position: absolute;
   top: 0px;
 }
-.js-open-contacts:focus + .page__contacts {
-  transform: translateY(2%);
-}
+/*.js-open-contacts:focus + .page__contacts {
+  transform: translateY(2%);*/
+
 .page__contacts {
   width: 100%;
   height: 100%;
-  transform: translateY(-97%);
   transition: transform 0.8s ease;
 }
 .page-contacts__container {
-  padding-left: 50px;
-  padding-bottom: 60px;
-  position: relative;
+  position: absolute;
+  bottom: 60px;
+  right: 20px;
+  left: 80px;
 }
 
 .addres__inner {
+  z-index: 1;
+
   display: flex;
+  padding-left: 10px;
+  padding-bottom: 20px;
   flex-direction: column;
   gap: 50px;
-  bottom: 40px;
 }
 .mail__link,
 .phone__link,
@@ -168,16 +172,19 @@
   right: 20px;
   top: 20px;
 }
-
+.address__map {
+  width: 620px;
+}
 .contacts__date {
   display: flex;
   flex-direction: row;
   gap: 30%;
 }
 .wrap__button-contacts {
-  right: 10px;
+  right: 0px;
   bottom: 0px;
   position: absolute;
+  z-index: 2;
 }
 .button__contacts {
   flex-direction: column;
@@ -187,58 +194,75 @@
   display: flex;
   position: relative;
 }
-.contacts-toggle:focus:before {
+
+.contacts-toggle:focus::before {
   content: '';
-  width: 720px;
+  width: 850px;
   height: 2px;
-  z-index: 1;
   background-color: #fff;
-  margin-bottom: 5px;
+  display: block;
+}
+.before {
+  content: '';
+  width: 850px;
+  height: 2px;
+  background-color: #fff;
   display: block;
 }
 .contacts__icon {
   cursor: pointer;
-
-  position: absolute;
-  bottom: 20px;
-  right: 10px;
+  bottom: 3px;
+  right: 0px;
 }
 
 .contacts-toggle {
+  width: 850px;
+  position: absolute;
+  z-index: 2;
   text-align: right;
   text-transform: uppercase;
   cursor: pointer;
   color: #fff;
-  z-index: 1;
-  background-color: transparent;
+  background-color: #000;
   border: none;
-  padding: 0;
+  padding: 0px 0px 800px 0px;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.2;
+  outline: none;
+  transition: transform 1s ease;
+  transform: translateY(-100%);
 }
 
 /*----------page__about-us----------*/
 .page__about-us {
   width: 100%;
   height: 100%;
+  z-index: 3;
+  transition: transform 0.8s;
 
-  /* position: absolute;*/
-  transform: translateY(5%);
+  position: absolute;
+
+  /* position: absolute;
+  transform: translateY(20%);
   position: relative;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease;*/
 }
 
 .wrap__about-us-container {
+  flex-direction: column;
+  max-width: 850px;
+  gap: 50px;
   padding-top: 80px;
   padding-right: 20px;
-  width: 100%;
-  padding-left: 50px;
+  display: flex;
+  right: 20px;
 }
 .page-about-us__container {
-  padding-left: 100px;
-  /* transform: translateY(-150%);*/
-  transition: transform 4.5s ease;
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  right: 20px;
 }
 
 /*.button__about-us:focus + .wrap__button-about-us {
@@ -249,14 +273,15 @@
 .wrap__button-about-us {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 40px;
+  outline: none;
 }
 
 .icon__about-us {
   position: absolute;
-  top: 40px;
-  right: 20px;
-  transform: rotate(180deg);
+  top: 25px;
+  right: 0px;
+  transform: rotate(-90deg);
   cursor: pointer;
 }
 
@@ -274,22 +299,24 @@
 }
 
 .js-open-about-us {
+  width: 850px;
   font-size: 24px;
   text-align: right;
-  background-color: transparent;
+  background-color: #000;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 400;
   line-height: 1.2;
-  padding: 0;
+  padding: 0px 0px 800px 0px;
   color: #fff;
   z-index: 1;
   border: none;
+  outline: none;
 }
 .js-open-about-us:visited,
 .js-open-about-us:focus::after {
   content: '';
-  width: 720px;
+  width: 800px;
   margin-bottom: -5px;
   height: 2px;
   background-color: #fff;
@@ -316,7 +343,6 @@
   line-height: 1.6;
 }
 .ceo__block {
-  padding-top: 20px;
   display: flex;
   flex-direction: row;
   gap: 20px;
