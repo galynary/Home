@@ -5,25 +5,31 @@ const wrapSlide = document.querySelector('.wrap__slide');
 const menuButton = document.querySelector('.icon__menu-button');
 
 let isToggled = true;
-wrapSlide.style.display = 'block';
+wrapSlide.style.display = 'flex';
 menuButton.style.transform = 'rotate(180deg)';
+slideLeft.style.transition = 'transform 1.5s ease';
+slideRight.style.transition = 'transform 1.5s ease';
 
 slideButton.addEventListener('click', () => {
   if (isToggled) {
     slideLeft.style.transform = 'translateX(0)';
     slideRight.style.transform = 'translateX(0)';
     menuButton.style.transform = 'rotate(180deg)';
+    wrapSlide.style.display = 'flex';
   } else {
     slideLeft.style.transform = 'translateX(-100%)';
     slideRight.style.transform = 'translateX(100%)';
     menuButton.style.transform = 'rotate(90deg)';
+    wrapSlide.style.display = 'none';
   }
-  isToggled = !isToggled;
-});
 
-const hideSwiper =
-  wrapSlide.style.display === 'block'
-    ? ((slideLeft.style.transform = 'translateX(0)'),
-      (slideRight.style.transform = 'translateX(0)'))
-    : ((slideLeft.style.transform = 'translateX(-100%)'),
-      (slideRight.style.transform = 'translateX(100%)'));
+  isToggled = !isToggled;
+  setTimeout(function () {
+    if (
+      slideLeft.style.transform === 'translateX(-100%)' &&
+      slideRight.style.transform === 'translateX(100%)'
+    ) {
+      wrapSlide.style.display = 'none';
+    }
+  }, 5000);
+});
