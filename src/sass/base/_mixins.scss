@@ -4,10 +4,11 @@
   justify-content: $jc;
   gap: $g;
 }
-@mixin flex2($d, $fd, $ai) {
+@mixin flex($d, $fd, $jc, $g) {
   display: $d;
   flex-direction: $fd;
-  align-items: $ai;
+  justify-content: $jc;
+  gap: $g;
 }
 @mixin flex-wrap($df, $dw, $gp) {
   display: $df;
@@ -18,7 +19,6 @@
   font-weight: $fw;
   font-size: $fs;
   line-height: $lh;
-  letter-spacing: $ls;
 }
 
 @mixin mobile {
