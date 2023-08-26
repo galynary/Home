@@ -1,2 +1,0 @@
-var wrapButtonAboutUs=document.querySelector(".wrap__button-about-us"),buttonIconAboutUs=document.querySelector(".icon__about-us"),pageAboutUs=document.querySelector(".page__about-us"),buttonAboutUs=document.querySelector(".js-open-about-us");wrapButtonAboutUs.addEventListener("click",(function(){"translateY(-4%)"===buttonAboutUs.style.transform?(buttonAboutUs.style.transform="translateY(-92%)",buttonIconAboutUs.style.display="block"):(buttonAboutUs.style.transform="translateY(-4%)",buttonIconAboutUs.style.display="none")}));
-//# sourceMappingURL=index.29ecce62.js.map
