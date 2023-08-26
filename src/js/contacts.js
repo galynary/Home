@@ -1,19 +1,19 @@
-const buttonContacts = document.querySelector('.wrap__button-contacts');
-const contactsToggle = document.querySelector('.contacts-toggle');
-const buttonIconContacts = document.querySelector('.contacts__icon');
+const buttonContacts = document.querySelector('.contacts-toggle');
 const pageContacts = document.querySelector('.page__contacts');
-const elementBefore = document.querySelector('::before');
+const buttonIconContacts = document.querySelector('.contacts__icon');
+
+buttonIconContacts.style.display = 'none';
+pageContacts.style.transform = 'translateY(-93%)';
 
 buttonContacts.addEventListener('click', () => {
-  if (contactsToggle.style.transform === 'translateY(-100%)') {
-    contactsToggle.style.transform = 'translateY(-3%)';
+  {
+    pageContacts.style.transform = 'translateY(-7%)';
     buttonIconContacts.style.display = 'block';
-    elementBefore.style.display = 'block';
-    pageContacts.style.display = 'block';
-  } else {
-    contactsToggle.style.transform = 'translateY(-100%)';
+  }
+});
+buttonIconContacts.addEventListener('click', () => {
+  {
     buttonIconContacts.style.display = 'none';
-    elementBefore.style.display = 'none';
-    pageContacts.style.display = 'none';
+    pageContacts.style.transform = 'translateY(-93%)';
   }
 });

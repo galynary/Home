@@ -1,6 +1,7 @@
 .hero__section {
   background-color: #000;
   overflow: hidden;
+  position: absolute;
 }
 .hero {
   background-color: #000;
@@ -95,17 +96,19 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
   border: 3px solid #fff;
+  transform: rotate(180deg);
 }
 
 .page__menu {
   width: 50%;
-  position: absolute;
-  padding: 20px;
-  right: 0;
-  top: 0px;
+  display: flex;
+
   height: 100%;
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
 .page__list {
   text-align: right;
@@ -126,24 +129,23 @@
 
 .page__contacts {
   width: 100%;
-  height: 100%;
   transition: transform 0.8s ease;
+  transform: translateY(-93%);
 }
+
 .page-contacts__container {
-  position: absolute;
-  bottom: 60px;
-  right: 20px;
-  left: 80px;
-}
-
-.addres__inner {
-  z-index: 1;
-
+  width: 100%;
+  height: 100%;
   display: flex;
-  padding-left: 10px;
-  padding-bottom: 20px;
+}
+.page-contacts__address {
+  z-index: 1;
+  display: flex;
+  padding-left: 60px;
   flex-direction: column;
   gap: 50px;
+  padding-top: 110px;
+  position: relative;
 }
 .mail__link,
 .phone__link,
@@ -181,12 +183,14 @@
   gap: 30%;
 }
 .wrap__button-contacts {
-  right: 0px;
-  bottom: 0px;
   position: absolute;
+  right: 0px;
+  bottom: 20px;
   z-index: 2;
+  padding: 0;
 }
 .button__contacts {
+  justify-content: center;
   flex-direction: column;
   /*align-items: self-end;*/
   align-items: flex-end;
@@ -197,7 +201,7 @@
 
 .contacts-toggle:focus::before {
   content: '';
-  width: 850px;
+  width: 900px;
   height: 2px;
   background-color: #fff;
   display: block;
@@ -216,31 +220,25 @@
 }
 
 .contacts-toggle {
-  width: 850px;
-  position: absolute;
-  z-index: 2;
   text-align: right;
   text-transform: uppercase;
   cursor: pointer;
   color: #fff;
   background-color: #000;
   border: none;
-  padding: 0px 0px 800px 0px;
   font-size: 24px;
   font-weight: 400;
-  line-height: 1.2;
   outline: none;
+
   transition: transform 1s ease;
-  transform: translateY(-100%);
 }
 
 /*----------page__about-us----------*/
 .page__about-us {
   width: 100%;
   height: 100%;
-  z-index: 3;
+  transform: translateY(92%);
   transition: transform 0.8s;
-
   position: absolute;
 
   /* position: absolute;
@@ -254,9 +252,8 @@
   max-width: 850px;
   gap: 50px;
   padding-top: 80px;
-  padding-right: 20px;
   display: flex;
-  right: 20px;
+  padding-left: 60px;
 }
 .page-about-us__container {
   position: absolute;
@@ -272,25 +269,23 @@
 
 .wrap__button-about-us {
   position: absolute;
-  top: 10px;
-  right: 40px;
+  top: 20px;
+  right: 0px;
   outline: none;
 }
 
 .icon__about-us {
-  position: absolute;
-  top: 25px;
-  right: 0px;
   transform: rotate(-90deg);
   cursor: pointer;
 }
 
 .button__about-us {
-  position: relative;
-  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
   gap: 5px;
-  /*align-items: self-end;*/
+  display: flex;
+  position: relative;
 }
 
 .js-open-about-us:focus + .icon__about-us {
@@ -299,7 +294,6 @@
 }
 
 .js-open-about-us {
-  width: 850px;
   font-size: 24px;
   text-align: right;
   background-color: #000;
@@ -307,7 +301,7 @@
   cursor: pointer;
   font-weight: 400;
   line-height: 1.2;
-  padding: 0px 0px 800px 0px;
+
   color: #fff;
   z-index: 1;
   border: none;
@@ -391,7 +385,8 @@
 .wrap__rigth-slide {
   background-position: right;
   position: relative;
-  animation: animationRight 10s linear infinite forwards alternate;
+  transition: transform 1s ease;
+  animation: animationRight 1s linear infinite forwards alternate;
 }
 /*
 @keyframes animationRight {
@@ -423,7 +418,8 @@
 .wrap__left-slide {
   background-position: left;
   position: relative;
-  animation: animationLeft 10s linear infinite forwards alternate;
+  transition: transform 1.5s ease;
+  animation: animationLeft 1.5s linear infinite forwards alternate;
 }
 
 /*@keyframes animationLeft {
