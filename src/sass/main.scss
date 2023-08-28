@@ -2,9 +2,11 @@
 @import './sections/fonts';
 @import './sections/hero';
 @import './sections/faq';
+@import './sections/pagination.scss';
 @import './sections/selling.scss';
 @import './base/normalize';
 @import './base/reset';
 @import './base/vars';
 @import './base/mixins';
 @import './components/section';
+@import './components/slider__page.scss';
