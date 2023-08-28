@@ -10,7 +10,7 @@
     max-width: 900px;
     padding: 10px 0px;
     display: flex;
-    height: 140px;
+    height: 180px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -71,11 +71,31 @@
 
   .flaq__link {
     font-family: 'Josefin Sans';
+    font-weight: 700;
     color: red;
-    font-size: 24px;
+    font-size: 26px;
     text-align: left;
   }
   .flaq__link::after {
     content: '';
+    display: block;
+    height: 2px;
+    background-color: #000;
+    margin-top: 5px;
+    left: 0;
+  }
+  .flaq-page__links {
+    height: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .flaq-page__item {
+    transform: rotate(-90deg) translateY(50%);
+  }
+  .flaq-page__link {
+    font-size: 36px;
+    color: #000;
   }
 }
