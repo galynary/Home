@@ -1,6 +1,8 @@
 @media screen and (min-width: 480px) {
-  .swiper-wrapper {
+  .swiper__wrapper {
     position: relative;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     display: flex;
@@ -12,7 +14,7 @@
     box-sizing: content-box;
     z-index: 31;
   }
-  .backdrop__page {
+  /*.backdrop__page {
     position: fixed;
     opacity: 1;
     top: 0;
@@ -26,18 +28,21 @@
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+  }*/
+  .swiper__slide {
+    width: 100%;
+    height: 100%;
   }
-
   .page__section {
     display: inline-block;
     position: fixed;
     left: 50%;
     top: 0px;
-    padding: 10px 15px;
     transform: translateX(-50%);
     background: #fff;
     border-radius: 4px;
-    max-width: 700px;
+    min-width: 480px;
+    max-width: 682px;
     height: auto;
     margin: 0 auto;
     background-color: #fff;
@@ -71,15 +76,14 @@
     background-position: center;
   }
   .page__container {
-    padding: 0px 20px;
+    padding: 0px 15px;
     padding-bottom: 40px;
     position: relative;
   }
   .page-header__container {
     position: relative;
-    padding: 10px 0px;
+    padding-top: 40px;
     display: flex;
-    height: 180px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -116,7 +120,9 @@
 
   .icon__phone {
     position: absolute;
-    right: 20px;
+    right: 0px;
+    width: 74px;
+    height: 74px;
   }
   .swiper__container {
     padding: 20px 0px;
@@ -124,7 +130,8 @@
 
   .page__links {
     height: 120px;
-
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
   }
@@ -135,6 +142,7 @@
     font-size: 36px;
     color: #000;
     line-height: 1.1;
+    text-transform: uppercase;
   }
   .swiper-pagination {
     bottom: 50px;

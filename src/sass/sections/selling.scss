@@ -1,6 +1,6 @@
 @media screen and (min-width: 480px) {
   .selling__contant {
-    padding: 20px 0px;
+    padding: 20px;
   }
   .selling__img {
     display: flex;
@@ -14,14 +14,15 @@
     display: flex;
     font-weight: 700;
     font-size: 30px;
-    color: #7c7a7a;
+    color: #5b5b5b;
     letter-spacing: 0.08em;
   }
   .selling__text {
+    max-width: 450px;
     display: flex;
     font-size: 18px;
     line-height: 1.4;
     color: #000;
-    padding: 20px;
+    padding: 20px 0px;
   }
 }
