@@ -1,6 +1,10 @@
 @media screen and (min-width: 480px) {
   .selling__contant {
-    padding: 20px;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .selling__img {
     display: flex;

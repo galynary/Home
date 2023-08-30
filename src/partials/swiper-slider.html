@@ -1,432 +1,438 @@
 <!DOCTYPE html>
 
 <!--<div class="backdrop__page is-hidden" data-selling>-->
-<div class="swiper__container"></div>
-<div class="swiper__wrapper">
-  <!---- <div class="swiper__slide">
-    <section class="page__section" data-selling>
-      <button class="close-page__button" data-selling-close type="button">
-        <svg
-          class="close-page__icon"
-          data-selling-close
-          width="18"
-          height="18"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M15 4.108 13.892 3 9.5 7.392 5.108 3 4 4.108 8.392 8.5 4 12.892 5.108 14 9.5 9.608 13.892 14 15 12.892 10.608 8.5 15 4.108Z"
-          />
-        </svg>
-      </button>
-      <div class="page__container">
-        <header class="page__header">
-          <div class="page-header__container">
-            <div class="logo__content-mob">
-              <div class="logo-page__icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  width="127px"
-                  height="107px"
-                >
-                  <image
-                    x="0px"
-                    y="0px"
-                    width="72px"
-                    height="105px"
-                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABpCAQAAAAzFK1fAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSCqjQvEAAADoklEQVRo3r2bXWjNcRyHn7MdYzZzxpm9NG9NFi2Ut8TS8pKWFEq4ciEXlAtu3ChcUFy4UlyMkveXG6RIkveXMIYx0WjeZl5mzDZn57gwGoXP2fp/fv+L3XxPe3p21q99nzNYwSWqecM3Ev98rmI6o7n0H5Sfz0wX0iIR6IILKI87IlKZC2mKCHTWBRTiqYg0xYW0XAQ65QJK57WINDFYkNSOrzHCTJdeUcA+j6MIH0RH4xyGoIWI+JbN44DHUS7NkqE4ox2G4AsFjBdeEyKHQx5HQ/97xf542ilxGIKPDGeU5Cibox5HJcRFR8UeIDgm/vLvdgFNEoG+UeRCOici7XQBzZIdDXUh3RKRdriAFohArQz0AKVQIyJtczlaKgJ9pcADlEadiLTV5WiVCNRMrgcok3ci0maXo3UiUBM5HqAoTSLSJpejrSLQJ/p5gAppFZE2uBxViEAfiHiAimkXkda6HB0Wgd7RxwM0VgRKsMbl6LQIVE+GB6hMdrTa5eiqCPSa9O5+q1RpqoGF0lwmDZ5tbYj7oqMX9HIYgs/Mleb68IobDkdhakVHz0lzGIoTo1ya7EsdNx2O0qkXHT0lHLwhiNGDadJkNrVUOhxFaBQd1XTdkW4IWshmsjTZn8fcdTjKF7eQCR6SErwh+EyhuBSO8oh7DkdF4hYyQVVXHSV79sp3/3wP0ChxC5mgkpAH6YTsaI4HaLIMZLlmAc7LSNr91+1TLgNd9gCFuC0jzfAgLZSBTHE9zGMZyRTXl8lAprjek5cyUhJxPbnLtfNpJyR/GqSQPQ5HmXI2TiKud90QtJHBVHE23xPXo3wRDcUZG7whaCZX/GGEGMBBh6NB8hYy0Lje+eyS39hHPEAj5C1kgHH993NUdmT6GMt4GcgW18/ISKa4Pk0GssX16zJShQdongzUxhAHUAoPZKTtHkdLZCBTXE/jmYxkiusrZSBTXO/NWxnJFNfXykCmuB6Rs7Etrm+RgZqIOoDyaZGRNnoc7ZCBGsl2AA0jJiOt9zjaLwOZ4voYeQtpi+snZSBTXC+VgWxx/aIM9Edc795frn8/9SwWJzN4z5XgDYXkf15J8KpzXA/KEHyS00Im9VwL3lGYJ7KjOnoGbyhOG7PF2SxPXE9PYgv5K64HZwhipMprc1Ncz0piC9kR14M0BK1kUSrOmuJ6jpyNO+J6sIagmTwmiLP9qaEqeEeD5WycoJqUoA1BI8PkdWeUakemHclxebbqO9lgE11gslI3AAAAAElFTkSuQmCC"
-                  />
-                  <image
-                    x="72px"
-                    y="8px"
-                    width="55px"
-                    height="99px"
-                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAABjCAQAAACVzVAsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSHdijtSAAADeklEQVRo3r3aT2wMcRTA8e9uV5puS21FRVCUttIDKQ4ICYL4HwcHiZSIkLoo0oiEgzgRN5G44MKBiIiTPwcihKJtaKQRNrRW/UnRP9udtdvu/hwEF+37zczLvDm+3+azb2Z35s2bCbGBSZRRQhGFQIohftDLFxJ08hPlCGFGzBk6ecVznvGYpBZoLLZhHnKMOUFxf7Z2mpgUHGcwZLnM/OC439ttFgbJGQxXmREkZ0hzlDHBcQbDS+YFyRkyHCQUHGcw3GBskJzhNbOC5Aw9LA6SMzisCZIzZNkcJGfIsnFkLMR74rxjkCRJIkQpJUYlVT5OxWnW8cDth8aznpM0e6qwj1qv37WCI3S4Brso97x3CLGWhy7B+0S8gwAraHMFnvbHQZhGBl2Aq/2CUE2LNdfNeP9gIReswfP+OYDD1uAyHXAXOSuujbAOWG9Z304dDvZbcfF//UyBL+4pMRaJq8pI0KZTX4T7FvV12PcyUkzmmwW4VouDrRbcdT0Obopclol6XCUZEWzQrO+cyN3V5GYyLHBDlGiCl8X6NqF1PgOLc/8KzerCJITqnmhWl+eKsKKOMXoc3BHyhVRrco/JCStqNTmHFmHFLE0O2oX8dF3urZCfosvFhfwEXa5byMd0OUfIR3W5QSEf0eVSQr5ElysW8kldThrl5HS5IiGf0uWmCvleXU4aU33X5aqE/Eddbq6QT2hyURYIK95ockvE0UaHJrdKyKfFK4aLCPFB6MQeaXZiS5kmrFBt/PaIK+6pWVSQFXZlhqhedU3i44t74sXXOmaQFm9IduvtymsiliGmhW2yuDeX7h+so5yvFtxKHayAuxaY1F1bxykLzLBDB9tnhcX9TqV/x3bLEeM2DazeEmvWmIc1WVGGvMVEUAg3s+izfrEaF08TumyfWf4/CjiEY43l/I29V9NuTRkMJ7xCYba4ftZ1y9vguYbjvHVJGd5Q5o6ZwlbO8NI1ZDD0jNRPR+glTpx+HAYIM45iyqhkto9xoMPGkWcQXr79aJsz+sUmUEyX62e5tKf1sG7q5AOrhb0Qu2hF7hJRu5+tfyrFXvt/iV+smRp7zB83QKPbtt8rleeil/civFFXvL7V4JZyOOfuaHnnmmmg1Dtlyznc5gAV/iBg1P42w2s6aOUJrWT8UwAhllNOjLF/r299JOnlEwk+k9dB/sUvbJv5SreK+msAAAAASUVORK5CYII="
-                  />
-                  <image
-                    x="56px"
-                    y="41px"
-                    width="32px"
-                    height="32px"
-                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSHdijtSAAAAk0lEQVRIx6XVSw6AIAxF0Yfrpmy9DoyiUvplfg+aAAX01UEorA4G54krTxMzTxHfPEyseYiQczexz12EnpuEnauEL98S/lwkYvlCxPMPkcsfIp8zGHSgRc74shoAUHr/cTs5Yrw/JU6M/9/ECPEs+ontbfAR6n20CfNFoFquE+5XkWq5TIQnA9VyoDzaJlGcz0Z+AiRx3ogz08JxAAAAAElFTkSuQmCC"
-                  />
-                </svg>
-              </div>
-              <p class="logo__text">real estate</p>
-            </div>
-            <button class="mob-menu__button">
-              <svg
-                class="icon-menu__button"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="82px"
-                height="41px"
-              >
-                <image
-                  x="0px"
-                  y="0px"
-                  width="82px"
-                  height="41px"
-                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAApCAQAAAAMwLYSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBERAiLl8hCAAAAAU0lEQVRYw+3W0QkAIRBDQT3sv2X9vwZMcF4Fw8JC5t4jvu82ABLy1yz4m45LQkKmBQmZFuRTyDUKFkbFJSGfQlrmkGlBQqYFCZlWBdIyh0yrAnkAnuQGTrW/ckAAAAAASUVORK5CYII="
-                />
-              </svg>
-            </button>
-            <div class="icon__phone">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="71px"
-                height="71px"
-              >
-                <image
-                  x="0px"
-                  y="0px"
-                  width="71px"
-                  height="71px"
-                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABHCAQAAAD/uZKUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoQMjb2rR84AAAE2ElEQVRo3sWaa2hbZRjHf0nb9N6mabTNarula93sRRrHlCHFrrIhgqKDThHHdCCbyD6IIjJU/DCqKChOKMI+6UBBEJXJxG2IrrOrMuuYprXrxdquJk3v2ltu5/ghVpPunJNzci7+n2/J+yY/nvc9z/s8z3tATlU8QhdDrDDC02RjwwJlS3zm5jZ8NOPFSy1Qy36CfGo1TgEuytiEj7tow5n0TRsCwwwSsQIpoWLaOE43C0SJISCm2BTvcKtV3mnmIXzcQiUVOCTHuelggHHWzAYqoJ33md7gDSnr4WHz/dPKZypQEnYGL3YzYbJ4gdaUbaskF2VcZslMoCFiqr0jEuIoN5mJs6IBRkSkj0fJMQvGjqBxRhMP4iXLHJws9uOUjM3yMyop4AdWzMHZwibKNc0ppI5pRlk1AydOHds0znLQxDD9ZuDM0cjdiJpObDulRLhOwHicME6acWtMIGy4CdGDaCyOHbjCGeKaZ5ZQYbRvEji/06v5cYdJBs3BidDP9xqfkyinOW/0UvFPOBOI0qThcV/kK97Db7x3ErLh4UsNB0U3d2gKnRnoJSZVwlxkj9kw0MIpVTA/85jZKAk9ztINOXKqxQnyBHnmISSfzDYq2EyuwugAXXzOrDXeKWQvAwq+meBtqs1FSM58l+nmW5Zlx05ziQlzcVLTKBsz1LJVZqyLUb62EkcgRBk7KJAcm02MQUIZnG8Z4kCcJVxsl8mGnZTwi1VbOSEbrQzJbudZDpgZAqVS8GWy2EaJ5Ph8NjPBkJU4Ycaoll0wD7n0E7IOR2QRES/VMhliJYVcYdn49ALZeilAnHaZCJ2LixDDhK3DiRAkh0bJ88mGiyoW+NX4R16+mvyLAbxsken3eHATYoKoVTiwwjzV1Ml866EaP8EMsuwMcQSmEGmUSVqz8FDDiLGnmHLpHyWGj1qZFlM2dbQT5poZm1pO9fgVk7IZjuBW8Tt2HOTh0N89u5ffFHAE5nlNZsMnawcf8xNn6dDvoSMEFZPWeU7KpiUJHeIyYURijPIm9XqBDjKvCLTGB+ykSHKumwMpVUqUj2iQGatSLp5kThEowiD7JOceY3HD7ovTzwN6PfQys4pAApO8viGOl9Al6VeBcU7i3fgXWnp8FyjkToU2pY1ifFQhMMsqYGcXL3JQcllslNJALQEmMw+kHjpZTVMWCoxyGIAWzhNPU7f5uUfPglXRmWZTiwjM8R3v0kc0bU0bZ4o3VIQJBXWyoKJ4TlfR/meLfMj9eoCeSushbSbgp4Mi7Jm1q8cYYZe+yJEiG+XsoZgLmeGscpU1Gig17IbURj4NNOv5id34VWxWLabrcjOPek4bC6TnqiPGHNfIp4Z8g5YsovfmJcAX5LCVIgNuAWPGtIYd+LikOsrI2wxvGXEvFSfIIFAj0/lQqwleNcI7Cdk5xgARHaHQ8PcYWjhHJMNlm+F5o3EcbOcwfWnOcWm7SIvROAndxyeqXhNIXarjZvaNnqGfNQ3L9qf+ZFVJBdzMs4oFUbLF6GEnaEtOtSjKMlcZYw4nzrQHbZgTfGPGVe+N2sc5QoQVvXMdjxUo67qdUwoJW5yz6wPNWqxUTeGnlz9wUC7x/IzxinnNTyXt5gS9BFj71zNhxjn6f6Csq4rn6GUFAZEwP3Io+XWdvwFLIvUWU/u3lwAAAABJRU5ErkJggg=="
-                />
-              </svg>
-            </div>
-          </div>
-        </header>
-        <div class="selling__contant">
-          <figure class="selling__img">
-            <img src="./images/ceo.jpg" />
-            <figcaption class="figcaption__text">Selling</figcaption>
-          </figure>
-          <p class="selling__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-            sequi quaerat rerum, illo officia adipisci minima, esse consectetur
-            reiciendis quia quam ipsa consequuntur vel quos doloremque.
-            Quibusdam, asperiores voluptas. Aliquid, sequi quaerat rerum, illo
-            officia adipisci minima, esse consectetur reiciendis quia quam ipsa
-            consequuntur vel quos doloremque.
-          </p>
-        </div>
-        <ul class="page__links">
-          <li class="page__item">
-            <a href="" class="page__link link">About us</a>
-          </li>
-          <li class="page__item">
-            <a href="" class="page__link link">Contacts</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </div>-->
-  <!--<div class="swiper__slide">
-    <section class="page__section" data-faq>
-      <button class="close-page__button" type="button" data-faq-close>
-        <svg
-          class="close-page__icon"
-          data-faq-close
-          width="18"
-          height="18"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M15 4.108 13.892 3 9.5 7.392 5.108 3 4 4.108 8.392 8.5 4 12.892 5.108 14 9.5 9.608 13.892 14 15 12.892 10.608 8.5 15 4.108Z"
-          />
-        </svg>
-      </button>
-      <div class="page__container">
-        <header class="page__header">
-          <div class="page-header__container">
-            <div class="logo__content-mob">
-              <div class="logo-page__icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  width="127px"
-                  height="107px"
-                >
-                  <image
-                    x="0px"
-                    y="0px"
-                    width="72px"
-                    height="105px"
-                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABpCAQAAAAzFK1fAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSCqjQvEAAADoklEQVRo3r2bXWjNcRyHn7MdYzZzxpm9NG9NFi2Ut8TS8pKWFEq4ciEXlAtu3ChcUFy4UlyMkveXG6RIkveXMIYx0WjeZl5mzDZn57gwGoXP2fp/fv+L3XxPe3p21q99nzNYwSWqecM3Ev98rmI6o7n0H5Sfz0wX0iIR6IILKI87IlKZC2mKCHTWBRTiqYg0xYW0XAQ65QJK57WINDFYkNSOrzHCTJdeUcA+j6MIH0RH4xyGoIWI+JbN44DHUS7NkqE4ox2G4AsFjBdeEyKHQx5HQ/97xf542ilxGIKPDGeU5Cibox5HJcRFR8UeIDgm/vLvdgFNEoG+UeRCOici7XQBzZIdDXUh3RKRdriAFohArQz0AKVQIyJtczlaKgJ9pcADlEadiLTV5WiVCNRMrgcok3ci0maXo3UiUBM5HqAoTSLSJpejrSLQJ/p5gAppFZE2uBxViEAfiHiAimkXkda6HB0Wgd7RxwM0VgRKsMbl6LQIVE+GB6hMdrTa5eiqCPSa9O5+q1RpqoGF0lwmDZ5tbYj7oqMX9HIYgs/Mleb68IobDkdhakVHz0lzGIoTo1ya7EsdNx2O0qkXHT0lHLwhiNGDadJkNrVUOhxFaBQd1XTdkW4IWshmsjTZn8fcdTjKF7eQCR6SErwh+EyhuBSO8oh7DkdF4hYyQVVXHSV79sp3/3wP0ChxC5mgkpAH6YTsaI4HaLIMZLlmAc7LSNr91+1TLgNd9gCFuC0jzfAgLZSBTHE9zGMZyRTXl8lAprjek5cyUhJxPbnLtfNpJyR/GqSQPQ5HmXI2TiKud90QtJHBVHE23xPXo3wRDcUZG7whaCZX/GGEGMBBh6NB8hYy0Lje+eyS39hHPEAj5C1kgHH993NUdmT6GMt4GcgW18/ISKa4Pk0GssX16zJShQdongzUxhAHUAoPZKTtHkdLZCBTXE/jmYxkiusrZSBTXO/NWxnJFNfXykCmuB6Rs7Etrm+RgZqIOoDyaZGRNnoc7ZCBGsl2AA0jJiOt9zjaLwOZ4voYeQtpi+snZSBTXC+VgWxx/aIM9Edc795frn8/9SwWJzN4z5XgDYXkf15J8KpzXA/KEHyS00Im9VwL3lGYJ7KjOnoGbyhOG7PF2SxPXE9PYgv5K64HZwhipMprc1Ncz0piC9kR14M0BK1kUSrOmuJ6jpyNO+J6sIagmTwmiLP9qaEqeEeD5WycoJqUoA1BI8PkdWeUakemHclxebbqO9lgE11gslI3AAAAAElFTkSuQmCC"
-                  />
-                  <image
-                    x="72px"
-                    y="8px"
-                    width="55px"
-                    height="99px"
-                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAABjCAQAAACVzVAsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSHdijtSAAADeklEQVRo3r3aT2wMcRTA8e9uV5puS21FRVCUttIDKQ4ICYL4HwcHiZSIkLoo0oiEgzgRN5G44MKBiIiTPwcihKJtaKQRNrRW/UnRP9udtdvu/hwEF+37zczLvDm+3+azb2Z35s2bCbGBSZRRQhGFQIohftDLFxJ08hPlCGFGzBk6ecVznvGYpBZoLLZhHnKMOUFxf7Z2mpgUHGcwZLnM/OC439ttFgbJGQxXmREkZ0hzlDHBcQbDS+YFyRkyHCQUHGcw3GBskJzhNbOC5Aw9LA6SMzisCZIzZNkcJGfIsnFkLMR74rxjkCRJIkQpJUYlVT5OxWnW8cDth8aznpM0e6qwj1qv37WCI3S4Brso97x3CLGWhy7B+0S8gwAraHMFnvbHQZhGBl2Aq/2CUE2LNdfNeP9gIReswfP+OYDD1uAyHXAXOSuujbAOWG9Z304dDvZbcfF//UyBL+4pMRaJq8pI0KZTX4T7FvV12PcyUkzmmwW4VouDrRbcdT0Obopclol6XCUZEWzQrO+cyN3V5GYyLHBDlGiCl8X6NqF1PgOLc/8KzerCJITqnmhWl+eKsKKOMXoc3BHyhVRrco/JCStqNTmHFmHFLE0O2oX8dF3urZCfosvFhfwEXa5byMd0OUfIR3W5QSEf0eVSQr5ElysW8kldThrl5HS5IiGf0uWmCvleXU4aU33X5aqE/Eddbq6QT2hyURYIK95ockvE0UaHJrdKyKfFK4aLCPFB6MQeaXZiS5kmrFBt/PaIK+6pWVSQFXZlhqhedU3i44t74sXXOmaQFm9IduvtymsiliGmhW2yuDeX7h+so5yvFtxKHayAuxaY1F1bxykLzLBDB9tnhcX9TqV/x3bLEeM2DazeEmvWmIc1WVGGvMVEUAg3s+izfrEaF08TumyfWf4/CjiEY43l/I29V9NuTRkMJ7xCYba4ftZ1y9vguYbjvHVJGd5Q5o6ZwlbO8NI1ZDD0jNRPR+glTpx+HAYIM45iyqhkto9xoMPGkWcQXr79aJsz+sUmUEyX62e5tKf1sG7q5AOrhb0Qu2hF7hJRu5+tfyrFXvt/iV+smRp7zB83QKPbtt8rleeil/civFFXvL7V4JZyOOfuaHnnmmmg1Dtlyznc5gAV/iBg1P42w2s6aOUJrWT8UwAhllNOjLF/r299JOnlEwk+k9dB/sUvbJv5SreK+msAAAAASUVORK5CYII="
-                  />
-                  <image
-                    x="56px"
-                    y="41px"
-                    width="32px"
-                    height="32px"
-                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSHdijtSAAAAk0lEQVRIx6XVSw6AIAxF0Yfrpmy9DoyiUvplfg+aAAX01UEorA4G54krTxMzTxHfPEyseYiQczexz12EnpuEnauEL98S/lwkYvlCxPMPkcsfIp8zGHSgRc74shoAUHr/cTs5Yrw/JU6M/9/ECPEs+ontbfAR6n20CfNFoFquE+5XkWq5TIQnA9VyoDzaJlGcz0Z+AiRx3ogz08JxAAAAAElFTkSuQmCC"
-                  />
-                </svg>
-              </div>
-              <p class="logo__text">real estate</p>
-            </div>
-            <button class="mob-menu__button">
-              <svg
-                class="icon-menu__button"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="82px"
-                height="41px"
-              >
-                <image
-                  x="0px"
-                  y="0px"
-                  width="82px"
-                  height="41px"
-                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAApCAQAAAAMwLYSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBERAiLl8hCAAAAAU0lEQVRYw+3W0QkAIRBDQT3sv2X9vwZMcF4Fw8JC5t4jvu82ABLy1yz4m45LQkKmBQmZFuRTyDUKFkbFJSGfQlrmkGlBQqYFCZlWBdIyh0yrAnkAnuQGTrW/ckAAAAAASUVORK5CYII="
-                />
-              </svg>
-            </button>
-            <div class="icon__phone">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="71px"
-                height="71px"
-              >
-                <image
-                  x="0px"
-                  y="0px"
-                  width="71px"
-                  height="71px"
-                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABHCAQAAAD/uZKUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoQMjb2rR84AAAE2ElEQVRo3sWaa2hbZRjHf0nb9N6mabTNarula93sRRrHlCHFrrIhgqKDThHHdCCbyD6IIjJU/DCqKChOKMI+6UBBEJXJxG2IrrOrMuuYprXrxdquJk3v2ltu5/ghVpPunJNzci7+n2/J+yY/nvc9z/s8z3tATlU8QhdDrDDC02RjwwJlS3zm5jZ8NOPFSy1Qy36CfGo1TgEuytiEj7tow5n0TRsCwwwSsQIpoWLaOE43C0SJISCm2BTvcKtV3mnmIXzcQiUVOCTHuelggHHWzAYqoJ33md7gDSnr4WHz/dPKZypQEnYGL3YzYbJ4gdaUbaskF2VcZslMoCFiqr0jEuIoN5mJs6IBRkSkj0fJMQvGjqBxRhMP4iXLHJws9uOUjM3yMyop4AdWzMHZwibKNc0ppI5pRlk1AydOHds0znLQxDD9ZuDM0cjdiJpObDulRLhOwHicME6acWtMIGy4CdGDaCyOHbjCGeKaZ5ZQYbRvEji/06v5cYdJBs3BidDP9xqfkyinOW/0UvFPOBOI0qThcV/kK97Db7x3ErLh4UsNB0U3d2gKnRnoJSZVwlxkj9kw0MIpVTA/85jZKAk9ztINOXKqxQnyBHnmISSfzDYq2EyuwugAXXzOrDXeKWQvAwq+meBtqs1FSM58l+nmW5Zlx05ziQlzcVLTKBsz1LJVZqyLUb62EkcgRBk7KJAcm02MQUIZnG8Z4kCcJVxsl8mGnZTwi1VbOSEbrQzJbudZDpgZAqVS8GWy2EaJ5Ph8NjPBkJU4Ycaoll0wD7n0E7IOR2QRES/VMhliJYVcYdn49ALZeilAnHaZCJ2LixDDhK3DiRAkh0bJ88mGiyoW+NX4R16+mvyLAbxsken3eHATYoKoVTiwwjzV1Ml866EaP8EMsuwMcQSmEGmUSVqz8FDDiLGnmHLpHyWGj1qZFlM2dbQT5poZm1pO9fgVk7IZjuBW8Tt2HOTh0N89u5ffFHAE5nlNZsMnawcf8xNn6dDvoSMEFZPWeU7KpiUJHeIyYURijPIm9XqBDjKvCLTGB+ykSHKumwMpVUqUj2iQGatSLp5kThEowiD7JOceY3HD7ovTzwN6PfQys4pAApO8viGOl9Al6VeBcU7i3fgXWnp8FyjkToU2pY1ifFQhMMsqYGcXL3JQcllslNJALQEmMw+kHjpZTVMWCoxyGIAWzhNPU7f5uUfPglXRmWZTiwjM8R3v0kc0bU0bZ4o3VIQJBXWyoKJ4TlfR/meLfMj9eoCeSushbSbgp4Mi7Jm1q8cYYZe+yJEiG+XsoZgLmeGscpU1Gig17IbURj4NNOv5id34VWxWLabrcjOPek4bC6TnqiPGHNfIp4Z8g5YsovfmJcAX5LCVIgNuAWPGtIYd+LikOsrI2wxvGXEvFSfIIFAj0/lQqwleNcI7Cdk5xgARHaHQ8PcYWjhHJMNlm+F5o3EcbOcwfWnOcWm7SIvROAndxyeqXhNIXarjZvaNnqGfNQ3L9qf+ZFVJBdzMs4oFUbLF6GEnaEtOtSjKMlcZYw4nzrQHbZgTfGPGVe+N2sc5QoQVvXMdjxUo67qdUwoJW5yz6wPNWqxUTeGnlz9wUC7x/IzxinnNTyXt5gS9BFj71zNhxjn6f6Csq4rn6GUFAZEwP3Io+XWdvwFLIvUWU/u3lwAAAABJRU5ErkJggg=="
-                />
-              </svg>
-            </div>
-          </div>
-        </header>
-        <div class="flaq__content">
-          <h1 class="faq__title">faq</h1>
-          <div class="wrap-flaf__list">
-            <ul class="flaq__list list">
-              <li class="flaq__item">
-                <a href="" class="flaq__link link"
-                  >What is your process for selling?</a
-                >
-              </li>
-              <li class="flaq__item">
-                <a href="" class="flaq__link link"
-                  >What is your process for buying?</a
-                >
-              </li>
-              <li class="flaq__item">
-                <a href="" class="flaq__link link"
-                  >Do you offer help with mortgages?</a
-                >
-              </li>
-              <li class="flaq__item">
-                <a href="" class="flaq__link link"
-                  >Do you offer home insprection service?</a
-                >
-              </li>
-              <li class="flaq__item">
-                <a href="" class="flaq__link link"
-                  >Do you provider service outside of Toronto?</a
-                >
-              </li>
-              <li class="flaq__item">
-                <a href="" class="flaq__link link"
-                  >How will you market my property?</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <ul class="page__links">
-          <li class="page__item">
-            <a href="" class="page__link link">About us</a>
-          </li>
-          <li class="page__item">
-            <a href="" class="page__link link">Contacts</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </div>-->
-  <div class="swiper__slide">
-    <section class="page__section" data-selling>
-      <button class="close-page__button" data-selling-close type="button">
-        <svg
-          class="close-page__icon"
-          data-selling-close
-          width="18"
-          height="18"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M15 4.108 13.892 3 9.5 7.392 5.108 3 4 4.108 8.392 8.5 4 12.892 5.108 14 9.5 9.608 13.892 14 15 12.892 10.608 8.5 15 4.108Z"
-          />
-        </svg>
-      </button>
-      <div class="page__container">
-        <header class="page__header">
-          <div class="page-header__container">
-            <div class="logo__content-mob">
-              <div class="logo-page__icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  width="127px"
-                  height="107px"
-                >
-                  <image
-                    x="0px"
-                    y="0px"
-                    width="72px"
-                    height="105px"
-                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABpCAQAAAAzFK1fAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSCqjQvEAAADoklEQVRo3r2bXWjNcRyHn7MdYzZzxpm9NG9NFi2Ut8TS8pKWFEq4ciEXlAtu3ChcUFy4UlyMkveXG6RIkveXMIYx0WjeZl5mzDZn57gwGoXP2fp/fv+L3XxPe3p21q99nzNYwSWqecM3Ev98rmI6o7n0H5Sfz0wX0iIR6IILKI87IlKZC2mKCHTWBRTiqYg0xYW0XAQ65QJK57WINDFYkNSOrzHCTJdeUcA+j6MIH0RH4xyGoIWI+JbN44DHUS7NkqE4ox2G4AsFjBdeEyKHQx5HQ/97xf542ilxGIKPDGeU5Cibox5HJcRFR8UeIDgm/vLvdgFNEoG+UeRCOici7XQBzZIdDXUh3RKRdriAFohArQz0AKVQIyJtczlaKgJ9pcADlEadiLTV5WiVCNRMrgcok3ci0maXo3UiUBM5HqAoTSLSJpejrSLQJ/p5gAppFZE2uBxViEAfiHiAimkXkda6HB0Wgd7RxwM0VgRKsMbl6LQIVE+GB6hMdrTa5eiqCPSa9O5+q1RpqoGF0lwmDZ5tbYj7oqMX9HIYgs/Mleb68IobDkdhakVHz0lzGIoTo1ya7EsdNx2O0qkXHT0lHLwhiNGDadJkNrVUOhxFaBQd1XTdkW4IWshmsjTZn8fcdTjKF7eQCR6SErwh+EyhuBSO8oh7DkdF4hYyQVVXHSV79sp3/3wP0ChxC5mgkpAH6YTsaI4HaLIMZLlmAc7LSNr91+1TLgNd9gCFuC0jzfAgLZSBTHE9zGMZyRTXl8lAprjek5cyUhJxPbnLtfNpJyR/GqSQPQ5HmXI2TiKud90QtJHBVHE23xPXo3wRDcUZG7whaCZX/GGEGMBBh6NB8hYy0Lje+eyS39hHPEAj5C1kgHH993NUdmT6GMt4GcgW18/ISKa4Pk0GssX16zJShQdongzUxhAHUAoPZKTtHkdLZCBTXE/jmYxkiusrZSBTXO/NWxnJFNfXykCmuB6Rs7Etrm+RgZqIOoDyaZGRNnoc7ZCBGsl2AA0jJiOt9zjaLwOZ4voYeQtpi+snZSBTXC+VgWxx/aIM9Edc795frn8/9SwWJzN4z5XgDYXkf15J8KpzXA/KEHyS00Im9VwL3lGYJ7KjOnoGbyhOG7PF2SxPXE9PYgv5K64HZwhipMprc1Ncz0piC9kR14M0BK1kUSrOmuJ6jpyNO+J6sIagmTwmiLP9qaEqeEeD5WycoJqUoA1BI8PkdWeUakemHclxebbqO9lgE11gslI3AAAAAElFTkSuQmCC"
-                  />
-                  <image
-                    x="72px"
-                    y="8px"
-                    width="55px"
-                    height="99px"
-                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAABjCAQAAACVzVAsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSHdijtSAAADeklEQVRo3r3aT2wMcRTA8e9uV5puS21FRVCUttIDKQ4ICYL4HwcHiZSIkLoo0oiEgzgRN5G44MKBiIiTPwcihKJtaKQRNrRW/UnRP9udtdvu/hwEF+37zczLvDm+3+azb2Z35s2bCbGBSZRRQhGFQIohftDLFxJ08hPlCGFGzBk6ecVznvGYpBZoLLZhHnKMOUFxf7Z2mpgUHGcwZLnM/OC439ttFgbJGQxXmREkZ0hzlDHBcQbDS+YFyRkyHCQUHGcw3GBskJzhNbOC5Aw9LA6SMzisCZIzZNkcJGfIsnFkLMR74rxjkCRJIkQpJUYlVT5OxWnW8cDth8aznpM0e6qwj1qv37WCI3S4Brso97x3CLGWhy7B+0S8gwAraHMFnvbHQZhGBl2Aq/2CUE2LNdfNeP9gIReswfP+OYDD1uAyHXAXOSuujbAOWG9Z304dDvZbcfF//UyBL+4pMRaJq8pI0KZTX4T7FvV12PcyUkzmmwW4VouDrRbcdT0Obopclol6XCUZEWzQrO+cyN3V5GYyLHBDlGiCl8X6NqF1PgOLc/8KzerCJITqnmhWl+eKsKKOMXoc3BHyhVRrco/JCStqNTmHFmHFLE0O2oX8dF3urZCfosvFhfwEXa5byMd0OUfIR3W5QSEf0eVSQr5ElysW8kldThrl5HS5IiGf0uWmCvleXU4aU33X5aqE/Eddbq6QT2hyURYIK95ockvE0UaHJrdKyKfFK4aLCPFB6MQeaXZiS5kmrFBt/PaIK+6pWVSQFXZlhqhedU3i44t74sXXOmaQFm9IduvtymsiliGmhW2yuDeX7h+so5yvFtxKHayAuxaY1F1bxykLzLBDB9tnhcX9TqV/x3bLEeM2DazeEmvWmIc1WVGGvMVEUAg3s+izfrEaF08TumyfWf4/CjiEY43l/I29V9NuTRkMJ7xCYba4ftZ1y9vguYbjvHVJGd5Q5o6ZwlbO8NI1ZDD0jNRPR+glTpx+HAYIM45iyqhkto9xoMPGkWcQXr79aJsz+sUmUEyX62e5tKf1sG7q5AOrhb0Qu2hF7hJRu5+tfyrFXvt/iV+smRp7zB83QKPbtt8rleeil/civFFXvL7V4JZyOOfuaHnnmmmg1Dtlyznc5gAV/iBg1P42w2s6aOUJrWT8UwAhllNOjLF/r299JOnlEwk+k9dB/sUvbJv5SreK+msAAAAASUVORK5CYII="
-                  />
-                  <image
-                    x="56px"
-                    y="41px"
-                    width="32px"
-                    height="32px"
-                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSHdijtSAAAAk0lEQVRIx6XVSw6AIAxF0Yfrpmy9DoyiUvplfg+aAAX01UEorA4G54krTxMzTxHfPEyseYiQczexz12EnpuEnauEL98S/lwkYvlCxPMPkcsfIp8zGHSgRc74shoAUHr/cTs5Yrw/JU6M/9/ECPEs+ontbfAR6n20CfNFoFquE+5XkWq5TIQnA9VyoDzaJlGcz0Z+AiRx3ogz08JxAAAAAElFTkSuQmCC"
-                  />
-                </svg>
-              </div>
-              <p class="logo__text">real estate</p>
-            </div>
-            <button class="mob-menu__button">
-              <svg
-                class="icon-menu__button"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="82px"
-                height="41px"
-              >
-                <image
-                  x="0px"
-                  y="0px"
-                  width="82px"
-                  height="41px"
-                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAApCAQAAAAMwLYSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBERAiLl8hCAAAAAU0lEQVRYw+3W0QkAIRBDQT3sv2X9vwZMcF4Fw8JC5t4jvu82ABLy1yz4m45LQkKmBQmZFuRTyDUKFkbFJSGfQlrmkGlBQqYFCZlWBdIyh0yrAnkAnuQGTrW/ckAAAAAASUVORK5CYII="
-                />
-              </svg>
-            </button>
-            <div class="icon__phone">
-              <svg
-                class="icon__phone"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="71px"
-                height="71px"
-              >
-                <image
-                  x="0px"
-                  y="0px"
-                  width="71px"
-                  height="71px"
-                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABHCAQAAAD/uZKUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoQMjb2rR84AAAE2ElEQVRo3sWaa2hbZRjHf0nb9N6mabTNarula93sRRrHlCHFrrIhgqKDThHHdCCbyD6IIjJU/DCqKChOKMI+6UBBEJXJxG2IrrOrMuuYprXrxdquJk3v2ltu5/ghVpPunJNzci7+n2/J+yY/nvc9z/s8z3tATlU8QhdDrDDC02RjwwJlS3zm5jZ8NOPFSy1Qy36CfGo1TgEuytiEj7tow5n0TRsCwwwSsQIpoWLaOE43C0SJISCm2BTvcKtV3mnmIXzcQiUVOCTHuelggHHWzAYqoJ33md7gDSnr4WHz/dPKZypQEnYGL3YzYbJ4gdaUbaskF2VcZslMoCFiqr0jEuIoN5mJs6IBRkSkj0fJMQvGjqBxRhMP4iXLHJws9uOUjM3yMyop4AdWzMHZwibKNc0ppI5pRlk1AydOHds0znLQxDD9ZuDM0cjdiJpObDulRLhOwHicME6acWtMIGy4CdGDaCyOHbjCGeKaZ5ZQYbRvEji/06v5cYdJBs3BidDP9xqfkyinOW/0UvFPOBOI0qThcV/kK97Db7x3ErLh4UsNB0U3d2gKnRnoJSZVwlxkj9kw0MIpVTA/85jZKAk9ztINOXKqxQnyBHnmISSfzDYq2EyuwugAXXzOrDXeKWQvAwq+meBtqs1FSM58l+nmW5Zlx05ziQlzcVLTKBsz1LJVZqyLUb62EkcgRBk7KJAcm02MQUIZnG8Z4kCcJVxsl8mGnZTwi1VbOSEbrQzJbudZDpgZAqVS8GWy2EaJ5Ph8NjPBkJU4Ycaoll0wD7n0E7IOR2QRES/VMhliJYVcYdn49ALZeilAnHaZCJ2LixDDhK3DiRAkh0bJ88mGiyoW+NX4R16+mvyLAbxsken3eHATYoKoVTiwwjzV1Ml866EaP8EMsuwMcQSmEGmUSVqz8FDDiLGnmHLpHyWGj1qZFlM2dbQT5poZm1pO9fgVk7IZjuBW8Tt2HOTh0N89u5ffFHAE5nlNZsMnawcf8xNn6dDvoSMEFZPWeU7KpiUJHeIyYURijPIm9XqBDjKvCLTGB+ykSHKumwMpVUqUj2iQGatSLp5kThEowiD7JOceY3HD7ovTzwN6PfQys4pAApO8viGOl9Al6VeBcU7i3fgXWnp8FyjkToU2pY1ifFQhMMsqYGcXL3JQcllslNJALQEmMw+kHjpZTVMWCoxyGIAWzhNPU7f5uUfPglXRmWZTiwjM8R3v0kc0bU0bZ4o3VIQJBXWyoKJ4TlfR/meLfMj9eoCeSushbSbgp4Mi7Jm1q8cYYZe+yJEiG+XsoZgLmeGscpU1Gig17IbURj4NNOv5id34VWxWLabrcjOPek4bC6TnqiPGHNfIp4Z8g5YsovfmJcAX5LCVIgNuAWPGtIYd+LikOsrI2wxvGXEvFSfIIFAj0/lQqwleNcI7Cdk5xgARHaHQ8PcYWjhHJMNlm+F5o3EcbOcwfWnOcWm7SIvROAndxyeqXhNIXarjZvaNnqGfNQ3L9qf+ZFVJBdzMs4oFUbLF6GEnaEtOtSjKMlcZYw4nzrQHbZgTfGPGVe+N2sc5QoQVvXMdjxUo67qdUwoJW5yz6wPNWqxUTeGnlz9wUC7x/IzxinnNTyXt5gS9BFj71zNhxjn6f6Csq4rn6GUFAZEwP3Io+XWdvwFLIvUWU/u3lwAAAABJRU5ErkJggg=="
-                />
-              </svg>
-            </div>
-          </div>
-        </header>
-        <div class="write-us__contant">
-          <h1 class="write-us__title">Write Us</h1>
-          <forma class="write-us__forma">
-            <div class="forma__container">
-              <div class="write-us__wrap-input">
-                <input
-                  type="text"
-                  name="write-us__name"
-                  class="write-us__input"
-                  placeholder="Name"
-                />
-              </div>
-              <div class="write-us__wrap-input">
-                <input
-                  type="email"
-                  name="write-us__email"
-                  class="write-us__input"
-                  placeholder=" E-mail"
-                />
-              </div>
-              <div class="write-us__wrap-input">
-                <input
-                  type="tel"
-                  name="write-us__tel"
-                  class="write-us__input"
-                  placeholder=" Phone"
-                />
-              </div>
-              <div class="write-us__wrap-input">
-                <select
-                  id="select__region"
-                  name="select__region"
-                  class="select__region"
-                >
-                  <option value="xs" class="write-us__input radio">
-                    Select preffered Region
-                  </option>
-                  <option value="s" class="write-us__input">Winnipeg</option>
-                  <option value="m" class="write-us__input">Montreal</option>
-                  <option value="l" class="write-us__input">Ottawa</option>
-                </select>
-              </div>
-            </div>
-            <div class="forma__radio">
-              <div class="forma__wrap-radio">
-                <label class="label__radio">
-                  <input
-                    type="radio"
-                    name="house"
-                    class="input__radio"
-                    checked
-                  />
-                  House
-                </label>
-              </div>
-              <div class="forma__wrap-radio">
-                <label class="label__radio">
-                  <input type="radio" name="apartament" class="input__radio" />
-                  Apartament
-                </label>
-              </div>
-            </div>
-            <button type="submit" class="forma__button">send</button>
-          </forma>
-        </div>
-        <ul class="page__links">
-          <li class="page__item">
-            <a href="" class="page__link link">About us</a>
-          </li>
-          <li class="page__item">
-            <a href="" class="page__link link">Contacts</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </div>
-  <div class="swiper__slide"></div>
 
-  <div class="swiper-pagination">
-    <ul class="pagination__list">
-      <li class="pagination__item">
-        <p class="pagination__number">1</p>
-      </li>
-      <li class="pagination__item">
-        <p class="pagination__number">2</p>
-      </li>
-      <li class="pagination__item">
-        <p class="pagination__number">3</p>
-      </li>
-      <li class="pagination__item">
-        <p class="pagination__number">4</p>
-      </li>
-    </ul>
+<div class="swiper my__swiper">
+  <div class="swiper__wrapper">
+    <!----  <div class="swiper__slide">
+      <section class="page__section" loading="lazy" data-selling>
+        <button class="close-page__button" data-selling-close type="button">
+          <svg
+            class="close-page__icon"
+            data-selling-close
+            width="18"
+            height="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 4.108 13.892 3 9.5 7.392 5.108 3 4 4.108 8.392 8.5 4 12.892 5.108 14 9.5 9.608 13.892 14 15 12.892 10.608 8.5 15 4.108Z"
+            />
+          </svg>
+        </button>
+        <div class="page__container">
+          <header class="page__header">
+            <div class="page-header__container">
+              <div class="logo__content-mob">
+                <div class="logo-page__icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="127px"
+                    height="107px"
+                  >
+                    <image
+                      x="0px"
+                      y="0px"
+                      width="72px"
+                      height="105px"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABpCAQAAAAzFK1fAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSCqjQvEAAADoklEQVRo3r2bXWjNcRyHn7MdYzZzxpm9NG9NFi2Ut8TS8pKWFEq4ciEXlAtu3ChcUFy4UlyMkveXG6RIkveXMIYx0WjeZl5mzDZn57gwGoXP2fp/fv+L3XxPe3p21q99nzNYwSWqecM3Ev98rmI6o7n0H5Sfz0wX0iIR6IILKI87IlKZC2mKCHTWBRTiqYg0xYW0XAQ65QJK57WINDFYkNSOrzHCTJdeUcA+j6MIH0RH4xyGoIWI+JbN44DHUS7NkqE4ox2G4AsFjBdeEyKHQx5HQ/97xf542ilxGIKPDGeU5Cibox5HJcRFR8UeIDgm/vLvdgFNEoG+UeRCOici7XQBzZIdDXUh3RKRdriAFohArQz0AKVQIyJtczlaKgJ9pcADlEadiLTV5WiVCNRMrgcok3ci0maXo3UiUBM5HqAoTSLSJpejrSLQJ/p5gAppFZE2uBxViEAfiHiAimkXkda6HB0Wgd7RxwM0VgRKsMbl6LQIVE+GB6hMdrTa5eiqCPSa9O5+q1RpqoGF0lwmDZ5tbYj7oqMX9HIYgs/Mleb68IobDkdhakVHz0lzGIoTo1ya7EsdNx2O0qkXHT0lHLwhiNGDadJkNrVUOhxFaBQd1XTdkW4IWshmsjTZn8fcdTjKF7eQCR6SErwh+EyhuBSO8oh7DkdF4hYyQVVXHSV79sp3/3wP0ChxC5mgkpAH6YTsaI4HaLIMZLlmAc7LSNr91+1TLgNd9gCFuC0jzfAgLZSBTHE9zGMZyRTXl8lAprjek5cyUhJxPbnLtfNpJyR/GqSQPQ5HmXI2TiKud90QtJHBVHE23xPXo3wRDcUZG7whaCZX/GGEGMBBh6NB8hYy0Lje+eyS39hHPEAj5C1kgHH993NUdmT6GMt4GcgW18/ISKa4Pk0GssX16zJShQdongzUxhAHUAoPZKTtHkdLZCBTXE/jmYxkiusrZSBTXO/NWxnJFNfXykCmuB6Rs7Etrm+RgZqIOoDyaZGRNnoc7ZCBGsl2AA0jJiOt9zjaLwOZ4voYeQtpi+snZSBTXC+VgWxx/aIM9Edc795frn8/9SwWJzN4z5XgDYXkf15J8KpzXA/KEHyS00Im9VwL3lGYJ7KjOnoGbyhOG7PF2SxPXE9PYgv5K64HZwhipMprc1Ncz0piC9kR14M0BK1kUSrOmuJ6jpyNO+J6sIagmTwmiLP9qaEqeEeD5WycoJqUoA1BI8PkdWeUakemHclxebbqO9lgE11gslI3AAAAAElFTkSuQmCC"
+                    />
+                    <image
+                      x="72px"
+                      y="8px"
+                      width="55px"
+                      height="99px"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAABjCAQAAACVzVAsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSHdijtSAAADeklEQVRo3r3aT2wMcRTA8e9uV5puS21FRVCUttIDKQ4ICYL4HwcHiZSIkLoo0oiEgzgRN5G44MKBiIiTPwcihKJtaKQRNrRW/UnRP9udtdvu/hwEF+37zczLvDm+3+azb2Z35s2bCbGBSZRRQhGFQIohftDLFxJ08hPlCGFGzBk6ecVznvGYpBZoLLZhHnKMOUFxf7Z2mpgUHGcwZLnM/OC439ttFgbJGQxXmREkZ0hzlDHBcQbDS+YFyRkyHCQUHGcw3GBskJzhNbOC5Aw9LA6SMzisCZIzZNkcJGfIsnFkLMR74rxjkCRJIkQpJUYlVT5OxWnW8cDth8aznpM0e6qwj1qv37WCI3S4Brso97x3CLGWhy7B+0S8gwAraHMFnvbHQZhGBl2Aq/2CUE2LNdfNeP9gIReswfP+OYDD1uAyHXAXOSuujbAOWG9Z304dDvZbcfF//UyBL+4pMRaJq8pI0KZTX4T7FvV12PcyUkzmmwW4VouDrRbcdT0Obopclol6XCUZEWzQrO+cyN3V5GYyLHBDlGiCl8X6NqF1PgOLc/8KzerCJITqnmhWl+eKsKKOMXoc3BHyhVRrco/JCStqNTmHFmHFLE0O2oX8dF3urZCfosvFhfwEXa5byMd0OUfIR3W5QSEf0eVSQr5ElysW8kldThrl5HS5IiGf0uWmCvleXU4aU33X5aqE/Eddbq6QT2hyURYIK95ockvE0UaHJrdKyKfFK4aLCPFB6MQeaXZiS5kmrFBt/PaIK+6pWVSQFXZlhqhedU3i44t74sXXOmaQFm9IduvtymsiliGmhW2yuDeX7h+so5yvFtxKHayAuxaY1F1bxykLzLBDB9tnhcX9TqV/x3bLEeM2DazeEmvWmIc1WVGGvMVEUAg3s+izfrEaF08TumyfWf4/CjiEY43l/I29V9NuTRkMJ7xCYba4ftZ1y9vguYbjvHVJGd5Q5o6ZwlbO8NI1ZDD0jNRPR+glTpx+HAYIM45iyqhkto9xoMPGkWcQXr79aJsz+sUmUEyX62e5tKf1sG7q5AOrhb0Qu2hF7hJRu5+tfyrFXvt/iV+smRp7zB83QKPbtt8rleeil/civFFXvL7V4JZyOOfuaHnnmmmg1Dtlyznc5gAV/iBg1P42w2s6aOUJrWT8UwAhllNOjLF/r299JOnlEwk+k9dB/sUvbJv5SreK+msAAAAASUVORK5CYII="
+                    />
+                    <image
+                      x="56px"
+                      y="41px"
+                      width="32px"
+                      height="32px"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSHdijtSAAAAk0lEQVRIx6XVSw6AIAxF0Yfrpmy9DoyiUvplfg+aAAX01UEorA4G54krTxMzTxHfPEyseYiQczexz12EnpuEnauEL98S/lwkYvlCxPMPkcsfIp8zGHSgRc74shoAUHr/cTs5Yrw/JU6M/9/ECPEs+ontbfAR6n20CfNFoFquE+5XkWq5TIQnA9VyoDzaJlGcz0Z+AiRx3ogz08JxAAAAAElFTkSuQmCC"
+                    />
+                  </svg>
+                </div>
+                <p class="logo__text">real estate</p>
+              </div>
+              <button class="mob-menu__button">
+                <svg
+                  class="icon-menu__button"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="82px"
+                  height="41px"
+                >
+                  <image
+                    x="0px"
+                    y="0px"
+                    width="82px"
+                    height="41px"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAApCAQAAAAMwLYSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBERAiLl8hCAAAAAU0lEQVRYw+3W0QkAIRBDQT3sv2X9vwZMcF4Fw8JC5t4jvu82ABLy1yz4m45LQkKmBQmZFuRTyDUKFkbFJSGfQlrmkGlBQqYFCZlWBdIyh0yrAnkAnuQGTrW/ckAAAAAASUVORK5CYII="
+                  />
+                </svg>
+              </button>
+              <div class="icon__phone">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="71px"
+                  height="71px"
+                >
+                  <image
+                    x="0px"
+                    y="0px"
+                    width="71px"
+                    height="71px"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABHCAQAAAD/uZKUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoQMjb2rR84AAAE2ElEQVRo3sWaa2hbZRjHf0nb9N6mabTNarula93sRRrHlCHFrrIhgqKDThHHdCCbyD6IIjJU/DCqKChOKMI+6UBBEJXJxG2IrrOrMuuYprXrxdquJk3v2ltu5/ghVpPunJNzci7+n2/J+yY/nvc9z/s8z3tATlU8QhdDrDDC02RjwwJlS3zm5jZ8NOPFSy1Qy36CfGo1TgEuytiEj7tow5n0TRsCwwwSsQIpoWLaOE43C0SJISCm2BTvcKtV3mnmIXzcQiUVOCTHuelggHHWzAYqoJ33md7gDSnr4WHz/dPKZypQEnYGL3YzYbJ4gdaUbaskF2VcZslMoCFiqr0jEuIoN5mJs6IBRkSkj0fJMQvGjqBxRhMP4iXLHJws9uOUjM3yMyop4AdWzMHZwibKNc0ppI5pRlk1AydOHds0znLQxDD9ZuDM0cjdiJpObDulRLhOwHicME6acWtMIGy4CdGDaCyOHbjCGeKaZ5ZQYbRvEji/06v5cYdJBs3BidDP9xqfkyinOW/0UvFPOBOI0qThcV/kK97Db7x3ErLh4UsNB0U3d2gKnRnoJSZVwlxkj9kw0MIpVTA/85jZKAk9ztINOXKqxQnyBHnmISSfzDYq2EyuwugAXXzOrDXeKWQvAwq+meBtqs1FSM58l+nmW5Zlx05ziQlzcVLTKBsz1LJVZqyLUb62EkcgRBk7KJAcm02MQUIZnG8Z4kCcJVxsl8mGnZTwi1VbOSEbrQzJbudZDpgZAqVS8GWy2EaJ5Ph8NjPBkJU4Ycaoll0wD7n0E7IOR2QRES/VMhliJYVcYdn49ALZeilAnHaZCJ2LixDDhK3DiRAkh0bJ88mGiyoW+NX4R16+mvyLAbxsken3eHATYoKoVTiwwjzV1Ml866EaP8EMsuwMcQSmEGmUSVqz8FDDiLGnmHLpHyWGj1qZFlM2dbQT5poZm1pO9fgVk7IZjuBW8Tt2HOTh0N89u5ffFHAE5nlNZsMnawcf8xNn6dDvoSMEFZPWeU7KpiUJHeIyYURijPIm9XqBDjKvCLTGB+ykSHKumwMpVUqUj2iQGatSLp5kThEowiD7JOceY3HD7ovTzwN6PfQys4pAApO8viGOl9Al6VeBcU7i3fgXWnp8FyjkToU2pY1ifFQhMMsqYGcXL3JQcllslNJALQEmMw+kHjpZTVMWCoxyGIAWzhNPU7f5uUfPglXRmWZTiwjM8R3v0kc0bU0bZ4o3VIQJBXWyoKJ4TlfR/meLfMj9eoCeSushbSbgp4Mi7Jm1q8cYYZe+yJEiG+XsoZgLmeGscpU1Gig17IbURj4NNOv5id34VWxWLabrcjOPek4bC6TnqiPGHNfIp4Z8g5YsovfmJcAX5LCVIgNuAWPGtIYd+LikOsrI2wxvGXEvFSfIIFAj0/lQqwleNcI7Cdk5xgARHaHQ8PcYWjhHJMNlm+F5o3EcbOcwfWnOcWm7SIvROAndxyeqXhNIXarjZvaNnqGfNQ3L9qf+ZFVJBdzMs4oFUbLF6GEnaEtOtSjKMlcZYw4nzrQHbZgTfGPGVe+N2sc5QoQVvXMdjxUo67qdUwoJW5yz6wPNWqxUTeGnlz9wUC7x/IzxinnNTyXt5gS9BFj71zNhxjn6f6Csq4rn6GUFAZEwP3Io+XWdvwFLIvUWU/u3lwAAAABJRU5ErkJggg=="
+                  />
+                </svg>
+              </div>
+            </div>
+          </header>
+          <div class="selling__contant">
+            <figure class="selling__img">
+              <img src="./images/ceo.jpg" />
+              <figcaption class="figcaption__text">Selling</figcaption>
+            </figure>
+            <p class="selling__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
+              sequi quaerat rerum, illo officia adipisci minima, esse
+              consectetur reiciendis quia quam ipsa consequuntur vel quos
+              doloremque. Quibusdam, asperiores voluptas. Aliquid, sequi quaerat
+              rerum, illo officia adipisci minima, esse consectetur reiciendis
+              quia quam ipsa consequuntur vel quos doloremque.
+            </p>
+          </div>
+          <ul class="page__links">
+            <li class="page__item">
+              <a href="" class="page__link link">About us</a>
+            </li>
+            <li class="page__item">
+              <a href="" class="page__link link">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="swiper__slide">
+      <section class="page__section" loading="lazy" data-faq>
+        <button class="close-page__button" type="button" data-faq-close>
+          <svg
+            class="close-page__icon"
+            data-faq-close
+            width="18"
+            height="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 4.108 13.892 3 9.5 7.392 5.108 3 4 4.108 8.392 8.5 4 12.892 5.108 14 9.5 9.608 13.892 14 15 12.892 10.608 8.5 15 4.108Z"
+            />
+          </svg>
+        </button>
+        <div class="page__container">
+          <header class="page__header">
+            <div class="page-header__container">
+              <div class="logo__content-mob">
+                <div class="logo-page__icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="127px"
+                    height="107px"
+                  >
+                    <image
+                      x="0px"
+                      y="0px"
+                      width="72px"
+                      height="105px"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABpCAQAAAAzFK1fAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSCqjQvEAAADoklEQVRo3r2bXWjNcRyHn7MdYzZzxpm9NG9NFi2Ut8TS8pKWFEq4ciEXlAtu3ChcUFy4UlyMkveXG6RIkveXMIYx0WjeZl5mzDZn57gwGoXP2fp/fv+L3XxPe3p21q99nzNYwSWqecM3Ev98rmI6o7n0H5Sfz0wX0iIR6IILKI87IlKZC2mKCHTWBRTiqYg0xYW0XAQ65QJK57WINDFYkNSOrzHCTJdeUcA+j6MIH0RH4xyGoIWI+JbN44DHUS7NkqE4ox2G4AsFjBdeEyKHQx5HQ/97xf542ilxGIKPDGeU5Cibox5HJcRFR8UeIDgm/vLvdgFNEoG+UeRCOici7XQBzZIdDXUh3RKRdriAFohArQz0AKVQIyJtczlaKgJ9pcADlEadiLTV5WiVCNRMrgcok3ci0maXo3UiUBM5HqAoTSLSJpejrSLQJ/p5gAppFZE2uBxViEAfiHiAimkXkda6HB0Wgd7RxwM0VgRKsMbl6LQIVE+GB6hMdrTa5eiqCPSa9O5+q1RpqoGF0lwmDZ5tbYj7oqMX9HIYgs/Mleb68IobDkdhakVHz0lzGIoTo1ya7EsdNx2O0qkXHT0lHLwhiNGDadJkNrVUOhxFaBQd1XTdkW4IWshmsjTZn8fcdTjKF7eQCR6SErwh+EyhuBSO8oh7DkdF4hYyQVVXHSV79sp3/3wP0ChxC5mgkpAH6YTsaI4HaLIMZLlmAc7LSNr91+1TLgNd9gCFuC0jzfAgLZSBTHE9zGMZyRTXl8lAprjek5cyUhJxPbnLtfNpJyR/GqSQPQ5HmXI2TiKud90QtJHBVHE23xPXo3wRDcUZG7whaCZX/GGEGMBBh6NB8hYy0Lje+eyS39hHPEAj5C1kgHH993NUdmT6GMt4GcgW18/ISKa4Pk0GssX16zJShQdongzUxhAHUAoPZKTtHkdLZCBTXE/jmYxkiusrZSBTXO/NWxnJFNfXykCmuB6Rs7Etrm+RgZqIOoDyaZGRNnoc7ZCBGsl2AA0jJiOt9zjaLwOZ4voYeQtpi+snZSBTXC+VgWxx/aIM9Edc795frn8/9SwWJzN4z5XgDYXkf15J8KpzXA/KEHyS00Im9VwL3lGYJ7KjOnoGbyhOG7PF2SxPXE9PYgv5K64HZwhipMprc1Ncz0piC9kR14M0BK1kUSrOmuJ6jpyNO+J6sIagmTwmiLP9qaEqeEeD5WycoJqUoA1BI8PkdWeUakemHclxebbqO9lgE11gslI3AAAAAElFTkSuQmCC"
+                    />
+                    <image
+                      x="72px"
+                      y="8px"
+                      width="55px"
+                      height="99px"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAABjCAQAAACVzVAsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSHdijtSAAADeklEQVRo3r3aT2wMcRTA8e9uV5puS21FRVCUttIDKQ4ICYL4HwcHiZSIkLoo0oiEgzgRN5G44MKBiIiTPwcihKJtaKQRNrRW/UnRP9udtdvu/hwEF+37zczLvDm+3+azb2Z35s2bCbGBSZRRQhGFQIohftDLFxJ08hPlCGFGzBk6ecVznvGYpBZoLLZhHnKMOUFxf7Z2mpgUHGcwZLnM/OC439ttFgbJGQxXmREkZ0hzlDHBcQbDS+YFyRkyHCQUHGcw3GBskJzhNbOC5Aw9LA6SMzisCZIzZNkcJGfIsnFkLMR74rxjkCRJIkQpJUYlVT5OxWnW8cDth8aznpM0e6qwj1qv37WCI3S4Brso97x3CLGWhy7B+0S8gwAraHMFnvbHQZhGBl2Aq/2CUE2LNdfNeP9gIReswfP+OYDD1uAyHXAXOSuujbAOWG9Z304dDvZbcfF//UyBL+4pMRaJq8pI0KZTX4T7FvV12PcyUkzmmwW4VouDrRbcdT0Obopclol6XCUZEWzQrO+cyN3V5GYyLHBDlGiCl8X6NqF1PgOLc/8KzerCJITqnmhWl+eKsKKOMXoc3BHyhVRrco/JCStqNTmHFmHFLE0O2oX8dF3urZCfosvFhfwEXa5byMd0OUfIR3W5QSEf0eVSQr5ElysW8kldThrl5HS5IiGf0uWmCvleXU4aU33X5aqE/Eddbq6QT2hyURYIK95ockvE0UaHJrdKyKfFK4aLCPFB6MQeaXZiS5kmrFBt/PaIK+6pWVSQFXZlhqhedU3i44t74sXXOmaQFm9IduvtymsiliGmhW2yuDeX7h+so5yvFtxKHayAuxaY1F1bxykLzLBDB9tnhcX9TqV/x3bLEeM2DazeEmvWmIc1WVGGvMVEUAg3s+izfrEaF08TumyfWf4/CjiEY43l/I29V9NuTRkMJ7xCYba4ftZ1y9vguYbjvHVJGd5Q5o6ZwlbO8NI1ZDD0jNRPR+glTpx+HAYIM45iyqhkto9xoMPGkWcQXr79aJsz+sUmUEyX62e5tKf1sG7q5AOrhb0Qu2hF7hJRu5+tfyrFXvt/iV+smRp7zB83QKPbtt8rleeil/civFFXvL7V4JZyOOfuaHnnmmmg1Dtlyznc5gAV/iBg1P42w2s6aOUJrWT8UwAhllNOjLF/r299JOnlEwk+k9dB/sUvbJv5SreK+msAAAAASUVORK5CYII="
+                    />
+                    <image
+                      x="56px"
+                      y="41px"
+                      width="32px"
+                      height="32px"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSHdijtSAAAAk0lEQVRIx6XVSw6AIAxF0Yfrpmy9DoyiUvplfg+aAAX01UEorA4G54krTxMzTxHfPEyseYiQczexz12EnpuEnauEL98S/lwkYvlCxPMPkcsfIp8zGHSgRc74shoAUHr/cTs5Yrw/JU6M/9/ECPEs+ontbfAR6n20CfNFoFquE+5XkWq5TIQnA9VyoDzaJlGcz0Z+AiRx3ogz08JxAAAAAElFTkSuQmCC"
+                    />
+                  </svg>
+                </div>
+                <p class="logo__text">real estate</p>
+              </div>
+              <button class="mob-menu__button">
+                <svg
+                  class="icon-menu__button"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="82px"
+                  height="41px"
+                >
+                  <image
+                    x="0px"
+                    y="0px"
+                    width="82px"
+                    height="41px"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAApCAQAAAAMwLYSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBERAiLl8hCAAAAAU0lEQVRYw+3W0QkAIRBDQT3sv2X9vwZMcF4Fw8JC5t4jvu82ABLy1yz4m45LQkKmBQmZFuRTyDUKFkbFJSGfQlrmkGlBQqYFCZlWBdIyh0yrAnkAnuQGTrW/ckAAAAAASUVORK5CYII="
+                  />
+                </svg>
+              </button>
+              <div class="icon__phone">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="71px"
+                  height="71px"
+                >
+                  <image
+                    x="0px"
+                    y="0px"
+                    width="71px"
+                    height="71px"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABHCAQAAAD/uZKUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoQMjb2rR84AAAE2ElEQVRo3sWaa2hbZRjHf0nb9N6mabTNarula93sRRrHlCHFrrIhgqKDThHHdCCbyD6IIjJU/DCqKChOKMI+6UBBEJXJxG2IrrOrMuuYprXrxdquJk3v2ltu5/ghVpPunJNzci7+n2/J+yY/nvc9z/s8z3tATlU8QhdDrDDC02RjwwJlS3zm5jZ8NOPFSy1Qy36CfGo1TgEuytiEj7tow5n0TRsCwwwSsQIpoWLaOE43C0SJISCm2BTvcKtV3mnmIXzcQiUVOCTHuelggHHWzAYqoJ33md7gDSnr4WHz/dPKZypQEnYGL3YzYbJ4gdaUbaskF2VcZslMoCFiqr0jEuIoN5mJs6IBRkSkj0fJMQvGjqBxRhMP4iXLHJws9uOUjM3yMyop4AdWzMHZwibKNc0ppI5pRlk1AydOHds0znLQxDD9ZuDM0cjdiJpObDulRLhOwHicME6acWtMIGy4CdGDaCyOHbjCGeKaZ5ZQYbRvEji/06v5cYdJBs3BidDP9xqfkyinOW/0UvFPOBOI0qThcV/kK97Db7x3ErLh4UsNB0U3d2gKnRnoJSZVwlxkj9kw0MIpVTA/85jZKAk9ztINOXKqxQnyBHnmISSfzDYq2EyuwugAXXzOrDXeKWQvAwq+meBtqs1FSM58l+nmW5Zlx05ziQlzcVLTKBsz1LJVZqyLUb62EkcgRBk7KJAcm02MQUIZnG8Z4kCcJVxsl8mGnZTwi1VbOSEbrQzJbudZDpgZAqVS8GWy2EaJ5Ph8NjPBkJU4Ycaoll0wD7n0E7IOR2QRES/VMhliJYVcYdn49ALZeilAnHaZCJ2LixDDhK3DiRAkh0bJ88mGiyoW+NX4R16+mvyLAbxsken3eHATYoKoVTiwwjzV1Ml866EaP8EMsuwMcQSmEGmUSVqz8FDDiLGnmHLpHyWGj1qZFlM2dbQT5poZm1pO9fgVk7IZjuBW8Tt2HOTh0N89u5ffFHAE5nlNZsMnawcf8xNn6dDvoSMEFZPWeU7KpiUJHeIyYURijPIm9XqBDjKvCLTGB+ykSHKumwMpVUqUj2iQGatSLp5kThEowiD7JOceY3HD7ovTzwN6PfQys4pAApO8viGOl9Al6VeBcU7i3fgXWnp8FyjkToU2pY1ifFQhMMsqYGcXL3JQcllslNJALQEmMw+kHjpZTVMWCoxyGIAWzhNPU7f5uUfPglXRmWZTiwjM8R3v0kc0bU0bZ4o3VIQJBXWyoKJ4TlfR/meLfMj9eoCeSushbSbgp4Mi7Jm1q8cYYZe+yJEiG+XsoZgLmeGscpU1Gig17IbURj4NNOv5id34VWxWLabrcjOPek4bC6TnqiPGHNfIp4Z8g5YsovfmJcAX5LCVIgNuAWPGtIYd+LikOsrI2wxvGXEvFSfIIFAj0/lQqwleNcI7Cdk5xgARHaHQ8PcYWjhHJMNlm+F5o3EcbOcwfWnOcWm7SIvROAndxyeqXhNIXarjZvaNnqGfNQ3L9qf+ZFVJBdzMs4oFUbLF6GEnaEtOtSjKMlcZYw4nzrQHbZgTfGPGVe+N2sc5QoQVvXMdjxUo67qdUwoJW5yz6wPNWqxUTeGnlz9wUC7x/IzxinnNTyXt5gS9BFj71zNhxjn6f6Csq4rn6GUFAZEwP3Io+XWdvwFLIvUWU/u3lwAAAABJRU5ErkJggg=="
+                  />
+                </svg>
+              </div>
+            </div>
+          </header>
+          <div class="flaq__content">
+            <h1 class="faq__title">faq</h1>
+            <div class="wrap-flaf__list">
+              <ul class="flaq__list list">
+                <li class="flaq__item">
+                  <a href="" class="flaq__link link"
+                    >What is your process for selling?</a
+                  >
+                </li>
+                <li class="flaq__item">
+                  <a href="" class="flaq__link link"
+                    >What is your process for buying?</a
+                  >
+                </li>
+                <li class="flaq__item">
+                  <a href="" class="flaq__link link"
+                    >Do you offer help with mortgages?</a
+                  >
+                </li>
+                <li class="flaq__item">
+                  <a href="" class="flaq__link link"
+                    >Do you offer home insprection service?</a
+                  >
+                </li>
+                <li class="flaq__item">
+                  <a href="" class="flaq__link link"
+                    >Do you provider service outside of Toronto?</a
+                  >
+                </li>
+                <li class="flaq__item">
+                  <a href="" class="flaq__link link"
+                    >How will you market my property?</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul class="page__links">
+            <li class="page__item">
+              <a href="" class="page__link link">About us</a>
+            </li>
+            <li class="page__item">
+              <a href="" class="page__link link">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>-->
+    <div class="swiper__slide">
+      <section class="page__section" loading="lazy" data-selling>
+        <button class="close-page__button" data-selling-close type="button">
+          <svg
+            class="close-page__icon"
+            data-selling-close
+            width="18"
+            height="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 4.108 13.892 3 9.5 7.392 5.108 3 4 4.108 8.392 8.5 4 12.892 5.108 14 9.5 9.608 13.892 14 15 12.892 10.608 8.5 15 4.108Z"
+            />
+          </svg>
+        </button>
+        <div class="page__container">
+          <header class="page__header">
+            <div class="page-header__container">
+              <div class="logo__content-mob">
+                <div class="logo-page__icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="127px"
+                    height="107px"
+                  >
+                    <image
+                      x="0px"
+                      y="0px"
+                      width="72px"
+                      height="105px"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABpCAQAAAAzFK1fAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSCqjQvEAAADoklEQVRo3r2bXWjNcRyHn7MdYzZzxpm9NG9NFi2Ut8TS8pKWFEq4ciEXlAtu3ChcUFy4UlyMkveXG6RIkveXMIYx0WjeZl5mzDZn57gwGoXP2fp/fv+L3XxPe3p21q99nzNYwSWqecM3Ev98rmI6o7n0H5Sfz0wX0iIR6IILKI87IlKZC2mKCHTWBRTiqYg0xYW0XAQ65QJK57WINDFYkNSOrzHCTJdeUcA+j6MIH0RH4xyGoIWI+JbN44DHUS7NkqE4ox2G4AsFjBdeEyKHQx5HQ/97xf542ilxGIKPDGeU5Cibox5HJcRFR8UeIDgm/vLvdgFNEoG+UeRCOici7XQBzZIdDXUh3RKRdriAFohArQz0AKVQIyJtczlaKgJ9pcADlEadiLTV5WiVCNRMrgcok3ci0maXo3UiUBM5HqAoTSLSJpejrSLQJ/p5gAppFZE2uBxViEAfiHiAimkXkda6HB0Wgd7RxwM0VgRKsMbl6LQIVE+GB6hMdrTa5eiqCPSa9O5+q1RpqoGF0lwmDZ5tbYj7oqMX9HIYgs/Mleb68IobDkdhakVHz0lzGIoTo1ya7EsdNx2O0qkXHT0lHLwhiNGDadJkNrVUOhxFaBQd1XTdkW4IWshmsjTZn8fcdTjKF7eQCR6SErwh+EyhuBSO8oh7DkdF4hYyQVVXHSV79sp3/3wP0ChxC5mgkpAH6YTsaI4HaLIMZLlmAc7LSNr91+1TLgNd9gCFuC0jzfAgLZSBTHE9zGMZyRTXl8lAprjek5cyUhJxPbnLtfNpJyR/GqSQPQ5HmXI2TiKud90QtJHBVHE23xPXo3wRDcUZG7whaCZX/GGEGMBBh6NB8hYy0Lje+eyS39hHPEAj5C1kgHH993NUdmT6GMt4GcgW18/ISKa4Pk0GssX16zJShQdongzUxhAHUAoPZKTtHkdLZCBTXE/jmYxkiusrZSBTXO/NWxnJFNfXykCmuB6Rs7Etrm+RgZqIOoDyaZGRNnoc7ZCBGsl2AA0jJiOt9zjaLwOZ4voYeQtpi+snZSBTXC+VgWxx/aIM9Edc795frn8/9SwWJzN4z5XgDYXkf15J8KpzXA/KEHyS00Im9VwL3lGYJ7KjOnoGbyhOG7PF2SxPXE9PYgv5K64HZwhipMprc1Ncz0piC9kR14M0BK1kUSrOmuJ6jpyNO+J6sIagmTwmiLP9qaEqeEeD5WycoJqUoA1BI8PkdWeUakemHclxebbqO9lgE11gslI3AAAAAElFTkSuQmCC"
+                    />
+                    <image
+                      x="72px"
+                      y="8px"
+                      width="55px"
+                      height="99px"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAABjCAQAAACVzVAsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSHdijtSAAADeklEQVRo3r3aT2wMcRTA8e9uV5puS21FRVCUttIDKQ4ICYL4HwcHiZSIkLoo0oiEgzgRN5G44MKBiIiTPwcihKJtaKQRNrRW/UnRP9udtdvu/hwEF+37zczLvDm+3+azb2Z35s2bCbGBSZRRQhGFQIohftDLFxJ08hPlCGFGzBk6ecVznvGYpBZoLLZhHnKMOUFxf7Z2mpgUHGcwZLnM/OC439ttFgbJGQxXmREkZ0hzlDHBcQbDS+YFyRkyHCQUHGcw3GBskJzhNbOC5Aw9LA6SMzisCZIzZNkcJGfIsnFkLMR74rxjkCRJIkQpJUYlVT5OxWnW8cDth8aznpM0e6qwj1qv37WCI3S4Brso97x3CLGWhy7B+0S8gwAraHMFnvbHQZhGBl2Aq/2CUE2LNdfNeP9gIReswfP+OYDD1uAyHXAXOSuujbAOWG9Z304dDvZbcfF//UyBL+4pMRaJq8pI0KZTX4T7FvV12PcyUkzmmwW4VouDrRbcdT0Obopclol6XCUZEWzQrO+cyN3V5GYyLHBDlGiCl8X6NqF1PgOLc/8KzerCJITqnmhWl+eKsKKOMXoc3BHyhVRrco/JCStqNTmHFmHFLE0O2oX8dF3urZCfosvFhfwEXa5byMd0OUfIR3W5QSEf0eVSQr5ElysW8kldThrl5HS5IiGf0uWmCvleXU4aU33X5aqE/Eddbq6QT2hyURYIK95ockvE0UaHJrdKyKfFK4aLCPFB6MQeaXZiS5kmrFBt/PaIK+6pWVSQFXZlhqhedU3i44t74sXXOmaQFm9IduvtymsiliGmhW2yuDeX7h+so5yvFtxKHayAuxaY1F1bxykLzLBDB9tnhcX9TqV/x3bLEeM2DazeEmvWmIc1WVGGvMVEUAg3s+izfrEaF08TumyfWf4/CjiEY43l/I29V9NuTRkMJ7xCYba4ftZ1y9vguYbjvHVJGd5Q5o6ZwlbO8NI1ZDD0jNRPR+glTpx+HAYIM45iyqhkto9xoMPGkWcQXr79aJsz+sUmUEyX62e5tKf1sG7q5AOrhb0Qu2hF7hJRu5+tfyrFXvt/iV+smRp7zB83QKPbtt8rleeil/civFFXvL7V4JZyOOfuaHnnmmmg1Dtlyznc5gAV/iBg1P42w2s6aOUJrWT8UwAhllNOjLF/r299JOnlEwk+k9dB/sUvbJv5SreK+msAAAAASUVORK5CYII="
+                    />
+                    <image
+                      x="56px"
+                      y="41px"
+                      width="32px"
+                      height="32px"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoRKSHdijtSAAAAk0lEQVRIx6XVSw6AIAxF0Yfrpmy9DoyiUvplfg+aAAX01UEorA4G54krTxMzTxHfPEyseYiQczexz12EnpuEnauEL98S/lwkYvlCxPMPkcsfIp8zGHSgRc74shoAUHr/cTs5Yrw/JU6M/9/ECPEs+ontbfAR6n20CfNFoFquE+5XkWq5TIQnA9VyoDzaJlGcz0Z+AiRx3ogz08JxAAAAAElFTkSuQmCC"
+                    />
+                  </svg>
+                </div>
+                <p class="logo__text">real estate</p>
+              </div>
+              <button class="mob-menu__button">
+                <svg
+                  class="icon-menu__button"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="82px"
+                  height="41px"
+                >
+                  <image
+                    x="0px"
+                    y="0px"
+                    width="82px"
+                    height="41px"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAApCAQAAAAMwLYSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBERAiLl8hCAAAAAU0lEQVRYw+3W0QkAIRBDQT3sv2X9vwZMcF4Fw8JC5t4jvu82ABLy1yz4m45LQkKmBQmZFuRTyDUKFkbFJSGfQlrmkGlBQqYFCZlWBdIyh0yrAnkAnuQGTrW/ckAAAAAASUVORK5CYII="
+                  />
+                </svg>
+              </button>
+              <div class="icon__phone">
+                <svg
+                  class="icon__phone"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="71px"
+                  height="71px"
+                >
+                  <image
+                    x="0px"
+                    y="0px"
+                    width="71px"
+                    height="71px"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABHCAQAAAD/uZKUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnCBoQMjb2rR84AAAE2ElEQVRo3sWaa2hbZRjHf0nb9N6mabTNarula93sRRrHlCHFrrIhgqKDThHHdCCbyD6IIjJU/DCqKChOKMI+6UBBEJXJxG2IrrOrMuuYprXrxdquJk3v2ltu5/ghVpPunJNzci7+n2/J+yY/nvc9z/s8z3tATlU8QhdDrDDC02RjwwJlS3zm5jZ8NOPFSy1Qy36CfGo1TgEuytiEj7tow5n0TRsCwwwSsQIpoWLaOE43C0SJISCm2BTvcKtV3mnmIXzcQiUVOCTHuelggHHWzAYqoJ33md7gDSnr4WHz/dPKZypQEnYGL3YzYbJ4gdaUbaskF2VcZslMoCFiqr0jEuIoN5mJs6IBRkSkj0fJMQvGjqBxRhMP4iXLHJws9uOUjM3yMyop4AdWzMHZwibKNc0ppI5pRlk1AydOHds0znLQxDD9ZuDM0cjdiJpObDulRLhOwHicME6acWtMIGy4CdGDaCyOHbjCGeKaZ5ZQYbRvEji/06v5cYdJBs3BidDP9xqfkyinOW/0UvFPOBOI0qThcV/kK97Db7x3ErLh4UsNB0U3d2gKnRnoJSZVwlxkj9kw0MIpVTA/85jZKAk9ztINOXKqxQnyBHnmISSfzDYq2EyuwugAXXzOrDXeKWQvAwq+meBtqs1FSM58l+nmW5Zlx05ziQlzcVLTKBsz1LJVZqyLUb62EkcgRBk7KJAcm02MQUIZnG8Z4kCcJVxsl8mGnZTwi1VbOSEbrQzJbudZDpgZAqVS8GWy2EaJ5Ph8NjPBkJU4Ycaoll0wD7n0E7IOR2QRES/VMhliJYVcYdn49ALZeilAnHaZCJ2LixDDhK3DiRAkh0bJ88mGiyoW+NX4R16+mvyLAbxsken3eHATYoKoVTiwwjzV1Ml866EaP8EMsuwMcQSmEGmUSVqz8FDDiLGnmHLpHyWGj1qZFlM2dbQT5poZm1pO9fgVk7IZjuBW8Tt2HOTh0N89u5ffFHAE5nlNZsMnawcf8xNn6dDvoSMEFZPWeU7KpiUJHeIyYURijPIm9XqBDjKvCLTGB+ykSHKumwMpVUqUj2iQGatSLp5kThEowiD7JOceY3HD7ovTzwN6PfQys4pAApO8viGOl9Al6VeBcU7i3fgXWnp8FyjkToU2pY1ifFQhMMsqYGcXL3JQcllslNJALQEmMw+kHjpZTVMWCoxyGIAWzhNPU7f5uUfPglXRmWZTiwjM8R3v0kc0bU0bZ4o3VIQJBXWyoKJ4TlfR/meLfMj9eoCeSushbSbgp4Mi7Jm1q8cYYZe+yJEiG+XsoZgLmeGscpU1Gig17IbURj4NNOv5id34VWxWLabrcjOPek4bC6TnqiPGHNfIp4Z8g5YsovfmJcAX5LCVIgNuAWPGtIYd+LikOsrI2wxvGXEvFSfIIFAj0/lQqwleNcI7Cdk5xgARHaHQ8PcYWjhHJMNlm+F5o3EcbOcwfWnOcWm7SIvROAndxyeqXhNIXarjZvaNnqGfNQ3L9qf+ZFVJBdzMs4oFUbLF6GEnaEtOtSjKMlcZYw4nzrQHbZgTfGPGVe+N2sc5QoQVvXMdjxUo67qdUwoJW5yz6wPNWqxUTeGnlz9wUC7x/IzxinnNTyXt5gS9BFj71zNhxjn6f6Csq4rn6GUFAZEwP3Io+XWdvwFLIvUWU/u3lwAAAABJRU5ErkJggg=="
+                  />
+                </svg>
+              </div>
+            </div>
+          </header>
+          <div class="write-us__contant">
+            <h1 class="write-us__title">Write Us</h1>
+            <forma class="write-us__forma">
+              <div class="forma__container">
+                <div class="write-us__wrap-input">
+                  <input
+                    type="text"
+                    name="write-us__name"
+                    class="write-us__input"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="write-us__wrap-input">
+                  <input
+                    type="email"
+                    name="write-us__email"
+                    class="write-us__input"
+                    placeholder=" E-mail"
+                  />
+                </div>
+                <div class="write-us__wrap-input">
+                  <input
+                    type="tel"
+                    name="write-us__tel"
+                    class="write-us__input"
+                    placeholder=" Phone"
+                  />
+                </div>
+                <div class="write-us__wrap-input">
+                  <select
+                    id="select__region"
+                    name="select__region"
+                    class="select__region"
+                  >
+                    <option value="xs" class="write-us__input radio">
+                      Select preffered Region
+                    </option>
+                    <option value="s" class="write-us__input">Winnipeg</option>
+                    <option value="m" class="write-us__input">Montreal</option>
+                    <option value="l" class="write-us__input">Ottawa</option>
+                  </select>
+                </div>
+              </div>
+              <div class="forma__radio">
+                <div class="forma__wrap-radio">
+                  <label class="label__radio">
+                    <input
+                      type="radio"
+                      name="house"
+                      class="input__radio"
+                      checked
+                    />
+                    House
+                  </label>
+                </div>
+                <div class="forma__wrap-radio">
+                  <label class="label__radio">
+                    <input
+                      type="radio"
+                      name="apartament"
+                      class="input__radio"
+                    />
+                    Apartament
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="forma__button">send</button>
+            </forma>
+          </div>
+          <ul class="page__links">
+            <li class="page__item page__item-aboutus">
+              <a href="" class="page__link about-us link">About us</a>
+            </li>
+            <li class="page__item page-item-contact">
+              <a href="" class="page__link contacts link">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="swiper__slide"></div>
+
+    <div class="swiper-pagination">
+      <ul class="pagination__list">
+        <li class="pagination__item">
+          <p class="pagination__number">1</p>
+        </li>
+        <li class="pagination__item">
+          <p class="pagination__number">2</p>
+        </li>
+        <li class="pagination__item">
+          <p class="pagination__number">3</p>
+        </li>
+        <li class="pagination__item">
+          <p class="pagination__number">4</p>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
