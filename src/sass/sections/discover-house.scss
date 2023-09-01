@@ -1,0 +1,51 @@
+.page__section > .discover-house {
+  padding: 0px 15px 90px;
+}
+.descover-house__contant {
+  padding: 20px 50px;
+}
+.about__house {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 20px;
+}
+.location__house {
+  font-family: Josefin Sans;
+  font-size: 28px;
+  font-weight: 300;
+}
+.location__house::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+.price__house {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Josefin Sans;
+  text-align: right;
+}
+.house__images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.house__img {
+  width: 100%;
+}
+
+.descover-house__button {
+  float: right;
+  text-transform: uppercase;
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+  margin-top: 20px;
+  border: 1px solid#2e2d2d;
+}

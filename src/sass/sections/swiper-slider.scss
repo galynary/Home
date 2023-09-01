@@ -57,7 +57,7 @@
     height: auto;
     margin: 0 auto;
     background-color: #fff;
-    align-items: center;
+    z-index: 1;
   }
 
   .close-page__button {
@@ -134,29 +134,32 @@
     width: 74px;
     height: 74px;
   }
-
+  .wrap__page-links {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+  }
   .page__links {
+    position: relative;
     height: 120px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
   }
 
   .page__link {
-    font-size: 36px;
+    font-size: 20px;
     color: #000;
     line-height: 1.1;
     text-transform: uppercase;
   }
 
   .page__item-aboutus {
-    margin-left: 10px;
-    transform: rotate(-90deg) translateY(-30%);
+    margin-left: 35px;
+    transform: rotate(-90deg) translate(-10%, -20%);
   }
   .page-item-contact {
-    margin-right: -180px;
-    transform: rotate(-90deg) translateY(-50%);
+    margin-right: -129px;
+    transform: rotate(-90deg) translateY(-55%);
   }
 
   /*-------- swiper-slide-pagination--------*/
