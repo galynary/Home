@@ -13,7 +13,7 @@
       />
     </svg>
   </button>
-  <div class="page__container discover-house">
+  <div class="page__container">
     <header class="page__header">
       <div class="page-header__container">
         <div class="logo__content-mob">
@@ -84,23 +84,82 @@
         </div>
       </div>
     </header>
-    <div class="descover-house__contant">
-      <div class="about__house">
-        <div class="location__house">38, Nameless str.</div>
-        <div class="price__house">2,000,000</div>
-      </div>
-      <div class="house__images">
-        <img src="./images/house-day.jpg" alt="house-day" class="house__img" />
-        <img
-          src="./images/house-light.jpg"
-          alt="house-light"
-          class="house__img"
-        />
-      </div>
-
-      <button type="button" class="descover-house__button">
-        descover house
-      </button>
+    <div class="write-us__contant">
+      <h1 class="write-us__title">Write Us</h1>
+      <forma class="write-us__forma">
+        <div class="forma__container">
+          <div class="write-us__wrap-input">
+            <input
+              type="text"
+              name="write-us__name"
+              class="write-us__input"
+              placeholder="Name"
+            />
+          </div>
+          <div class="write-us__wrap-input">
+            <input
+              type="email"
+              name="write-us__email"
+              class="write-us__input"
+              placeholder=" E-mail"
+            />
+          </div>
+          <div class="write-us__wrap-input">
+            <input
+              type="tel"
+              name="write-us__tel"
+              class="write-us__input"
+              placeholder=" Phone"
+            />
+          </div>
+          <div class="write-us__wrap-input">
+            <select
+              id="select__region"
+              name="select__region"
+              class="select__region"
+            >
+              <option value="xs" class="write-us__input radio">
+                Select preffered Region
+              </option>
+              <option value="s" class="write-us__input">Winnipeg</option>
+              <option value="m" class="write-us__input">Montreal</option>
+              <option value="l" class="write-us__input">Ottawa</option>
+            </select>
+          </div>
+        </div>
+        <div class="forma__radio">
+          <div class="forma__wrap-radio">
+            <label class="label__radio">
+              <input type="radio" name="house" class="input__radio" checked />
+              House
+            </label>
+          </div>
+          <div class="forma__wrap-radio">
+            <label class="label__radio">
+              <input type="radio" name="apartament" class="input__radio" />
+              Apartament
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="forma__button">send</button>
+        <div class="pagination__container writeus-pagination__container">
+          <div class="circle">
+            <span class="number">1</span>
+          </div>
+          <div class="circle">
+            <span class="number">2</span>
+          </div>
+          <div class="circle">
+            <span class="number">3</span>
+          </div>
+          <div class="circle">
+            <span class="number">4</span>
+          </div>
+          <div class="circle">
+            <span class="number">5</span>
+          </div>
+        </div>
+      </forma>
     </div>
     <div class="wrap__page-links">
       <ul class="page__links">

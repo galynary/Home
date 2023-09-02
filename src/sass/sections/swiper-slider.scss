@@ -57,7 +57,7 @@
     height: auto;
     margin: 0 auto;
     background-color: #fff;
-    z-index: 1;
+    z-index: 4;
   }
 
   .close-page__button {
@@ -155,22 +155,40 @@
 
   .page__item-aboutus {
     margin-left: 35px;
-    transform: rotate(-90deg) translate(-10%, -20%);
+    transform: rotate(-90deg) translate(-20%, -20%);
   }
   .page-item-contact {
     margin-right: -129px;
-    transform: rotate(-90deg) translateY(-55%);
+    transform: rotate(-90deg) translate(-10%, -55%);
   }
 
   /*-------- swiper-slide-pagination--------*/
-  .swiper-pagination {
-    bottom: 50px;
-    left: 25%;
-  }
-  .wrap__pagination {
-    position: relative;
-    align-items: center;
+  .pagination__container {
     display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 10px;
+    padding: 30px 0px;
+  }
+  .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: -1;
+    border: 1px solid #000;
+  }
+  .number {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    font-size: 24px;
+    color: #000;
+    z-index: 1;
   }
   .pagination__list {
     flex-direction: row;

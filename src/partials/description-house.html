@@ -13,7 +13,7 @@
       />
     </svg>
   </button>
-  <div class="page__container discover-house">
+  <div class="page__container description-house__container">
     <header class="page__header">
       <div class="page-header__container">
         <div class="logo__content-mob">
@@ -84,22 +84,82 @@
         </div>
       </div>
     </header>
-    <div class="descover-house__contant">
-      <div class="about__house">
-        <div class="location__house">38, Nameless str.</div>
-        <div class="price__house">2,000,000</div>
+    <div class="description-house__contant">
+      <div class="video__container">
+        <video
+          class="video"
+          width="530"
+          poster="./images/description_house.jpg"
+          autoplay
+        >
+          <source src="https://https:///.mp4" type="video/mp4" />
+          <source src="https://https://.ogv" type="video/ogg" />
+          <source src="https://https://.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="poster-overlay"></div>
+        <button class="play__button" onclick="playVideo()">
+          <svg
+            class="play-button__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="66px"
+            height="66px"
+          >
+            <image
+              x="0px"
+              y="0px"
+              width="66px"
+              height="66px"
+              xlink:href="data:img/png;base64,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"
+            />
+          </svg>
+        </button>
       </div>
-      <div class="house__images">
-        <img src="./images/house-day.jpg" alt="house-day" class="house__img" />
-        <img
-          src="./images/house-light.jpg"
-          alt="house-light"
-          class="house__img"
-        />
-      </div>
-
-      <button type="button" class="descover-house__button">
-        descover house
+      <dl class="description-house__list">
+        <div class="description-house__item">
+          <dt>Floors:</dt>
+          <dd>2</dd>
+        </div>
+        <div class="description-house__item">
+          <dt>Bathrooms:</dt>
+          <dd>2</dd>
+        </div>
+        <div class="description-house__item">
+          <dt>Bedrooms:</dt>
+          <dd>3</dd>
+        </div>
+        <div class="description-house__item">
+          <dt>Size:</dt>
+          <dd>4014 sq.ft</dd>
+        </div>
+        <div class="description-house__item">
+          <dt>Year Built:</dt>
+          <dd>2019</dd>
+        </div>
+        <div class="description-house__item">
+          <dt>Pool:</dt>
+          <dd>Yes</dd>
+        </div>
+        <div class="description-house__item">
+          <dt>Terrace:</dt>
+          <dd>Yes</dd>
+        </div>
+        <div class="description-house__item">
+          <dt>Parking:</dt>
+          <dd>Underground(2 spaces)</dd>
+        </div>
+        <div class="description-house__item">
+          <dt>Developer:</dt>
+          <dd>DM-4 Group</dd>
+        </div>
+        <div class="description-house__item">
+          <dt>ADRESS:</dt>
+          <dd>7th Street etc.</dd>
+        </div>
+      </dl>
+      <button type="button" class="description-house__button">
+        open gallery
       </button>
     </div>
     <div class="wrap__page-links">
