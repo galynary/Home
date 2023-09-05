@@ -1,0 +1,126 @@
+.page__about-us {
+  display: none;
+  width: 100%;
+  height: 100%;
+  transform: translateY(92%);
+  transition: transform 0.8s;
+  position: absolute;
+
+  /* position: absolute;
+  transform: translateY(20%);
+  position: relative;
+  transition: transform 0.5s ease;*/
+}
+
+.wrap__about-us-container {
+  flex-direction: column;
+  max-width: 850px;
+  gap: 50px;
+  padding-top: 80px;
+  display: flex;
+  padding-left: 200px;
+}
+.page-about-us__container {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  right: 20px;
+}
+
+/*.button__about-us:focus + .wrap__button-about-us {
+  top: 20px;
+  bottom: 0px;
+}*/
+
+.wrap__button-about-us {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  outline: none;
+}
+
+.icon__about-us {
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+
+.button__about-us {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+  display: flex;
+  position: relative;
+}
+
+.js-open-about-us:focus + .icon__about-us {
+  display: block;
+  /* transform: rotate(180deg);*/
+}
+
+.js-open-about-us {
+  font-size: 24px;
+  text-align: right;
+  background-color: #000;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 1.2;
+
+  color: #fff;
+  z-index: 1;
+  border: none;
+  outline: none;
+}
+.js-open-about-us:visited,
+.js-open-about-us:focus::after {
+  content: '';
+  width: 800px;
+  margin-bottom: -5px;
+  height: 2px;
+  background-color: #fff;
+  z-index: 1;
+  display: block;
+}
+.about-us__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.about-us-item__text,
+.about-us__text {
+  font-family: JournalSans;
+  font-weight: 400;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.about-us__list {
+  padding-left: 20px;
+}
+.about-us-item__text {
+  line-height: 1.6;
+}
+.ceo__block {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.ceo__text {
+  font-family: JournalSans;
+  font-weight: 400;
+  color: #fff;
+}
+.ceo__text1 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.ceo__role {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.ceo__name {
+  font-size: 24px;
+  line-height: 1.5;
+}

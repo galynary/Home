@@ -1,4 +1,4 @@
-(() => {
+document.addEventListener('DOMContentLoaded', () => {
   const refs = {
     openModalBtn: document.querySelector('[data-open-faq]'),
     closeModalBtn: document.querySelector('[data-faq-close]'),
@@ -11,4 +11,4 @@
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
   }
-})();
+});

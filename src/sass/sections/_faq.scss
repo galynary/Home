@@ -1,4 +1,17 @@
 @media screen and (min-width: 480px) {
+  .backdrop__page {
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(29, 28, 28);
+    z-index: 31;
+  }
+  .backdrop__page.is-hidden {
+    display: none;
+  }
   .page__section {
     width: 480px;
     max-width: 682px;
@@ -9,12 +22,13 @@
     margin: 0 auto;
     display: inline-block;
     position: fixed;
-    top: 0;
+    top: 5%;
     left: 50%;
     transform: translateX(-50%);
   }
   .close-page__button {
     cursor: pointer;
+    z-index: 1;
     width: 50px;
     height: 50px;
     background-color: #0000;
