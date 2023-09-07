@@ -5,19 +5,19 @@ const wrapSlide = document.querySelector('.wrap__slide');
 const menuButton = document.querySelector('.icon__menu-button');
 
 let isToggled = true;
-wrapSlide.style.display = 'flex';
-menuButton.style.transform = 'rotate(180deg)';
-slideLeft.style.transition = 'transform 1.5s ease';
-slideRight.style.transition = 'transform 1.5s ease';
 
+menuButton.style.transform = 'rotate(180deg)';
 slideButton.addEventListener('click', () => {
   if (isToggled) {
     slideLeft.style.transform = 'translateX(0)';
     slideRight.style.transform = 'translateX(0)';
     menuButton.style.transform = 'rotate(180deg)';
-    wrapSlide.style.display = 'flex';
+    slideLeft.style.transition = 'transform 1.5s ease';
+    slideRight.style.transition = 'transform 1.5s ease';
   } else {
     slideLeft.style.transform = 'translateX(-100%)';
+    slideLeft.style.transition = 'transform 1.5s ease';
+    slideRight.style.transition = 'transform 1.5s ease';
     slideRight.style.transform = 'translateX(100%)';
     menuButton.style.transform = 'rotate(90deg)';
     wrapSlide.style.display = 'none';
