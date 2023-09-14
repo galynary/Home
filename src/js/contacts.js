@@ -1,23 +1,17 @@
-const buttonContacts = document.querySelector('.contacts-toggle');
-const pageContacts = document.querySelector('.page__contacts');
-const buttonIconContacts = document.querySelector('.contacts__icon');
-const wrapSlide = document.querySelector('.wrap__slide');
+document.addEventListener('DOMContentLoaded', () => {
+  const buttonContacts = document.querySelector('#contacts__link');
+  const pageContacts = document.querySelector('.wrap__page-item-contact');
+  const buttonIconContacts = document.querySelector('.contacts__icon');
 
-buttonIconContacts.style.display = 'none';
-pageContacts.style.transform = 'translateY(-93%)';
+  buttonIconContacts.style.display = 'none';
 
-buttonContacts.addEventListener('click', () => {
-  setTimeout(function () {
-    wrapSlide.style.display = 'none';
-  }, 0);
-  {
-    pageContacts.style.transform = 'translateY(-7%)';
-    buttonIconContacts.style.display = 'block';
-  }
-});
-buttonIconContacts.addEventListener('click', () => {
-  {
-    buttonIconContacts.style.display = 'none';
-    pageContacts.style.transform = 'translateY(-93%)';
-  }
+  buttonContacts.addEventListener('click', () => {
+    if (pageContacts.style.top === '0px') {
+      pageContacts.style.top = '800px';
+      buttonIconContacts.style.display = 'block';
+    } else {
+      pageContacts.style.top = '0px';
+      buttonIconContacts.style.display = 'none';
+    }
+  });
 });

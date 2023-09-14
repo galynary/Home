@@ -5,57 +5,175 @@ body {
   font-size: 16px;
   justify-content: center;
 }
+/*------ mob-slide -----*/
+@media screen and (min-width: 480px) {
+  .slide {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+.wrap-container__mob-slide,.container__mob-slide {
+  position: relative;
+    width: 100%;
+    height: 100%;
+ 
+  }
 
+.wrap__mob-slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+}
+.mob__slide-up,
+.mob__slide-down {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.mob__slide {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+.mob__img-slide {
+  display: block;
+   width: 100%;
+  height: 100%;
+}
+.img-slide__mob {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .swiper__hero {
   position: absolute;
   top: 0px;
-  width: 100%;
   overflow: hidden;
-  min-height: 820px;
+  height: 820px;
   height: 100%;
+  width: 100%;
 }
+.wrap__slide {
+  display: none;
+}
+.img-slide__desc {
+  display: none;
+}
+}
+
+/*------ wrap__slide -----*/
+@media screen and (min-width: 1200px) {
+  .wrap-container__mob-slide {
+    display: none;
+  }
+  .img-slide__mob {  display: none;
+  }
+  .img-slide__desc {  display: block;
+  }
+  .wrap__slide {
+    display: block;
+  }
 
 .img-slide__mob {
   display: none;
 }
 .wrap__slide {
   position: relative;
-  z-index: 1;
+  width: 100%;
+  z-index: 31;
   display: flex;
-
   justify-content: space-between;
   overflow: hidden;
-  transition: transform 1.2s ease;
+  transition: transform 2s ease;
 }
-.left-slide {
+.wrap__slide.element.style {
+  display: block;
+}
+.wrap-container__left-slide {
+  width: 100%;
+  height: 100%;
+}
+.wrap-container__right-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap__left-slide {
+  margin: 0;
+  /* width: 50%;*/
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0%);
+  transition: transform 20s ease;
+  animation: animationLeft 15s linear infinite forwards alternate;
+}
+.wrap__right-slide {
   position: relative;
+  margin: 0;
+  /* width: 50%;*/
+  display: flex;
+  transform: translateY(0%);
+  flex-direction: column;
+  transition: transform 20s ease;
+  animation: animationRight 15s linear infinite forwards alternate;
 }
+
 .wrap__img {
   position: relative;
   object-fit: cover;
 }
-.wrap__rigth-slide {
-  display: block;
+.wrap__left-slide::before {
+  content: ''; /* Додаємо порожній контент для псевдоелемента */
+  width: 100%;
   height: 100%;
-  background-position: right;
-  position: relative;
-  transition: transform 1s ease;
-  animation: animationRight 1s linear infinite forwards alternate;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  animation: animationLeft 5s linear infinite; /* Анімація зупинки на 2 секунди */
 }
 
-.wrap__left-slide {
-  display: block;
-  background-position: left;
-  position: relative;
-  transition: transform 1.5s ease;
-  animation: animationLeft 1.5s linear infinite forwards alternate;
+@keyframes animationLeft {
+  0%,
+  100% {
+    transform: translateY(0%);
+  }
+  33% {
+    transform: translateY(-35%);
+  }
+  66% {
+    transform: translateY(-65%);
+  }
+}
+
+@keyframes animationRight {
+  0% {
+    transform: translateY(-65%);
+  }
+  33% {
+    transform: translateY(-35%);
+  }
+  66% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-65%);
+  }
+}
+.button__menu-open:focus animationLeft,
+animationLeft {
+  animation-play-state: paused;
 }
 
 .title__right {
   max-width: 1920px;
   top: 0%;
   padding-left: 0%;
-  font-size: 130px;
+  font-size: 100px;
   line-height: 0.5;
   width: 100%;
   height: 100%;
@@ -72,7 +190,7 @@ body {
   /* @include font(400, 130px, 1.5, null);*/
   top: 0%;
   padding-top: 300px;
-  font-size: 130px;
+  font-size: 100px;
   width: 100%;
   height: 100%;
   line-height: 0.5;
@@ -83,69 +201,37 @@ body {
   text-transform: uppercase;
   position: absolute;
   text-align: right;
+}
+@media screen and (min-width: 1400px) {
+  .title__right,.title__left {
+    font-size: 130px;
+  }
 }
 
 .img__left-slide {
   position: relative;
 }
-.wrap__img {
+/*.wrap__img {
   position: relative;
-}
-.wrap__left-slide {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Забезпечує вирівнювання по вертикалі 
+}*/
+.img__slide {
   display: block;
-  height: 100%;
-  background-position: left;
-  position: relative;
-  transition: transform 1.5s ease;
-  animation: animationLeft 1.5s linear infinite forwards alternate;
+  width: 100%;
+  height: auto;
 }
-.wrap__rigth-slide,
-.wrap__left-slide {
-  display: block;
-  position: relative;
-  background-position: left;
-}
-.wrap__rigth-slide {
-  background-position: right;
-}
+
 .img-slide__desc {
   position: relative;
 }
-.title__right {
-  top: 0%;
-  padding-left: 0%;
-  font-size: 130px;
-  line-height: 0.5;
-  width: 100%;
-  height: 100%;
-  padding-top: 300px;
-  font-family: 'Fiver';
-  background-color: rgba(47, 48, 58, 0.4);
-  color: #fff;
-  font-weight: 400;
-  text-transform: uppercase;
-  position: absolute;
-}
 
-.title__left {
-  /* @include font(400, 130px, 1.5, null);*/
-  top: 0;
-  font-size: 130px;
-  width: 100%;
-  height: 100%;
-  line-height: 0.5;
-  padding-top: 300px;
-  font-family: 'Fiver';
-  background-color: rgba(47, 48, 58, 0.4);
-  color: #fff;
-  font-weight: 400;
-  text-transform: uppercase;
-  position: absolute;
-  text-align: right;
-}
 .logo {
   position: absolute;
   top: 20px;
   left: 20px;
   z-index: 3;
+}
 }

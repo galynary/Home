@@ -1,35 +1,35 @@
-const slideButton = document.querySelector('.button__menu-open');
-const slideLeft = document.querySelector('.wrap__left-slide');
-const slideRight = document.querySelector('.wrap__rigth-slide');
-const wrapSlide = document.querySelector('.wrap__slide');
+const toggleButton = document.getElementById('toggle-button');
+const leftSlide = document.querySelector('[data-slide-left]');
+const rightSlide = document.querySelector('[data-slide-right]');
 const menuButton = document.querySelector('.icon__menu-button');
 
-let isToggled = true;
+const animationDuration = '1s';
+const easingFunction = 'linear';
+leftSlide.style.transition = `transform ${animationDuration} ${easingFunction}`;
+rightSlide.style.transition = `transform ${animationDuration} ${easingFunction}`;
 
-menuButton.style.transform = 'rotate(180deg)';
-slideButton.addEventListener('click', () => {
-  if (isToggled) {
-    slideLeft.style.transform = 'translateX(0)';
-    slideRight.style.transform = 'translateX(0)';
-    menuButton.style.transform = 'rotate(180deg)';
-    slideLeft.style.transition = 'transform 1.5s ease';
-    slideRight.style.transition = 'transform 1.5s ease';
+// Додаємо обробник кліку на кнопку
+toggleButton.addEventListener('click', () => {
+  // Оприлюднюємо стани анімації та змінюємо transform відповідно
+  if (leftSlide.style.animationPlayState === 'running') {
+    leftSlide.style.animationPlayState = 'paused';
+    rightSlide.style.animationPlayState = 'paused';
+
+    // Затримка перед зміною transform
+    setTimeout(() => {
+      menuButton.style.transform = 'rotate(90deg)';
+      leftSlide.style.transform = 'translateX(-100%)';
+      rightSlide.style.transform = 'translateX(100%)';
+    }, 200); // Змініть затримку на потрібну вам
   } else {
-    slideLeft.style.transform = 'translateX(-100%)';
-    slideLeft.style.transition = 'transform 1.5s ease';
-    slideRight.style.transition = 'transform 1.5s ease';
-    slideRight.style.transform = 'translateX(100%)';
-    menuButton.style.transform = 'rotate(90deg)';
-    wrapSlide.style.display = 'none';
-  }
+    leftSlide.style.animationPlayState = 'running';
+    rightSlide.style.animationPlayState = 'running';
 
-  isToggled = !isToggled;
-  setTimeout(function () {
-    if (
-      slideLeft.style.transform === 'translateX(-100%)' &&
-      slideRight.style.transform === 'translateX(100%)'
-    ) {
-      wrapSlide.style.display = 'none';
-    }
-  }, 5000);
+    // Затримка перед зміною transform
+    setTimeout(() => {
+      menuButton.style.transform = 'rotate(180deg)';
+      leftSlide.style.transform = 'translateX(0%)';
+      rightSlide.style.transform = 'translateX(0%)';
+    }, 0); // Змініть затримку на потрібну вам
+  }
 });

@@ -1,17 +1,15 @@
 .page__contacts {
   width: 100%;
-  transition: transform 0.8s ease;
-  transform: translateY(-93%);
+  height: 100%;
+  /* transform: translateY(-93%);*/
 }
 
 .page-contacts__container {
   width: 100%;
   height: 100%;
   display: flex;
-  display: none;
 }
 .page-contacts__address {
-  z-index: 1;
   display: flex;
   padding-left: 200px;
   flex-direction: column;
@@ -86,10 +84,19 @@
   background-color: #fff;
   display: block;
 }
+.contacts-link__content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  display: flex;
+  position: relative;
+}
 .contacts__icon {
   cursor: pointer;
   bottom: 3px;
   right: 0px;
+  display: none;
 }
 
 .contacts-toggle {
