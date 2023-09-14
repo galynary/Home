@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",(function(){var e=document.querySelector("#contacts__link"),t=document.querySelector(".wrap__page-item-contact"),n=document.querySelector(".contacts__icon");n.style.display="none",e.addEventListener("click",(function(){"0px"===t.style.top?(t.style.top="800px",n.style.display="block"):(t.style.top="0px",n.style.display="none")}))}));
+//# sourceMappingURL=index.c23bb678.js.map
