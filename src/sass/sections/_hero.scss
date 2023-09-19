@@ -87,7 +87,7 @@
     border: 3px solid #fff;
     transform: rotate(180deg);
   }
-  .menu-button__list {
+  .wrap-menu-button__list{
     justify-content: center;
     position: relative;
     padding: 30px 0px;
@@ -150,63 +150,20 @@
   .menu-button__item:nth-child(1)::after {
     transform: translate(-50%, 270%);
   }
-  .menu-button__item:nth-child(1) {
+ /*.menu-button__item {
     position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .menu-button__item:nth-child(2) {
-    position: absolute;
-    top: 35%;
-    left: 0%;
-  }
-  .menu-button__item:nth-child(3) {
-    position: absolute;
-    top: 65%;
-    left: 70%;
-  }
+    top: 50%;
+    right: 0%;
+    transform: translate(0, -50%);
+    transition: all 0.5s ease; 
+  }*/
+ 
+ 
+  
+ 
+  
 
-  .menu-button__item:nth-child(4) {
-    position: absolute;
-    top: 35%;
-    left: 70%;
-  }
-  .menu-button__item:nth-child(5) {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .menu-button__item:nth-child(6) {
-    position: absolute;
-    top: 65%;
-    left: 0%;
-  }
-  @media screen and (min-width: 560px) and (max-width: 700px) {
-    .menu-button__item:nth-child(2),
-    .menu-button__item:nth-child(6) {
-      left: 50px;
-    }
-  }
-  @media screen and (min-width: 701px) and (max-width: 900px) {
-    .menu-button__item:nth-child(2),
-    .menu-button__item:nth-child(6) {
-      left: 100px;
-    }
-  }
-  @media screen and (min-width: 901px) and (max-width: 1000px) {
-    .menu-button__item:nth-child(2),
-    .menu-button__item:nth-child(6) {
-      left: 140px;
-    }
-  }
-  @media screen and (min-width: 1001px) and (max-width: 1500px) {
-    .menu-button__item:nth-child(2),
-    .menu-button__item:nth-child(6) {
-      left: 200px;
-    }
-  }
+
   .wrap__button {
     position: absolute;
     top: 50%;
@@ -217,6 +174,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+   
   }
   .page__links-mob {
     position: relative;
@@ -324,6 +282,7 @@
     right: 0px;
     height: 100%;
     width: 50%;
+  
   }
   .page__links-mob {
     height: 100%;
@@ -442,43 +401,211 @@
     transition: transform 0.3s ease;
     transform: rotate(180deg);
   }
+  .wrap-menu-button__list {
+   right: 50%;
+    transition: transform 0.5s ease;
+  }
   .menu-button__list {
-    width: 50%;
-    right: 50px;
-  }
-  .menu-button__item:nth-child(1) {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 3%;
-    left: 90%;
+  
+  
   }
+  
+  .menu-button__item {
+    transition: transform 0.5s ease;
+    animation: none;
+  }
+
+    .menu-button__item:nth-child(1) {
+      position: absolute;
+      animation-delay: 1000ms;
+      animation: none;
+     transition: transform 0.5s ease;
+  }
+  
+  @keyframes menuButton1 {
+      0% {
+          top: 50%;
+          left: 100%;
+          opacity: 0;
+      }
+   
+      100% {
+          top: 5%;
+          left: 85%;
+          opacity: 1;
+      }
+  }
+  
+  .menu-button__item:nth-child(1).reverse {
+      animation: menuButton1 2s reverse forwards 2s;
+      transition: transform 0.5s ease;
+      animation-delay: 2000ms;
+  }
+  
   .menu-button__item:nth-child(2) {
-    position: absolute;
-    top: 20%;
-    left: 65%;
+      position: absolute;
+      animation: none;
+      animation-delay: 1200ms;
+      transition: transform 0.5s ease;
   }
+  
+  @keyframes menuButton2 {
+      0% {
+          top: 50%;
+          left: 100%;
+          opacity: 0;
+      }
+   
+      100% {
+          top: 20%;
+          left: 73%;
+          opacity: 1;
+      }
+  }
+  
+  .menu-button__item:nth-child(2).reverse {
+      animation: menuButton2 2s reverse forwards 2s;
+      transition: transform 0.5s ease;
+      animation-delay: 1800ms;
+  }
+  
   .menu-button__item:nth-child(3) {
-    position: absolute;
-    top: 38%;
-    left: 50%;
+      position: absolute;
+      animation: none;
+      animation-delay: 1400ms;
+      transition: transform 0.5s ease;
   }
+  
+  @keyframes menuButton3 {
+      0% {
+          top: 50%;
+          left: 100%;
+          opacity: 0;
+      }
+    
+      100% {
+          top: 38%;
+          left: 65%;
+          opacity: 1;
+      }
+  }
+  
+  .menu-button__item:nth-child(3).reverse {
+      animation: menuButton3 2s reverse forwards 2s;
+      transition: transform 0.5s ease;
+      animation-delay: 1600ms;
+  }
+  
   .menu-button__item:nth-child(4) {
-    position: absolute;
-    top: 56%;
-    left: 50%;
+      position: absolute;
+      animation: none;
+      animation-delay: 1600ms;
+      transition: transform 0.5s ease;
   }
+  
+  @keyframes menuButton4 {
+      0% {
+          top: 50%;
+          left: 100%;
+          opacity: 0;
+      }
+     
+      100% {
+          top: 56%;
+          left: 65%;
+          opacity: 1;
+      }
+  }
+  
+  .menu-button__item:nth-child(4).reverse {
+      animation: menuButton4 2s reverse forwards 2s;
+      transition: transform 0.5s ease;
+      animation-delay: 1400ms;
+  }
+  
   .menu-button__item:nth-child(5) {
-    position: absolute;
-    top: 74%;
-    left: 70%;
+      position: absolute;
+      animation: none;
+      animation-delay: 1800ms;
+      transition: transform 0.5s ease;
   }
+  
+  @keyframes menuButton5 {
+      0% {
+          top: 50%;
+          left: 100%;
+          opacity: 0;
+      }
+    
+      100% {
+          top: 75%;
+          left: 73%;
+          opacity: 1;
+      }
+  }
+  
+  .menu-button__item:nth-child(5).reverse {
+      animation: menuButton5 2s reverse forwards 2s;
+      transition: transform 0.5s ease;
+      animation-delay: 1200ms;
+  }
+  
   .menu-button__item:nth-child(6) {
-    position: absolute;
-    top: 90%;
-    left: 80%;
+      position: absolute;
+      animation: none;
+      animation-delay: 2000ms;
+      transition: transform 0.5s ease;
+  }
+  
+  @keyframes menuButton6 {
+      0% {
+          top: 50%;
+          left: 100%;
+          opacity: 0;
+      }
+     
+      100% {
+          top: 90%;
+          left: 85%;
+          opacity: 1;
+      }
+  }
+  
+  .menu-button__item:nth-child(6).reverse {
+      animation: menuButton6 2s reverse forwards 2s;
+      transition: transform 0.5s ease;
+      animation-delay: 1000ms;
   }
   .menu-button__item:nth-child(5)::after,
   .menu-button__item:nth-child(6)::after,
   .menu-button__item:nth-child(3)::after {
     transform: translate(-50%, 150%);
+  }
+}
+@media screen and (min-width: 560px) and (max-width: 700px) {
+  .menu-button__item:nth-child(2),
+  .menu-button__item:nth-child(6) {
+    left: 50px;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 900px) {
+  .menu-button__item:nth-child(2),
+  .menu-button__item:nth-child(6) {
+    left: 100px;
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1000px) {
+  .menu-button__item:nth-child(2),
+  .menu-button__item:nth-child(6) {
+    left: 140px;
+  }
+}
+@media screen and (min-width: 1001px) and (max-width: 1500px) {
+  .menu-button__item:nth-child(2),
+  .menu-button__item:nth-child(6) {
+    left: 200px;
   }
 }

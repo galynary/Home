@@ -54,11 +54,13 @@
 }
 .wrap__button-contacts {
   position: absolute;
+  width: 100%;
   right: 0px;
   bottom: 20px;
   z-index: 2;
   padding: 0;
-  display: none;
+  background-color: #000;
+ 
 }
 .button__contacts {
   justify-content: center;

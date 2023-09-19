@@ -1,20 +1,35 @@
-document.addEventListener("DOMContentLoaded", 
-  
-function nextSlide() {
-        var currentSlide = $('.slide.active');
-        var nextSlide = currentSlide.next('.slide');
+const toggleButton = document.getElementById('toggle-button-mob');
+const upSlide = document.querySelector('.wrap__slide-up');
+const downSlide = document.querySelector('.wrap__slide-down');
+const menuButton = document.querySelector('.icon__menu-button-mob');
 
-        if (nextSlide.length === 0) {
-            nextSlide = $('.slide:first');
-        }
+const animationDuration = '1s';
+const easingFunction = 'linear';
+upSlide.style.transition = `transform ${animationDuration} ${easingFunction}`;
+downSlide.style.transition = `transform ${animationDuration} ${easingFunction}`;
 
-        currentSlide.removeClass('active');
-        nextSlide.addClass('active');
-    
+// Додаємо обробник кліку на кнопку
+toggleButton.addEventListener('click', () => {
+  // Оприлюднюємо стани анімації та змінюємо transform відповідно
+  if (upSlide.style.animationPlayState === 'running') {
+    upSlide.style.animationPlayState = 'paused';
+    downSlide.style.animationPlayState = 'paused';
 
-    function startSlider() {
-        setInterval(nextSlide, 3000); // Змініть інтервал, якщо потрібно
-    }
+    // Затримка перед зміною transform
+    setTimeout(() => {
+      menuButton.style.transform = 'rotate(90deg)';
+      upSlide.style.transform = 'translateY(-120%)';
+      downSlide.style.transform = 'translateY(100%)';
+    }, 200); // Змініть затримку на потрібну вам
+  } else {
+    upSlide.style.animationPlayState = 'running';
+    downSlide.style.animationPlayState = 'running';
 
-    startSlider();
+    // Затримка перед зміною transform
+    setTimeout(() => {
+      menuButton.style.transform = 'rotate(180deg)';
+      upSlide.style.transform = 'translateY(0%)';
+      downSlide.style.transform = 'translateY(0%)';
+    }, 0); // Змініть затримку на потрібну вам
+  }
 });
