@@ -25,15 +25,20 @@ display: block;
   height: 100%;
 }
 .wrap__mob-slide {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
   position: relative;
- height: 100%;
+  overflow: hidden;
 }
 .wrap__slide-up,
 .wrap__slide-down {
-  width: 300%;
+  width: 100%;
   position: relative;
 display: block;
-  height: 50%;
+  height: 100%;
 }
 .mob__slide {
   flex: 1;
@@ -50,8 +55,8 @@ display: block;
 
 .mob__slide-up,
 .mob__slide-down {
-  width: 100%;
-  height: 100%;
+  width: 300%;
+  height:100%;
   position: relative;
 display: flex;
 flex-direction: row;
@@ -83,10 +88,7 @@ flex-direction: row;
 
 }
 
-
-
 .mob__slide {
- 
  display: flex;
   width: 100%;
   height: 100%;
@@ -96,12 +98,7 @@ flex-direction: row;
  
 
 }
-.mob__img-slide {
-  display: block;
-   width: 100%;
-  height: 100%;
- 
-}
+
 .img-slide__mob {
   display: inline-block;
   width: 100%;
@@ -109,30 +106,41 @@ flex-direction: row;
  
   
 }
-@media (min-width: 769px) {
-  .img-slide__mob{
-    max-width: 100%;
-    height: auto;
-  }
-}
+
 .swiper__hero {
   position: absolute;
   top: 0px;
+  z-index: 31;
   overflow: hidden;
   height: 820px;
   height: 100%;
   width: 100%;
-  display: none;
+ }
 
-  
-
-}
-.wrap__slide {
-  display: none;
-}
 .img-slide__desc {
   display: none;
 }
+}
+@media (min-width: 768px) {
+  .img-slide__mob{
+    max-width: 300%;
+    height: auto;
+  }
+  .mob__slide-up,
+.mob__slide-down {
+  width: 300%;
+  height: 100%;
+}
+.img__slide {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.mob__img-slide {
+ width: 100%;
+
+}
+
 }
 
 /*------ wrap__slide -----*/
@@ -146,9 +154,7 @@ flex-direction: row;
   .wrap-container__right-slide,
   .wrap-container__left-slide {
     transition: transform 2s;
-
-    
-  }
+ }
 
   .img-slide__desc { 
    display: block;
@@ -160,14 +166,21 @@ flex-direction: row;
   display: none;
 }
 .wrap__slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 31;
+}
+.wrap-slide__container {
   position: relative;
   width: 100%;
+  height: 100%;
 display: flex;
   justify-content: space-between;
   overflow: hidden;
  
 }
-.wrap__slide.element.style {
+.wrap-slide__container.element.style {
   display: block;
 }
 

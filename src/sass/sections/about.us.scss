@@ -1,9 +1,8 @@
 .page__about-us {
-  display: none;
+  top: 50px;
+ right: 0;
   width: 100%;
   height: 100%;
-  transform: translateY(92%);
-  transition: transform 0.8s;
   position: absolute;
 
   /* position: absolute;
@@ -13,13 +12,12 @@
 }
 
 .wrap__about-us-container {
-  flex-direction: column;
-  max-width: 850px;
-  gap: 50px;
-  padding-top: 80px;
-  display: flex;
-  padding-left: 200px;
-}
+  width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   padding-right: 20px;
+ }
 .page-about-us__container {
   display: none;
   position: absolute;
@@ -44,6 +42,16 @@
   transform: rotate(-90deg);
   cursor: pointer;
 }
+.wrap__icon-about-us::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  right: 0;
+ 
+}
 
 .button__about-us {
   flex-direction: column;
@@ -62,7 +70,7 @@
 .js-open-about-us {
   font-size: 24px;
   text-align: right;
-  background-color: #000;
+  background-color: transparent;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 400;
@@ -73,18 +81,9 @@
   border: none;
   outline: none;
 }
-.js-open-about-us:visited,
-.js-open-about-us:focus::after {
-  content: '';
-  width: 800px;
-  margin-bottom: -5px;
-  height: 2px;
-  background-color: #fff;
-  z-index: 1;
-  display: block;
-}
+
 .about-us__inner {
-  display: flex;
+ display: flex;
   flex-direction: column;
   gap: 30px;
 }
@@ -96,14 +95,23 @@
   font-size: 16px;
   line-height: 1.7;
 }
+
 .about-us__list {
   padding-left: 20px;
+  color: #fff;
+  list-style-type: disc;
 }
 .about-us-item__text {
   line-height: 1.6;
 }
+.ceo__description { 
+  font-style: italic;
+}
+
 .ceo__block {
+padding-top: 20px;
   display: flex;
+  padding-left: 25px;
   flex-direction: row;
   gap: 20px;
 }
@@ -123,4 +131,5 @@
 .ceo__name {
   font-size: 24px;
   line-height: 1.5;
+  text-transform: uppercase;
 }
