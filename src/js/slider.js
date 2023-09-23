@@ -23,7 +23,7 @@ toggleButton.addEventListener('click', () => {
     }, 1200);
 
     // Крок 3: Зникнення слайдерів через 1500 мс
-    setTimeout(() => {
+    setTimeout(() => {s
       wrapSlide.style.display='none';
     }, 3000);
 
