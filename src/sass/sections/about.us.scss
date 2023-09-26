@@ -1,6 +1,14 @@
-.page__about-us {
+@media screen and (min-width: 1200px) {
+  .page__about-us {
+  display: none;
+}
+}
+@media screen and (min-width: 1200px)
+ {
+  .page__about-us {
+    display: block;
   top: 50px;
- right: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -132,3 +140,4 @@ padding-top: 20px;
   line-height: 1.5;
   text-transform: uppercase;
 }
+ }

@@ -9,14 +9,15 @@ const aboutUsLink = document.querySelector('.wrap__about-us-link');
   let isUp = true;
 
   wrapContactsLink.style.transition = "top 2s ease"; 
-
+  buttonAboutUs.disabled = false;
   buttonContacts.addEventListener('click', () => {
     iconContacts.style.display = 'block';
     wrapContactsLink.style.top = '93%';
     aboutUsLink.style.bottom = '20px';
     pageAboutUs.style.zIndex = '21';
     pageContact.style.zIndex = '22';
-    buttonAboutUs.removeEventListener('click', () => {});
+    buttonAboutUs.disabled = true;
+    /*buttonAboutUs.removeEventListener('click', () => {});*/
     isUp = false;
   });
 
@@ -25,6 +26,7 @@ const aboutUsLink = document.querySelector('.wrap__about-us-link');
       wrapContactsLink.style.top = '15px';
       iconContacts.style.display = 'none';
       pageContact.style.zIndex = '22';
+      buttonAboutUs.disabled = false;
     isUp = true;
     }
   });

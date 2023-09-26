@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Встановлюємо transition для top
   aboutUsLink.style.transition = "bottom 2s ease"; // Змініть час і тип анімації за потребою
-
+  buttonContacts.disabled = false;
   buttonAboutUs.addEventListener('click', () => {
     aboutUsLink.style.bottom = '90%';
     iconAboutUs.style.display = 'block';
     pageContact.style.zIndex = '21';
     pageAboutUs.style.zIndex = '22';
     wrapContactsLink.style.top = '10px';
-    buttonContacts.removeEventListener('click', () => {});
+    buttonContacts.disabled = true;
     isUp = false;
   });
 
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     iconAboutUs.style.display = 'none';
     aboutUsLink.style.bottom = '20px';
     pageAboutUs.style.zIndex = '22';
+    buttonContacts.disabled = false;
     isUp = true;
   });
 });
