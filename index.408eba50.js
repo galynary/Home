@@ -1,2 +1,0 @@
-document.addEventListener("DOMContentLoaded",(function(){var e={openModalBtn:document.querySelector("[data-open-selling]"),closeModalBtn:document.querySelector("[data-selling-close]"),modal:document.querySelector("[data-selling]")};function n(){e.modal.classList.toggle("is-hidden")}e.openModalBtn.addEventListener("click",n),e.closeModalBtn.addEventListener("click",n)}));
-//# sourceMappingURL=index.408eba50.js.map
