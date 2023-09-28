@@ -1,4 +1,81 @@
 @media screen and (min-width: 480px) {
+  .swiper.my__swiper {
+    position: absolute;
+    top:0;
+    width: 500%;
+    height: 100%;
+    display: none;
+   
+  }
+  .wrap__page-section {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+  }
+  .slide__page {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+  }
+  .swiper__slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px ;
+  }
+  .prev:hover, .next:hover {
+   background-color: #7c7a7a;
+  }
+  .swiper-pagination {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .pagination__item {
+    cursor:pointer;
+    width: 13px;
+    height: 13px;
+    margin: 0px 2px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: #000;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    
+  }
+  .active, pagination__item:hover {
+    background-color: #7c7a7a;
+  }
+.fade {
+animation: fade  linear 1.5s;
+display: flex;
+flex-direction: row;
+}
+@keyframes  fade {
+  from{opacity: .4;}
+  to {opacity: 1;}
+}
+  
   .backdrop__page {
     position: absolute;
     opacity: 1;
@@ -21,7 +98,7 @@
     pointer-events: none;
   }*/
 
-  .backdrop-page__container {
+  .slide-page__container {
     width: 100%;
     height: 100%;
     justify-content: space-between;
@@ -54,11 +131,14 @@
     height: auto;
    border-radius: 4px;
     margin: 0 auto;
-    z-index: 41;
-    display: inline-block;
-  top: 5%;
+  display: none;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
+  }
+  .page__header {
+   width: 100%;
+    height: 100%;
   }
   .close-page__button {
     cursor: pointer;
@@ -74,20 +154,19 @@
     right: 15px;
   }
   .page__container {
-    padding: 0px 20px 20px 20px;
+   padding: 20px;
     position: relative;
   }
   .page-header__container {
-    position: relative;
-    padding-top: 40px;
-    display: flex;
+  position: relative;
+   display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .wrap-logo__content-mob {
+  /*.wrap-logo__content-mob {
     z-index: 41;
     position: absolute;
-  }
+  }*/
   .logo__content-mob {
     display: flex;
     flex-direction: column;
