@@ -5,7 +5,9 @@ const rightContainer = document.querySelector('.page-container__right');
 const menuButton = document.querySelector('.icon__menu-button2');
 const menuButtonItems = document.querySelectorAll('.menu-button__item');
 const openSelling = document.querySelector('[data-open-selling]');
-const page = document.querySelector('.slide__page');
+const page = document.getElementById('slide__page-selling');
+const swiperArrows = document.querySelector('.wrap__swiper-arrows');
+const swiperPagination = document.querySelector('.wrap__swiper-pagination');
 const pageSection = document.querySelector('.page__section');
 const mySwiper = document.querySelector('.my__swiper');
 
@@ -20,12 +22,12 @@ menuButtonItems.forEach(item => {
   setTimeout(() => {
         page.style.display = 'block';
         page.style.zIndex = "40";
-        page.style.transition = 'transform 4s ease';
+       page.style.transition = 'transform 4s ease';
       }, 300);
        //leftContainer rightContainer стають на позицію 0
       setTimeout(() => {
       menuButton.style.transform = 'rotate(180deg)';
-      toggleButton2.style.transform = 'translate(0%, -350%)';
+      toggleButton2.style.transform = 'translate(-50%, -350%)';
       leftContainer.style.transform = 'translateX(0%)';
       rightContainer.style.transform = 'translateX(0%)';
       leftContainer.style.transition = 'transform 4s ease';
@@ -36,16 +38,14 @@ menuButtonItems.forEach(item => {
     setTimeout(() => {
        pageSection.style.display = 'block';
        pageSection.style.zIndex = "41";
+       swiperArrows.style.zIndex = "42";
+       swiperPagination.style.zIndex = "42";
        pageSection.style.animation= 'openPage 4s linear forwards';
        pageSection.style.transition = 'transform 5s ease';
     }, 2500);
   });
 });
-
-
 let isOpenPage = false;
-
-
 toggleButton2.addEventListener('click', () => {
   pageSection.style.animation= 'closePage 4s linear forwards';
   pageSection.style.transition = 'transform 5s ease';
@@ -69,6 +69,8 @@ toggleButton2.addEventListener('click', () => {
       page.style.zIndex = "1";*/
       mySwiper.style.display = 'none';
       mySwiper.style.zIndex = "1";
+      swiperArrows.style.zIndex = "1";
+      swiperPagination.style.zIndex = "1";
       toggleButton2.style.display = 'none';
       toggleButton.style.display = 'block';
     }, 6000);

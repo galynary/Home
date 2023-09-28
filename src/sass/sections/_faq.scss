@@ -2,7 +2,7 @@
   .swiper.my__swiper {
     position: absolute;
     top:0;
-    width: 500%;
+    width: 100%;
     height: 100%;
     display: none;
    
@@ -18,19 +18,31 @@
     position: relative;
     display: none;
   }
-  .swiper__slide {
+  .my-swiper__container{
+     display: flex;
+    flex-direction: row;
     width: 100%;
     height: 100%;
+  }
+ .swiper__slide {
     position: relative;
-    display: flex;
-    flex-direction: row;
+    width: 100%;
+     height: 100%;
+    flex: 1;
+    transition: transform 0.3s ease-in-out;
+  }
+  .wrap__swiper-arrows {
+    position: absolute;
+    top:50%;
+    width: 100%;
+    z-index: 1;
   }
   .prev,
   .next {
     cursor: pointer;
     position: absolute;
     top:50%;
-    width: auto;
+  width: auto;
     margin-top: -22px;
     padding: 16px;
     color: #000;
@@ -46,20 +58,56 @@
   .prev:hover, .next:hover {
    background-color: #7c7a7a;
   }
-  .swiper-pagination {
+  .active {
+    display: block;
+  }
+  .wrap__swiper-pagination {
+ position: absolute;
+ z-index: 1;
+ bottom: 50px;
+ left: 50%;
+ transform: translateX(-50%);
+  }
+  .swiper__pagination {
     display: flex;
     flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
+  }
+  .pagination__container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 10px;
+    padding: 30px 0px;
+  }
+ 
+  .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: -1;
+    cursor: pointer;
+    border: 1px solid #000;
   }
   .pagination__item {
     cursor:pointer;
-    width: 13px;
-    height: 13px;
+    width: 50px;
+    height: 50px;
     margin: 0px 2px;
     background-color: transparent;
     border-radius: 50%;
     border: #000;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: background-color 0.6s ease;
     
   }
@@ -242,36 +290,8 @@ flex-direction: row;
     background-color: #2f2c2c;
     left: 0;
   }
-  .pagination__container {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    gap: 10px;
-    padding: 30px 0px;
-  }
-  .pagination__container.faq-pagination__container {
-    padding: 40px 0px;
-  }
-  .circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border-radius: 50%;
-    z-index: -1;
-    border: 1px solid #000;
-  }
-  .number {
-    display: inline-block;
-    position: absolute;
-    text-align: center;
-    font-size: 24px;
-    color: #000;
-    z-index: 1;
-  }
+ 
+ 
 
   .wrap__page-links {
     position: absolute;

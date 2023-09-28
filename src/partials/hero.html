@@ -370,9 +370,11 @@
       <span class="button__right">nu</span>
     </button>
     </div>
-    <div class="swiper my__swiper">
+    <div class="wrap-swiper__slide">
+      <div class="swiper my__swiper">
+      <div class="my-swiper__container"> 
       <div class="swiper__slide">
-        <div class="slide__page fade" data-selling>
+        <div class="slide__page fade" id="slide__page-selling" data-selling>
          <div class="slide-page__container">
               <div class="page-container__left"></div>
               <div class="page-container__right"></div>
@@ -481,23 +483,7 @@
                 
                 </div>
                </div>
-               <div class="pagination__container">
-                 <div class="circle">
-                   <span class="number">1</span>
-                 </div>
-                 <div class="circle">
-                   <span class="number">2</span>
-                 </div>
-                 <div class="circle">
-                   <span class="number">3</span>
-                 </div>
-                 <div class="circle">
-                   <span class="number">4</span>
-                 </div>
-                 <div class="circle">
-                   <span class="number">5</span>
-                 </div>
-               </div>
+            
                <div class="wrap__page-links">
                  <ul class="page__links">
                    <li class="page__item page__item-aboutus">
@@ -511,7 +497,7 @@
              </div>
            </section>
            </div>
-         <div class="slide__page fade" data-faq>
+         <div class="slide__page fade" id="slide__page-faq" data-faq>
           <div class="slide-page__container">
             <div class="page-container__left"></div>
             <div class="page-container__right"></div>
@@ -624,24 +610,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="pagination__container faq-pagination__container">
-                  <div class="circle">
-                    <span class="number">1</span>
-                  </div>
-                  <div class="circle">
-                    <span class="number">2</span>
-                  </div>
-                  <div class="circle">
-                    <span class="number">3</span>
-                  </div>
-                  <div class="circle">
-                    <span class="number">4</span>
-                  </div>
-                  <div class="circle">
-                    <span class="number">5</span>
-                  </div>
-                </div>
-              </div>
+            </div>
               <div class="wrap__page-links">
                 <ul class="page__links">
                   <li class="page__item page__item-aboutus">
@@ -902,24 +871,7 @@
                     </div>
                   </div>
                   <button type="submit" class="forma__button">send</button>
-                  <div class="pagination__container writeus-pagination__container">
-                    <div class="circle">
-                      <span class="number">1</span>
-                    </div>
-                    <div class="circle">
-                      <span class="number">2</span>
-                    </div>
-                    <div class="circle">
-                      <span class="number">3</span>
-                    </div>
-                    <div class="circle">
-                      <span class="number">4</span>
-                    </div>
-                    <div class="circle">
-                      <span class="number">5</span>
-                    </div>
-                  </div>
-                </forma>
+               </forma>
               </div>
               <div class="wrap__page-links">
                 <ul class="page__links">
@@ -936,16 +888,42 @@
         
         </div>
         <div class="slide__page fade" ></div>
-        <a href ="" class="prev" onclick="plusPage(-1)">&#10094</a>
-        <a href ="" class="next" onclick="plusPage(1)">&#10095</a>
-      <div class="swiper-pagination">
-          <span class="pagination__item" onclick="currentPage(1)">1</span>
-          <span class="pagination__item" onclick="currentPage(2)">2</span>
-          <span class="pagination__item" onclick="currentPage(3)">3</span>
-          <span class="pagination__item" onclick="currentPage(4)">4</span>
+      </div>
+    </div>
+      </div>
+    </div>
+      <div class="wrap__swiper-pagination">
+        <div class="swiper__pagination">
+          <div class="pagination__container">
+            <div class="circle">
+              <span class="pagination__item">1</span>
+            </div>
+            <div class="circle">
+              <span class="pagination__item">2</span>
+            </div>
+            <div class="circle">
+              <span class="pagination__item">3</span>
+            </div>
+            <div class="circle">
+              <span class="pagination__item">4</span>
+            </div>
+            <div class="circle">
+              <span class="pagination__item">5</span>
+            </div>
+          </div>
         </div>
       </div>
+      
+      <div class="wrap__swiper-arrows">
+        <div class="swiper-arrows">
+          <span class="prev">&#10094;</span>
+          <span class="next">&#10095;</span>
+        </div>
       </div>
+        
+  
+   
+   
       
     <div class="swiper__hero" data-swiper-hero>
       <div class="slide">
