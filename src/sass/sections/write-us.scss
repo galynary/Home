@@ -1,4 +1,14 @@
-.write-us__contant {
+@media screen and (min-width: 480px) {
+  .wrap__write-us-contant {
+    padding-top: 50px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .write-us__contant {
   padding: 30px 30px;
   position: relative;
   max-width: 505px;
@@ -93,3 +103,13 @@
   opacity: 1;
   transition: opacity 0.5s ease;
 }*/
+}
+@media screen and (min-width: 1200px) {
+  .write-us__contant {
+    width:100%;
+    max-width: 800px;
+}
+.write-us__forma {
+  align-items: stretch;
+}
+}

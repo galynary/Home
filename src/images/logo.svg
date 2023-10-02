@@ -1,0 +1,20 @@
+<svg id="Група_4" data-name="Група 4" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-opacity: 0.4;
+        stroke: #000;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        font-size: 36px;
+        fill: #df185a;
+        font-family: "Myriad Pro";
+      }
+    </style>
+  </defs>
+  <path id="Прямокутник_1" data-name="Прямокутник 1" class="cls-1" d="M438,416h64v64H438V416Z" transform="translate(-437.5 -415.5)"/>
+  <text id="A" class="cls-2" x="21.727" y="43.258">A</text>
+</svg>

@@ -1,10 +1,18 @@
 @media screen and (min-width: 480px) {
+  .wrap-swiper__slide {
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
   .swiper.my__swiper {
     position: absolute;
     top:0;
     width: 100%;
     height: 100%;
     display: none;
+   
    
   }
   .wrap__page-section {
@@ -64,7 +72,7 @@
   .wrap__swiper-pagination {
  position: absolute;
  z-index: 1;
- bottom: 50px;
+ bottom: 20px;
  left: 50%;
  transform: translateX(-50%);
   }
@@ -82,6 +90,7 @@
     position: relative;
     gap: 10px;
     padding: 30px 0px;
+    display: none;
   }
  
   .circle {
@@ -101,8 +110,7 @@
     cursor:pointer;
     width: 50px;
     height: 50px;
-    margin: 0px 2px;
-    background-color: transparent;
+  background-color: transparent;
     border-radius: 50%;
     border: #000;
     display: flex;
@@ -112,7 +120,9 @@
     
   }
   .active, pagination__item:hover {
-    background-color: #7c7a7a;
+   background-color: #000000b3;
+    color: #fff;
+    border: #fff;
   }
 .fade {
 animation: fade  linear 1.5s;
@@ -154,6 +164,8 @@ flex-direction: row;
     display: flex;
     position: relative;
     overflow: hidden;
+    overflow: scroll;
+    
   }
   .page-container__right {
      transform: translateX(100%);
@@ -183,10 +195,12 @@ flex-direction: row;
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
+    
   }
   .page__header {
    width: 100%;
-    height: 100%;
+    height: 100px;
+    position: fixed;
   }
   .close-page__button {
     cursor: pointer;
@@ -204,12 +218,15 @@ flex-direction: row;
   .page__container {
    padding: 20px;
     position: relative;
+    overflow: hidden;
   }
   .page-header__container {
   position: relative;
    display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0px;
+    background-color: #fff;
   }
   /*.wrap-logo__content-mob {
     z-index: 41;
@@ -312,10 +329,6 @@ flex-direction: row;
     text-transform: uppercase;
   }
 
-  .page__item-aboutus {
-    margin-left: 35px;
-    transform: rotate(-90deg) translate(-20%, -20%);
-  }
   .page-item-contact {
     margin-right: -129px;
     transform: rotate(-90deg) translate(-12%, -65%);
@@ -326,3 +339,4 @@ flex-direction: row;
   width: 100%;
 }
 }
+@media screen and (min-width: 1200px) {}

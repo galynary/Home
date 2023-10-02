@@ -1,47 +1,55 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const swiperContainer = document.querySelector(".my__swiper");
-  const slides = document.querySelectorAll(".slide__page");
-  const paginationItems = document.querySelectorAll(".pagination__item");
-  const prevButton = document.querySelector(".prev");
-  const nextButton = document.querySelector(".next");
+const prevArrow = document.querySelector('.prev');
+const nextArrow = document.querySelector('.next');
+const paginationItems = document.querySelectorAll('.pagination__item');
 
-  let currentPage = 0;
 
-  // Функція для переключення на обрану сторінку
-  function goToPage(pageIndex) {
-    if (pageIndex >= 0 && pageIndex < slides.length) {
-      slides[currentPage].classList.remove("activePage");
-      slides[pageIndex].classList.add("activePage");
-      paginationItems[currentPage].classList.remove("active");
-      paginationItems[pageIndex].classList.add("active");
-      currentPage = pageIndex;
-    }
+let slideIndex = 1;
+showSlides(slideIndex);
+
+
+prevArrow.addEventListener('click', () => {
+  showSlides((slideIndex -= 1));
+});
+
+
+nextArrow.addEventListener('click', () => {
+  showSlides((slideIndex += 1));
+});
+
+
+paginationItems.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    showSlides(index + 1);
+  });
+});
+
+
+function showSlides(n) {
+  let i;
+  const slides = document.querySelectorAll('.slide__page');
+  const paginationItems = document.querySelectorAll('.pagination__item');
+
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
   }
 
-  // Обробник для пагінації
-  paginationItems.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      goToPage(index);
-    });
-  });
 
-  // Обробник для стрілки "Назад"
-  prevButton.addEventListener("click", () => {
-    const newIndex = currentPage - 1;
-    if (newIndex >= 0) {
-      goToPage(newIndex);
-    }
-  });
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
 
-  // Обробник для стрілки "Вперед"
-  nextButton.addEventListener("click", () => {
-    const newIndex = currentPage + 1;
-    if (newIndex < slides.length) {
-      goToPage(newIndex);
-    }
-  });
 
-  // Початкова активна сторінка
-  slides[currentPage].classList.add("activePage");
-  paginationItems[currentPage].classList.add("active");
-});
+  for (i = 0; i < paginationItems.length; i++) {
+    paginationItems[i].classList.remove('active');
+  }
+
+
+  slides[slideIndex - 1].style.display = 'block';
+  paginationItems[slideIndex - 1].classList.add('active');
+}
+
+

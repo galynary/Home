@@ -8,11 +8,11 @@ const aboutUsLink = document.querySelector('.wrap__about-us-link');
   const buttonAboutUs = document.querySelector('.js-open-about-us');
   let isUp = true;
 
-  wrapContactsLink.style.transition = "top 2s ease"; 
+  wrapContactsLink.style.transition = "top 2.5s ease"; 
   buttonAboutUs.disabled = false;
   buttonContacts.addEventListener('click', () => {
     iconContacts.style.display = 'block';
-    wrapContactsLink.style.top = '93%';
+    wrapContactsLink.style.top = '90%';
     aboutUsLink.style.bottom = '20px';
     pageAboutUs.style.zIndex = '21';
     pageContact.style.zIndex = '22';
