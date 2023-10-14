@@ -1,55 +1,100 @@
-const prevArrow = document.querySelector('.prev');
-const nextArrow = document.querySelector('.next');
-const paginationItems = document.querySelectorAll('.pagination__item');
-
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-
-prevArrow.addEventListener('click', () => {
-  showSlides((slideIndex -= 1));
-});
-
-
-nextArrow.addEventListener('click', () => {
-  showSlides((slideIndex += 1));
-});
-
-
-paginationItems.forEach((item, index) => {
-  item.addEventListener('click', () => {
-    showSlides(index + 1);
-  });
-});
-
-
-function showSlides(n) {
-  let i;
-  const slides = document.querySelectorAll('.slide__page');
+document.addEventListener("DOMContentLoaded", function () {
+  const prevArrow = document.querySelector('.prev');
+  const nextArrow = document.querySelector('.next');
+  const leftContainer = document.querySelectorAll('.page-container__left');
+  const rightContainer = document.querySelectorAll('.page-container__right');
+  const pageSection = document.querySelectorAll('.page__section');
+  const slidePage = document.querySelectorAll('.fade');
   const paginationItems = document.querySelectorAll('.pagination__item');
 
+let slideIndex = 0; // Start from the first slide (0-based index)
 
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
+  prevArrow.addEventListener('click', (event) => {
+    event.preventDefault();
+    leftContainer.forEach(leftContainer => {
+      leftContainer.style.transform = 'translateX(0%)';
+    })
+    rightContainer.forEach(rightContainer => {
+      rightContainer.style.transform = 'translateX(0%)';
+    })
+    slidePage.forEach(fade => {
+      fade.style.animation = 'none';
+      fade.style.transition = 'none';
+    });
+    pageSection.forEach(section => {
+      section.style.animation = 'none';
+      section.style.transition = 'none';
+    });
+    showSlide(slideIndex - 1);
+  });
 
+  nextArrow.addEventListener('click', (event) => {
+    event.preventDefault();
+    leftContainer.forEach(leftContainer => {
+      leftContainer.style.transform = 'translateX(0%)';
+    })
+    rightContainer.forEach(rightContainer => {
+      rightContainer.style.transform = 'translateX(0%)';
+    })
+    slidePage.forEach(fade => {
+      fade.style.animation = 'none';
+      fade.style.transition = 'none';
+    });
+    pageSection.forEach(section => {
+      section.style.animation = 'none';
+      });
+    showSlide(slideIndex + 1);
+  });
 
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
-  }
+  paginationItems.forEach((item, index) => {
+    item.addEventListener('click', (event) => {
+      // Get the index from the data attribute of the clicked item
+      const dataIndex = parseInt(item.getAttribute('data-index'));
+      event.preventDefault();
+      leftContainer.forEach(leftContainer => {
+        leftContainer.style.transform = 'translateX(0%)';
+      })
+      rightContainer.forEach(rightContainer => {
+        rightContainer.style.transform = 'translateX(0%)';
+      })
+      slidePage.forEach(fade => {
+        fade.style.animation = 'none';
+        fade.style.transition = 'none';
+      });
+      pageSection.forEach(section => {
+        section.style.animation = 'none';
+        section.style.transition = 'none';
+      });
+      showSlide(dataIndex);
+    });
+  });
 
-
-  for (i = 0; i < paginationItems.length; i++) {
-    paginationItems[i].classList.remove('active');
-  }
-
-
-  slides[slideIndex - 1].style.display = 'block';
-  paginationItems[slideIndex - 1].classList.add('active');
-}
-
-
+  // Function to show a specific slide
+  function showSlide(index) {
+    const slides = document.querySelectorAll('.slide__page');
+    const paginationItems = document.querySelectorAll('.pagination__item');
+  
+    if (index < 1) {
+      index = slides.length; // Wrap around to the last slide
+    } else if (index > slides.length) {
+      index = 1; // Wrap around to the first slide
+    }
+  
+    // Hide all slides
+    slides.forEach(slide => {
+      slide.style.display = 'none';
+    });
+  
+    // Show the selected slide
+    slides[index - 1].style.display = 'block';
+  
+    // Update the current slide index
+    slideIndex = index;
+  
+    // Update the active pagination item
+    paginationItems.forEach(button => {
+      button.classList.remove('active');
+    });
+  
+    paginationItems[index - 1].classList.add('active');
+  }})

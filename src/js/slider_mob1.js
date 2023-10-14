@@ -1,35 +1,75 @@
-const toggleButton = document.getElementById('toggle-button-mob');
-const upSlide = document.querySelector('.wrap__slide-up');
-const downSlide = document.querySelector('.wrap__slide-down');
+const toggleButton = document.querySelector('.button__menu-open-mob');
+const mobslide = document.querySelector('.swiper__hero');
+const upSlide = document.querySelector('.wrap__left-slide');
+const downSlide = document.querySelector('.wrap__right-slide');
+const buttonLeft = document.querySelector('.button__left-mob');
+const buttonRight = document.querySelector('.button__right-mob');
+const containerslideUp = document.querySelector('.wrap-container__left-slide');
+const containerslideDown = document.querySelector('.wrap-container__right-slide');
 const menuButton = document.querySelector('.icon__menu-button-mob');
+const menuItems = document.querySelectorAll('.menu-button__item');
+let isAnimationPaused = false;
 
-const animationDuration = '1s';
-const easingFunction = 'linear';
-upSlide.style.transition = `transform ${animationDuration} ${easingFunction}`;
-downSlide.style.transition = `transform ${animationDuration} ${easingFunction}`;
-
-// Додаємо обробник кліку на кнопку
 toggleButton.addEventListener('click', () => {
-  // Оприлюднюємо стани анімації та змінюємо transform відповідно
-  if (upSlide.style.animationPlayState === 'running') {
+  if (!isAnimationPaused) {
+    // Крок 1: Зупинка анімації слайдерів
     upSlide.style.animationPlayState = 'paused';
     downSlide.style.animationPlayState = 'paused';
 
-    // Затримка перед зміною transform
+    // Крок 2: Зміщення слайдерів через 1500 мс
     setTimeout(() => {
       menuButton.style.transform = 'rotate(90deg)';
-      upSlide.style.transform = 'translateY(-120%)';
-      downSlide.style.transform = 'translateY(100%)';
-    }, 200); // Змініть затримку на потрібну вам
-  } else {
-    upSlide.style.animationPlayState = 'running';
-    downSlide.style.animationPlayState = 'running';
+      buttonLeft.style.opacity = "1";
+      buttonRight.style.opacity = "1";
+      containerslideUp.style.transition = 'transform 2s ease';
+      containerslideDown.style.transition = 'transform 2s ease';
+      containerslideUp.style.transform = 'translatey(-100%)';
+      containerslideDown.style.transform = 'translatey(100%)';
+    }, 1200);
 
-    // Затримка перед зміною transform
+    // Крок 3: Зникнення слайдерів через 1500 мс
     setTimeout(() => {
+      mobslide.style.display='none';
+    }, 3000);
+
+    // Крок 4: Запуск анімації елементів меню через 2 секунди
+    setTimeout(() => {
+      menuItems.forEach((item, index) => {
+        item.style.transition = 'transform 0.5s ease';
+        item.style.animation = `menuButton${index + 1} 2s forwards`;
+      });
+    }, 2000);
+  } else {
+    // Крок 5: Анімація елементів меню у зворотному порядку
+    setTimeout(() => {
+    menuItems.forEach((item, index) => {
+      item.style.transition = 'transform 0.5s ease';
+      item.style.animation = `menuButton${index - 1} 2s reverse forwards`;
+   
+    });
+  }, 500);
+       // Крок 6: Поява слайдерів 
+    setTimeout(() => {
+      mobslide.style.display='block';
+      buttonLeft.style.opacity = "0";
+      buttonRight.style.opacity = "0";
+    }, 2000);
+    // Крок 7: Повернення слайдерів назад
+    setTimeout(() => {
+      // Крок 7: Повернення слайдерів назад
       menuButton.style.transform = 'rotate(180deg)';
-      upSlide.style.transform = 'translateY(0%)';
-      downSlide.style.transform = 'translateY(0%)';
-    }, 0); // Змініть затримку на потрібну вам
+      containerslideUp.style.transform = 'translateX(0%)';
+      containerslideDown.style.transform = 'translateX(0%)';
+      containerslideUp.style.transition = 'transform 2s ease';
+      containerslideDown.style.transition = 'transform 2s ease';
+ }, 2300);
+
+    // Крок 8: Запуск анімації слайдерів через 2.3 секунди
+    setTimeout(() => {
+      upSlide.style.animationPlayState = 'running';
+      downSlide.style.animationPlayState = 'running';
+    }, 5000);
   }
+
+  isAnimationPaused = !isAnimationPaused;
 });

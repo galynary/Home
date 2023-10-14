@@ -6,19 +6,42 @@ body {
   justify-content: center;
 }
 /*------ mob-slide -----*/
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 380px) {
   .slide {
     display: block;
     width: 100%;
     height: 100%;
+    position: relative;
   }
-.wrap-container__mob-slide,.container__mob-slide {
+
+.wrap-container__mob-slide,
+.container__mob-slide {
   position: relative;
     width: 100%;
     height: 100%;
     z-index: 31;
+ }
+
+ .wrap-slide__container {
+  width: 100%;
+  height: auto;
+  position: relative;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+  overflow: hidden;
  
-  }
+}
+.container__right-slide,
+.container__left-slide {
+ width: 300%;
+ height: 100%;
+}
+
+
+.wrap__img {
+  display: none;
+}
 .img__slide {
 display: block;
   width: 100%;
@@ -42,30 +65,43 @@ display: block;
 }
 .mob__slide {
   flex: 1;
-  display: flex;
+  display: block;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
-
-.mob__img-slide {
-  /* Ваші стилі для mob__img-slide */
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.mob__slide-up,
-.mob__slide-down {
-  width: 300%;
-  height:100%;
+.wrap__left-slide,
+.wrap__right-slide {
   position: relative;
-display: flex;
-flex-direction: row;
- 
-}.mob__slide-up ,
-.mob__slide-down{
-  transition: transform 12s linear;
-  animation:  animationMobSlide 12s linear infinite  alternate;
+ display: flex;
+transform: translateX(0%);
+  flex-direction:row;
+  transition: transform 20s;
+  animation: animationRight 16s linear infinite forwards alternate;
 }
+@keyframes animationRight {
+  0%, 100% {
+    transform: translateX(0%);
+  }
+  16.66667% {
+    transform: translateX(0%); /* Пауза між третьою і першою картинкою */
+  }
+  25% {
+    transform: translateX(-33%);
+  }
+  41.66667% {
+    transform: translateX(-33%); /* Пауза між першою і другою картинкою */
+  }
+  50% {
+    transform: translateX(-66.7%);
+  }
+  66.66667% {
+    transform: translateX(-66.7%); /* Пауза між другою і третьою картинкою */
+  }
+}
+
+
 @keyframes animationMobSlide {
   0%, 100% {
     transform: translateX(0%);
@@ -88,8 +124,8 @@ flex-direction: row;
 
 }
 
-.mob__slide {
- display: flex;
+.mob__img-slide {
+ display: block;
   width: 100%;
   height: 100%;
   position: relative;
@@ -100,7 +136,7 @@ flex-direction: row;
 }
 
 .img-slide__mob {
-  display: inline-block;
+  display: block;
   width: 100%;
   height: 100%;
  
@@ -122,40 +158,71 @@ flex-direction: row;
 }
 }
 @media (min-width: 768px) {
-  .img-slide__mob{
-    max-width: 300%;
-    height: auto;
+
+.wrap__left-slide,
+.wrap__right-slide {
+transform: translateX(0%);
+  flex-direction:row;
+  transition: transform 20s;
+  animation: animationRight 16s linear infinite forwards alternate;
+}
+@keyframes animationRight {
+  0%, 100% {
+    transform: translateX(0%);
   }
-  .mob__slide-up,
-.mob__slide-down {
-  width: 300%;
-  height: 100%;
-}
-.img__slide {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.mob__img-slide {
- width: 100%;
+  16.66667% {
+    transform: translateX(0%); /* Пауза між третьою і першою картинкою */
+  }
+  25% {
+    transform: translateX(-33%);
+  }
+  41.66667% {
+    transform: translateX(-33%); /* Пауза між першою і другою картинкою */
+  }
+  50% {
+    transform: translateX(-66.7%);
+  }
+  66.66667% {
+    transform: translateX(-66.7%); /* Пауза між другою і третьою картинкою */
+  } /* Пауза між другою і третьою картинкою */
+  }
+
 
 }
 
-}
+
+
 
 /*------ wrap__slide -----*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
   .wrap-container__mob-slide {
     display: none;
   }
   .img-slide__mob { 
     display: none;
   }
-  .wrap-container__right-slide,
-  .wrap-container__left-slide {
-    transition: transform 2s;
- }
+  .mob__slide {
+    display: none;
+  }
+  .wrap-slide__container {
+    position: relative;
+   display: flex;
+  flex-direction: row;
+  align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+   }
 
+  .container__right-slide,
+  .container__left-slide {
+   width: 100%;
+   height: 100%;
+  }
+ 
+  .swiper-slide__left,
+  .swiper-slide__right {
+      flex: 1; 
+  }
   .img-slide__desc { 
    display: block;
    width: 100%;
@@ -165,31 +232,22 @@ flex-direction: row;
 .img-slide__mob {
   display: none;
 }
+.wrap__img {
+  display: block;
+}
 .wrap__slide {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 31;
 }
-.wrap-slide__container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-display: flex;
-  justify-content: space-between;
-  overflow: hidden;
- 
-}
+
 .wrap-slide__container.element.style {
   display: block;
 }
 
-
 .wrap__left-slide {
-  width: 100%;
-  margin: 0;
-display: flex;
-  flex-direction: column;
+flex-direction: column;
   transform: translateY(0%);
   transition: transform 20s;
   animation: animationLeft 16s linear infinite  alternate;
@@ -214,39 +272,30 @@ display: flex;
     transform: translateY(-66.7%); /* Пауза між другою і третьою картинкою */
   }
 }
-.swiper-slide__left {
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: relative;
-}
+
 .swiper-slide__left :nth-child(1) {
   animation-delay: 1s;
 }
 .swiper-slide__left :nth-child(2) {
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .swiper-slide__left:nth-child(3) {
-  animation-delay: 1s;
+  animation-delay: 3s;
 }
-.swiper-slide__right {
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: relative;
 
-  
+.wrap__left-slide { 
+  position: relative;
+  margin: 0;
+  display: flex;
+ transform: translateY(0%);
+  flex-direction: column;
+  transition: transform 20s;
+  animation: animationLeft 16s linear infinite forwards alternate;
 }
 .wrap__right-slide {
   position: relative;
   margin: 0;
-   width: 100%;
-   height: 300%;
-  display: flex;
+ display: flex;
 transform: translateY(0%);
   flex-direction: column;
   transition: transform 20s;
@@ -325,14 +374,13 @@ animationLeft {
 .img__left-slide {
   position: relative;
 }
-/*.wrap__img {
+/*wrap__img {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100%; /* Забезпечує вирівнювання по вертикалі 
+  height: 100%; 
 }*/
-
 
 .img-slide__desc {
   position: relative;
