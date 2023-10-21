@@ -6,7 +6,8 @@ import { page_open } from './js/page_open';
 import { faq } from './js/faq';
 import { slide_page } from './js/slide_page';
 import { page_open_mob } from './js/page_open_mob';
-/*import { discover_house } from './js/discover_house';*/
+import { write_us } from './js/write_us ';
+import { discover_house } from './js/discover_house';
 /*import { description_house } from './js/description_house';*/
 
 

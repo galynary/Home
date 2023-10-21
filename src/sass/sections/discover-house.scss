@@ -1,8 +1,9 @@
-.page__section > .discover-house {
+@media screen and (min-width: 480px) {
+  .page__section > .discover-house {
   padding: 0px 20px 90px;
 }
 .descover-house__contant {
-  padding: 20px 50px;
+  padding: 200px 50px;
 }
 .about__house {
   display: flex;
@@ -48,4 +49,5 @@
   display: flex;
   margin-top: 20px;
   border: 1px solid#2e2d2d;
+}
 }

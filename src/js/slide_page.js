@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const leftContainer = document.querySelectorAll('.page-container__left');
   const rightContainer = document.querySelectorAll('.page-container__right');
   const pageSection = document.querySelectorAll('.page__section');
-  const slidePage = document.querySelectorAll('.fade');
+  const slidePage = document.querySelectorAll('.slide__page');
   const paginationItems = document.querySelectorAll('.pagination__item');
 
-let slideIndex = 0; // Start from the first slide (0-based index)
+let slideIndex = 0; 
 
   prevArrow.addEventListener('click', (event) => {
     event.preventDefault();
@@ -24,6 +24,8 @@ let slideIndex = 0; // Start from the first slide (0-based index)
     pageSection.forEach(section => {
       section.style.animation = 'none';
       section.style.transition = 'none';
+      section.style.opacity ='1';
+      section.style.display = 'block';
     });
     showSlide(slideIndex - 1);
   });
@@ -42,13 +44,15 @@ let slideIndex = 0; // Start from the first slide (0-based index)
     });
     pageSection.forEach(section => {
       section.style.animation = 'none';
+      section.style.transition = 'none';
+      section.style.opacity ='1';
+      section.style.display = 'block';
       });
     showSlide(slideIndex + 1);
   });
 
   paginationItems.forEach((item, index) => {
     item.addEventListener('click', (event) => {
-      // Get the index from the data attribute of the clicked item
       const dataIndex = parseInt(item.getAttribute('data-index'));
       event.preventDefault();
       leftContainer.forEach(leftContainer => {
@@ -64,35 +68,27 @@ let slideIndex = 0; // Start from the first slide (0-based index)
       pageSection.forEach(section => {
         section.style.animation = 'none';
         section.style.transition = 'none';
+        section.style.opacity ='1';
+        section.style.display = 'block';
       });
       showSlide(dataIndex);
     });
   });
-
-  // Function to show a specific slide
-  function showSlide(index) {
+function showSlide(index) {
     const slides = document.querySelectorAll('.slide__page');
     const paginationItems = document.querySelectorAll('.pagination__item');
   
     if (index < 1) {
-      index = slides.length; // Wrap around to the last slide
+      index = slides.length;
     } else if (index > slides.length) {
-      index = 1; // Wrap around to the first slide
+      index = 1;
     }
-  
-    // Hide all slides
-    slides.forEach(slide => {
+  slides.forEach(slide => {
       slide.style.display = 'none';
     });
-  
-    // Show the selected slide
-    slides[index - 1].style.display = 'block';
-  
-    // Update the current slide index
-    slideIndex = index;
-  
-    // Update the active pagination item
-    paginationItems.forEach(button => {
+   slides[index - 1].style.display = 'block';
+   slideIndex = index;
+  paginationItems.forEach(button => {
       button.classList.remove('active');
     });
   

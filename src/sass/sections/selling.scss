@@ -11,9 +11,11 @@
   .wrap__page-container {
  position: relative;
   height: 100vh;
- overflow-y: scroll;
+overflow-y: scroll;
  overflow-x: hidden;
+
 }
+
 .wrap__page-container::-webkit-scrollbar {
   width: 5px;
   height: 40px;
@@ -34,6 +36,7 @@
 
   .page__inner-container {
 padding-top: 150px;
+padding-bottom: 70px;
   }
   .page-section.appear {
     display: block;
@@ -80,24 +83,64 @@ padding-top: 150px;
       opacity: 0;
     }
   }
-
+.logo__content-page {
+  z-index: 63;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: block;
+}
+.logo-text__page {
+  color: #000;
+  font-size: 26px;
+  font-family: deserta, sans-serif;
+}
+.logo-content-page__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   .selling__contant {
     width: 100%;
-   padding-top: 40px;
-   display: flex;
+    display: flex;
     flex-direction: column;
   align-items: center;
   }
-  .selling__text2 {
-transform: rotate(-90deg) translateY(-70%) translateX(-30%);
-  display: flex;
-    font-weight: 700;
-    font-size: 30px;
-    color: #5b5b5b;
-    letter-spacing: 0.08em;
+  .wrap__selling-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.selling__text2 {
+  position: relative;
+  right: 0;
+transform: rotate(-90deg)translateX(20%) translateY(50%);
+    display: flex;
+      font-weight: 900;
+      font-size: 30px;
+      color: #5b5b5b;
+      letter-spacing: 0.08em;
+    }
+  .selling__img {
+   width: 100%;
+  height: auto;
   }
+  .wrap-necessary__steps {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+  }
+  .necessary__steps {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    padding-top: 50px;
+  }
+ 
   .selling__text {
-    max-width: 400px;
+    max-width: 500px;
     display: flex;
     font-size: 18px;
     line-height: 1.4;
@@ -109,23 +152,30 @@ transform: rotate(-90deg) translateY(-70%) translateX(-30%);
 @media screen and (min-width: 768px) {
   .selling__contant {
     flex-direction: row;
-    gap:20px;
+    padding: 0px 20px 0px 50px;
+    gap:40px;
    align-items: start;
 }
   .selling__text {
-    max-width: 860px;
+    max-width: 600px;
     padding: 0;
 }
+.wrap-necessary__steps,
+.necessary__steps  {
+  display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+padding-top: 50px;
+ max-width: 100%;
+  gap:200px
+}
+
 .require-document__container,
 .steps-client__container {
   align-items: flex-start;
 }
-.necessary__steps {
-  display: flex;
-  flex-direction: column;
-  gap:50px;
-  padding-top: 50px;
-}
+
 .require-document__title,
 .steps-client__title {
   color: #000;
@@ -136,7 +186,7 @@ transform: rotate(-90deg) translateY(-70%) translateX(-30%);
 .required-document__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   list-style: none;
   padding-top: 30px;
 }
@@ -147,11 +197,31 @@ transform: rotate(-90deg) translateY(-70%) translateX(-30%);
   letter-spacing: 0.5;
   
 }
+.necessary__steps {
+  display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items:center;
+padding-top: 50px;
+padding: 50px 50px 0px;
+  max-width: 800px;
 }
-@media screen and (min-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+  .selling__contant {
+    flex-direction: column;
+  }
+}
+
+
+@media screen and (min-width: 1100px) {
   .page__inner-container {
-    padding: 120px 30px 0px 100px;
-    overflow: hidden;
+   overflow: hidden;
+}
+.selling__img {
+  max-width: 600px;
+  height: auto;
 }
  
   .selling__text {
@@ -159,13 +229,23 @@ transform: rotate(-90deg) translateY(-70%) translateX(-30%);
   
 }
 .selling__text2 {
-  transform: rotate(-90deg) translateX(-30%) translateY(50%);
+  transform: rotate(-90deg) translateX(0%) translateY(70%);
 }
-.necessary__steps {
+.wrap-necessary__steps,
+.necessary__steps  {
+  display: flex;
  flex-direction: row;
  justify-content: space-between;
- align-items: start;
+ align-items: center;
 padding-top: 50px;
-  max-width: 800px;
+ max-width: 100%;
+  gap:300px
 }
+.page__inner-container {
+  padding-left: 200px;
+  padding-bottom: 200px;
+  padding-right: 20px;
+  }
+ 
+
 }

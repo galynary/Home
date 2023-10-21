@@ -5,13 +5,14 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+    display: none;
   }
   .swiper.my__swiper {
     position: absolute;
     top:0;
     width: 100%;
     height: 100%;
-    display: none;
+   
 }
   .wrap__page-section {
     background-color: #fff;
@@ -19,8 +20,8 @@
     height: 100%;
   }
   .page__section {
-    width: 100%;
-    height: auto;
+  width: 100%;
+    height: 100vh;
     border-radius: 4px;
     margin: 0 auto;
    position: absolute;
@@ -73,7 +74,7 @@
   .wrap__swiper-pagination {
  position: absolute;
  z-index: 1;
-top: 87%;
+bottom: 20px;
  left: 50%;
  transform: translateX(-50%);
  display: none;
@@ -131,6 +132,7 @@ top: 87%;
     height: 100%;
     position: relative;
     display: none;
+    overflow: hidden;
  }
   .fade {
 flex-direction: row;
@@ -211,29 +213,37 @@ flex-direction: row;
     overflow: hidden;
   }
   .page-header__container {
-  position: relative;
+   position: relative;
    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
   }
+  .page__header-page { 
+    position: fixed;
+    margin: 0 auto;
+   height: 170px;
+   right: 0px;
+   margin-right:0px;
+   display: flex;
+   justify-content: space-between;
+    background-color: #fff;
+    top: 0;
+   left: 0;
+   z-index: 63;
+
+   }
   /*.wrap-logo__content-mob {
     z-index: 41;
     position: absolute;
   }*/
   .logo__content-mob {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
   }
 
-  .logo__text {
-    font-family: 'deserta', sans-serif;
-    font-size: 25px;
-    line-height: 1.2;
-    color: #000;
-  }
-  .mob-menu__button {
+ .mob-menu__button {
     transform: translateX(-50%);
     width: 100px;
     height: 100px;
@@ -244,20 +254,25 @@ flex-direction: row;
     border-radius: 100%;
     justify-content: center;
     align-items: center;
-    display: flex;
+    display: none;
     position: absolute;
     left: 54%;
   }
 
   .icon__phone {
     position: absolute;
-    right: 0px;
+    right: 20px;
   }
   .faq {
     max-width: 700px;
   }
   .faq__container {
     padding: 0px 20px;
+  }
+  .flaq__content {
+    height: 100vh;
+    position: relative;
+    padding-top: 170px;
   }
 
   .faq__title {
@@ -297,14 +312,19 @@ flex-direction: row;
     left: 0;
   }
  
- 
-
   .wrap__page-links {
+    width: 100%;
+    height: 200px;
     position: absolute;
     bottom: 20px;
-    width: 100%;
+    flex-direction: row;
+    display: none;
+    justify-content: space-between;
+    list-style: none;
+    z-index: 61;
   }
-  .page__links {
+
+.page__links {
     width: 100%;
     position: relative;
     height: 120px;
@@ -312,8 +332,24 @@ flex-direction: row;
     justify-content: space-between;
     list-style: none;
   }
-
-  .page__link {
+  .wrap__page-item-contact-mob {
+   /* width: 100%;
+    height: 100%;*/
+    padding-left: 5px;
+    position: absolute;
+   /* bottom: -20px;
+    transform: translateY(600%);*/
+}
+.wrap__contacts-link-mob {
+background-color: rgba(0,0,0,0);
+  padding: 0;
+  position: absolute;
+  bottom: 20px;
+  left: -30px;
+  transform: rotate(-90deg);
+  z-index: 63;
+}
+.page__link {
     font-size: 20px;
     color: #000;
     line-height: 1.1;
@@ -327,4 +363,40 @@ flex-direction: row;
   width: 100%;
 }
 }
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1100px) {
+  .page__header-page { 
+    margin-right: 140px;
+   
+}
+  .wrap__page-links {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    flex-direction: column;
+   
+  }
+  .page-container-selling {
+    padding-bottom: 100px;
+  }
+  .page__links {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 20px;
+    display: flex;
+    position: relative;
+}
+.wrap__contacts-link-mob {
+  position: absolute;
+  background-color: transparent;
+  padding: 0;
+  top: 20px;
+  left: 0;
+  right: 0;
+  transform: rotate(0deg);
+
+}
+}
