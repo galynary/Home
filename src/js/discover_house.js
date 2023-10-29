@@ -1,4 +1,4 @@
-const toggleButton = document.getElementById('toggle-button');
+/*const toggleButton = document.getElementById('toggle-button');
 const toggleButton2 = document.getElementById('toggle-button2');
 const logoBlack = document.querySelector('.logo-img__black');
 const logoWhite = document.querySelector('.logo-img__white');
@@ -7,7 +7,7 @@ const leftContainer = document.querySelector('.page-container__left');
 const rightContainer = document.querySelector('.page-container__right');
 const menuButton = document.querySelector('.icon__menu-button2');
 const menuButtonDiscover = document.querySelector('[data-discover-open]');
-const page = document.getElementById('slide__page-discover');
+const pageDiscover = document.getElementById('slide__page-discover');
 const swiperArrows = document.querySelector('.wrap__swiper-arrows');
 const swiperPagination = document.querySelector('.wrap__swiper-pagination');
 const pageSection = document.querySelectorAll('.slide__page');
@@ -20,8 +20,7 @@ const backgroundContactsLink = document.querySelector('.wrap__contacts-link');
 const contactsLink = document.querySelector('.contacts__link');
 const backgroundAboutUsLink = document.querySelector('.wrap__about-us-link');
 const aboutUsLink = document.querySelector('.js-open-about-us');
-
-
+import {showSlide} from  './slide_page';
 
 pageContainer.addEventListener('wheel', (e) => {
   const scrollSpeed = 5; // Швидкість прокрутки
@@ -37,6 +36,7 @@ menuButtonDiscover.addEventListener('click', () => {
    toggleButton.style.display = 'none';
    toggleButton2.style.display = 'flex';
     toggleButton2.style.opacity="1";
+    pageDiscover.style.display = 'flex';
   mySwiper.style.display = 'block';
     mySwiper.style.zIndex = "62";
     buttonLeft.style.opacity="0";
@@ -62,12 +62,16 @@ menuButtonDiscover.addEventListener('click', () => {
    
   },100);
   setTimeout(() => {
-    section.style.display = 'block';
-    section.style.animation= 'openPage 4s linear forwards';
-   section.style.zIndex = "64";
-    section.style.transition = 'transform 5s ease';
-   
-    },4300);
+    section.forEach(section => {
+      section.style.display = 'none';
+if (sectionName === 'slide__page-selling' || sectionName === 'slide__page-faq' || sectionName === 'slide__page-discover') {
+        section.style.display = 'block';
+        section.style.animation = 'openPage 4s linear forwards';
+        section.style.zIndex = "62";
+        section.style.transition = 'transform 5s ease';
+      }
+    });
+  }, 4300);
    //появляється pageSection
     setTimeout(() => {
       swiperArrows.style.zIndex = "63";
@@ -118,6 +122,7 @@ setTimeout(() => {
     section.style.display = 'none';
     section.style.transition = 'transform 5s ease';
   })
+  pageDiscover.style.display = 'block';
     mySwiper.style.display = 'none';
     mySwiper.style.zIndex = "1";
       swiperArrows.style.zIndex = "1";
@@ -128,4 +133,4 @@ setTimeout(() => {
       buttonRight.style.opacity="1";
     },6000);
  
-  })
+  })*/

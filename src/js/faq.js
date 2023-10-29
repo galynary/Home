@@ -1,4 +1,4 @@
-const toggleButton = document.getElementById('toggle-button');
+/*const toggleButton = document.getElementById('toggle-button');
 const toggleButton2 = document.getElementById('toggle-button2');
 const logoBlack = document.querySelector('.logo-img__black');
 const logoWhite = document.querySelector('.logo-img__white');
@@ -7,10 +7,10 @@ const leftContainer = document.querySelector('.page-container__left');
 const rightContainer = document.querySelector('.page-container__right');
 const menuButton = document.querySelector('.icon__menu-button2');
 const menuButtonFaq = document.querySelector('[data-open-faq]');
-const page = document.getElementById('slide__page-faq');
+const pageFaq = document.getElementById('slide__page-faq');
 const swiperArrows = document.querySelector('.wrap__swiper-arrows');
 const swiperPagination = document.querySelector('.wrap__swiper-pagination');
-const pageSection = document.querySelectorAll('.slide__page');
+const slidePage = document.querySelectorAll('.slide__page');
 const section = document.getElementById('data-faq');
 const mySwiper = document.querySelector('.wrap-swiper__slide');
 const pageContainer = document.querySelector('.wrap__page-container');
@@ -20,9 +20,6 @@ const backgroundContactsLink = document.querySelector('.wrap__contacts-link');
 const contactsLink = document.querySelector('.contacts__link');
 const backgroundAboutUsLink = document.querySelector('.wrap__about-us-link');
 const aboutUsLink = document.querySelector('.js-open-about-us');
-
-
-
 pageContainer.addEventListener('wheel', (e) => {
   const scrollSpeed = 5; // Швидкість прокрутки
 
@@ -32,11 +29,11 @@ pageContainer.addEventListener('wheel', (e) => {
   }
 });
 
-
 menuButtonFaq.addEventListener('click', () => {
-   toggleButton.style.display = 'none';
+  toggleButton.style.display = 'none';
    toggleButton2.style.display = 'flex';
     toggleButton2.style.opacity="1";
+    pageFaq.style.display = 'flex';
   mySwiper.style.display = 'block';
     mySwiper.style.zIndex = "62";
     buttonLeft.style.opacity="0";
@@ -45,10 +42,10 @@ menuButtonFaq.addEventListener('click', () => {
    
  //появляється page
  setTimeout(() => {
-  pageSection.forEach(section => {
-    section.style.display = 'block';
-    section.style.zIndex = "62";
-    section.style.transition = 'transform 5s ease';
+  slidePage.forEach(slide => {
+    slide.style.display = 'block';
+    slide.style.zIndex = "62";
+    slide.style.transition = 'transform 5s ease';
 }, 100);
 //leftContainer rightContainer стають на позицію 0
    setTimeout(() => {
@@ -66,8 +63,7 @@ menuButtonFaq.addEventListener('click', () => {
     section.style.animation= 'openPage 4s linear forwards';
    section.style.zIndex = "64";
     section.style.transition = 'transform 5s ease';
-   
-    },4300);
+  },4300);
    //появляється pageSection
     setTimeout(() => {
       swiperArrows.style.zIndex = "63";
@@ -114,10 +110,11 @@ menuButton.style.transform = 'rotate(-90deg)';
     aboutUsLink.style.color ="#fff";
   },1500);
 setTimeout(() => {
-    pageSection.forEach(section => {
-    section.style.display = 'none';
-    section.style.transition = 'transform 5s ease';
+  slidePage.forEach(slide => {
+    slide.style.display = 'none';
+    slide.style.transition = 'transform 5s ease';
   })
+  pageFaq.style.display = 'none';
     mySwiper.style.display = 'none';
     mySwiper.style.zIndex = "1";
       swiperArrows.style.zIndex = "1";
@@ -128,4 +125,4 @@ setTimeout(() => {
       buttonRight.style.opacity="1";
     },6000);
  
-  })
+  })*/

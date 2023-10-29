@@ -38,12 +38,12 @@ overflow-y: scroll;
 padding-top: 150px;
 padding-bottom: 70px;
   }
-  .page-section.appear {
+  .page__section.appear {
     display: block;
     animation: openPage 4s linear forwards;
   }
   
-  .page-section.disappear {
+  .page__section.disappear {
     animation: closePage 4s linear forwards;
     opacity: 0;
   }

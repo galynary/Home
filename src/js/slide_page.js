@@ -1,15 +1,63 @@
 document.addEventListener("DOMContentLoaded", function () {
   const prevArrow = document.querySelector('.prev');
   const nextArrow = document.querySelector('.next');
+  const openSelling = document.querySelector('[data-open-selling]');
+const openFaq = document.querySelector('[data-open-faq]');
+const openDiscover = document.querySelector('[data-discover-open]');
   const leftContainer = document.querySelectorAll('.page-container__left');
   const rightContainer = document.querySelectorAll('.page-container__right');
   const pageSection = document.querySelectorAll('.page__section');
   const slidePage = document.querySelectorAll('.slide__page');
   const paginationItems = document.querySelectorAll('.pagination__item');
+  const menuButtonItems = document.querySelectorAll('.wrap-menu__button');
+
+
+  menuButtonItems.forEach((buttonItem) => {
+    buttonItem.addEventListener('click', () => {
+  if(buttonItem === openSelling){
+    let slide = document.querySelector('[data-selling]')
+    pageSection.forEach((section) => {
+      section.style.display = 'none';
+      if( section === document.querySelector('[data-selling-page]')) {
+        section.style.display = 'block'
+          section.style.animation = 'openPage 4s linear forwards';
+          section.style.transition = 'transform 5s ease';
+        }})
+      slide.style.display = 'flex';
+      slide.style.zIndex = "62";
+      paginationItems[0].classList.add('active');
+    
+  }
+  else if(buttonItem === openFaq){
+    let slide = document.querySelector('[data-faq]')
+    pageSection.forEach((section) => {
+      section.style.display = 'none';
+      if( section === document.querySelector('[data-faq-page]')) {
+          section.style.display = 'block'
+          section.style.animation = 'openPage 4s linear forwards';
+          section.style.transition = 'transform 5s ease';
+        }})
+      slide.style.display = 'flex';
+      slide.style.zIndex = "62";
+      
+    paginationItems[1].classList.add('active');
+   } 
+ else if( buttonItem === openDiscover ){
+  let slide = document.querySelector('[data-discover]')
+  pageSection.forEach((section) => {
+    section.style.display = 'none';
+    if( section === document.querySelector('[data-discover-page]')) {
+      section.style.display = 'block'
+      section.style.animation = 'openPage 4s linear forwards';
+      section.style.transition = 'transform 5s ease';
+    }})
+  slide.style.display = 'flex';
+  slide.style.zIndex = "62";
+  paginationItems[2].classList.add('active')
+  }})})
 
 let slideIndex = 0; 
-
-  prevArrow.addEventListener('click', (event) => {
+prevArrow.addEventListener('click', (event) => {
     event.preventDefault();
     leftContainer.forEach(leftContainer => {
       leftContainer.style.transform = 'translateX(0%)';
@@ -42,12 +90,13 @@ let slideIndex = 0;
       fade.style.animation = 'none';
       fade.style.transition = 'none';
     });
-    pageSection.forEach(section => {
+   pageSection.forEach(section => {
       section.style.animation = 'none';
       section.style.transition = 'none';
       section.style.opacity ='1';
       section.style.display = 'block';
-      });
+    });
+     
     showSlide(slideIndex + 1);
   });
 
@@ -65,12 +114,12 @@ let slideIndex = 0;
         fade.style.animation = 'none';
         fade.style.transition = 'none';
       });
-      pageSection.forEach(section => {
-        section.style.animation = 'none';
-        section.style.transition = 'none';
-        section.style.opacity ='1';
-        section.style.display = 'block';
-      });
+     pageSection.forEach(section => {
+      section.style.animation = 'none';
+      section.style.transition = 'none';
+      section.style.opacity ='1';
+      section.style.display = 'block';
+    });
       showSlide(dataIndex);
     });
   });
@@ -94,3 +143,6 @@ function showSlide(index) {
   
     paginationItems[index - 1].classList.add('active');
   }})
+
+  
+

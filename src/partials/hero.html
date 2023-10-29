@@ -56,32 +56,33 @@ xmlns="http://www.w3.org/2000/svg"
             <ul class="menu-button__list">
           <li class="menu-button__item">
             <div class="wrap-menu__button" data-description-open>
-               <buttom class="menu__button" 
+              <buttom  class="menu__button" 
               >current listings</buttom>
             </div>
            </li>
           <li class="menu-button__item">
-            <div class="wrap-menu__button" data-discover-open><buttom class="menu__button" >buying</buttom>
+            <div class="wrap-menu__button" data-discover-open>
+              <buttom  class="menu__button" data-discover-open> buying </buttom>
             </div>
             </li>
           <li class="menu-button__item">
-            <div class="wrap-menu__button" data-discover-open>
-            <buttom class="menu__button">blog</buttom>
+            <div class="wrap-menu__button">
+              <buttom class="menu__button">blog</buttom>
             </div>
           </li>
           <li class="menu-button__item">
             <div class="wrap-menu__button" data-open-selling>
-            <buttom class="menu__button" >selling</buttom>
+              <buttom class="menu__button" data-open-selling> selling </buttom>
             </div>
           </li>
           <li class="menu-button__item">
             <div class="wrap-menu__button">
-                <buttom class="menu__button">consulting</buttom>
+              <buttom class="menu__button">consulting</buttom>
             </div>
           </li>
           <li class="menu-button__item">
             <div class="wrap-menu__button" data-open-faq>
-            <buttom class="menu__button" >faq</buttom>
+              <buttom  class="menu__button" data-open-faq>faq</buttom>
             </div>
           </li>
         </ul></div>
@@ -287,15 +288,15 @@ xmlns="http://www.w3.org/2000/svg"
         </div>
       
         <div class="wrap-swiper__slide">
+          <div class="slide-page__container">
+            <div class="page-container__left"></div>
+            <div class="page-container__right"></div>
+          </div>
           <div class="swiper my__swiper">
           <div class="my-swiper__container"> 
           <div class="swiper__slide">
-            <div class="slide__page fade" id="slide__page-selling" data-selling>
-             <div class="slide-page__container">
-                  <div class="page-container__left"></div>
-                  <div class="page-container__right"></div>
-                </div>
-              <section class="page__section"  id="data-selling" loading="lazy" >
+            <div class="slide__page fade" id="slide__page-selling" data-selling ="true">
+           <section class="page__section"  id="data-selling" loading="lazy" data-selling-page >
                 <div class="page__container page-container-selling">
                 
             <div class="selling__container">
@@ -463,12 +464,8 @@ xmlns="http://www.w3.org/2000/svg"
                  </div>
                </section>
                </div>
-             <div class="slide__page fade" id="slide__page-faq" data-faq>
-              <div class="slide-page__container">
-                <div class="page-container__left"></div>
-                <div class="page-container__right"></div>
-              </div>
-              <section class="page__section" id="data-faq">
+             <div class="slide__page fade" id="slide__page-faq" data-faq ="true">
+             <section class="page__section" id="data-faq" data-faq-page>
               <div class="page__container">
                 <div class="page__header-page"> 
                   <div class="page-header__container"> 
@@ -548,15 +545,10 @@ xmlns="http://www.w3.org/2000/svg"
               </div>
               </section>
             </div>
-            <div class="slide__page fade"  id="slide__page-discover" data-discover>
-              <div class="slide-page__container">
-                <div class="page-container__left"></div>
-                <div class="page-container__right"></div>
-              </div>
-              <section class="page__section" id ="data-discover" loading="lazy" data-discover>
+            <div class="slide__page fade"  id="slide__page-discover" data-discover ="true">
+            <section class="page__section" id ="data-discover" loading="lazy" data-discover-page>
               <div class="page__container discover-house">
-               
-                <div class="page__header-page"> 
+               <div class="page__header-page"> 
                     <div class="page-header__container"> 
                        <div class="logo__content-page">
                         <div class="logo-content-page__inner">
