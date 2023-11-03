@@ -47,30 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
       buttonLeft.style.opacity = "0";
       buttonRight.style.opacity = "0";
       pageContainer.style.zIndex = "62";
-      setTimeout(() => {
-        function defineScreen() {
-          let screen = window.matchMedia("(max-width: 1200px)");
-          function applyStyles() {
-              if (screen.matches) {
-                mySwiper.style.right = "0px";
-                mySwiper.style.bottom = "150px";
-              } else {
-                mySwiper.style.right = "150px";
-                mySwiper.style.bottom = "0px";
-              }
-            }
-      
-            applyStyles();
-            screen.addListener(applyStyles);
-          }
-        
-          // Call the defineScreen function
-          defineScreen();
-        },100);
-
-        setTimeout(() => {
-          leftContainer.style.transition = 'transform 6s ease';
-          rightContainer.style.transition = 'transform 6s ease';
+    
+    setTimeout(() => {
+          leftContainer.style.transition = 'transform 5s ease';
+          rightContainer.style.transition = 'transform 5s ease';
           leftContainer.style.transform = 'translateX(0%)';
           rightContainer.style.transform = 'translateX(0%)';
           toggleButton2.style.transition = 'transform 4s ease';
@@ -97,7 +77,7 @@ setTimeout(() => {
       aboutUsLink.style.color ="#000";
       aboutUsLink.style.zIndex = "63";
      
-    }, 1000);
+    }, 2000);
       setTimeout(() => {
       if (buttonItem === openSelling) {
         let slide = document.querySelector('[data-selling]');
@@ -140,7 +120,7 @@ setTimeout(() => {
           if (section === document.querySelector('[data-discover-page]')) {
             section.style.opacity = '1';
             section.style.display = 'block';
-            section.style.animation = 'openPage 4s linear forwards';
+            section.style.animation = 'openPage 5s linear forwards';
             section.style.transition = 'transform 5s ease';
           }
         });
@@ -148,7 +128,27 @@ setTimeout(() => {
         slide.style.zIndex = "62";
         paginationItems[2].classList.add('active');
       }
-    }, 3500);
+    }, 2100);
+    setTimeout(() => {
+      function defineScreen() {
+        let screen = window.matchMedia("(max-width: 1200px)");
+        function applyStyles() {
+            if (screen.matches) {
+              mySwiper.style.right = "0px";
+              mySwiper.style.bottom = "150px";
+            } else {
+              mySwiper.style.right = "150px";
+              mySwiper.style.bottom = "0px";
+            }
+          }
+    
+          applyStyles();
+          screen.addListener(applyStyles);
+        }
+      
+        // Call the defineScreen function
+        defineScreen();
+      },2500);
       setTimeout(() => {
         swiperArrows.style.display = 'block'; 
         logoWhite.style.display = 'none';
@@ -158,34 +158,33 @@ setTimeout(() => {
           swiperPagination.style.display = 'none';
         }
      
-    }, 3900);
+    }, 3000);
 });
   });
 
   let isOpenPage = false;
 
   toggleButton2.addEventListener('click', () => {
-    setTimeout(() => {
+ 
       pageSection.forEach((section) => {
-        section.style.animation = 'closePage 4s linear forwards';
-        section.style.transition = 'transform 4s ease';
+        section.style.animation = 'closePage 5s linear forwards';
+        section.style.transition = 'transform 5s ease';
         section.style.opacity = "0";
       });
-    }, 200);
 
     menuButton.style.transform = 'rotate(-90deg)';
     setTimeout(() => {
      mySwiper.style.right = "0px";
-    }, 1000);
+    }, 3200);
 
     setTimeout(() => {
-      leftContainer.style.transition = 'transform 4s ease';
-      rightContainer.style.transition = 'transform 4s ease';
+      leftContainer.style.transition = 'transform 5s ease';
+      rightContainer.style.transition = 'transform 5s ease';
       toggleButton2.style.transition = 'transform 4s ease';
       toggleButton2.style.transform = 'translate(-50%, 0%)';
       leftContainer.style.transform = 'translateX(-100%)';
       rightContainer.style.transform = 'translateX(100%)';
-   },1500);
+   },3300);
 
  setTimeout(() => {
       swiperPagination.style.display = 'none';
@@ -194,12 +193,13 @@ setTimeout(() => {
         item.classList.remove('active')
     });
       logoWhite.style.display = 'block';
+      swiperArrows.style.display = 'none'; 
      swiperPagination.style.zIndex = "1";
       backgroundContactsLink.style.background ="#000";
       contactsLink.style.color ="#fff";
       backgroundAboutUsLink.style.background ="#000";
       aboutUsLink.style.color ="#fff";
-    },5500);
+    },3300);
   setTimeout(() => {
     slidePage.forEach(slide => {
       slide.style.display = 'none';
@@ -209,13 +209,12 @@ setTimeout(() => {
     pageSelling.style.display = 'block';
       mySwiper.style.display = 'none';
       mySwiper.style.zIndex = "1";
-        swiperArrows.style.display = 'none'; 
        toggleButton2.style.display = 'none';
         toggleButton.style.display = 'flex';
         buttonLeft.style.opacity="1";
         buttonRight.style.opacity="1";
         iconPhone.style.zIndex = "52";
-      },6100)})})
+      },8000)})})
 
    /*   window.addEventListener('scroll', function() {
         const mySwiper = document.querySelector('.wrap-swiper__slide');
