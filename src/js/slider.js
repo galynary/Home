@@ -10,66 +10,89 @@ const menuButton = document.querySelector('.icon__menu-button');
 const menuItems = document.querySelectorAll('.menu-button__item');
 
 let isAnimationPaused = false;
-
 toggleButton.addEventListener('click', () => {
-  if (!isAnimationPaused) {
-    // Крок 1: Зупинка анімації слайдерів
-    wrapLeftSlide.style.animationPlayState = 'paused';
-    wrapRightSlide.style.animationPlayState = 'paused';
+        if (!isAnimationPaused) {
+          // Крок 1: Зупинка анімації слайдерів
+          wrapLeftSlide.style.animationPlayState = 'paused';
+          wrapRightSlide.style.animationPlayState = 'paused';
 
-    // Крок 2: Зміщення слайдерів через 1500 мс
-    setTimeout(() => {
-      menuButton.style.transform = 'rotate(90deg)';
-      leftSlide.style.transform = 'translateX(-100%)';
-      rightSlide.style.transform = 'translateX(100%)';
-      leftSlide.style.transition = 'transform 2s ease';
-      rightSlide.style.transition = 'transform 2s ease';
-      buttonLeft2.style.opacity = "1";
-      buttonRight2.style.opacity = "1";
-    }, 1500);
+          setTimeout(() => {
+            menuButton.style.transform = 'rotate(90deg)';
+            buttonLeft2.style.opacity = "1";
+            buttonRight2.style.opacity = "1";
+            leftSlide.style.transition = 'transform 2s ease';
+            rightSlide.style.transition = 'transform 2s ease';
+          
+            function defineScreen() {
+              let screen = window.matchMedia("(max-width: 1200px)");
+          
+              function applyStyles() {
+                if (screen.matches) {
+                  leftSlide.style.transform = 'translateY(-100%)';
+                  rightSlide.style.transform = 'translateY(100%)';
+                } else {
+                  leftSlide.style.transform = 'translateX(-100%)';
+                  rightSlide.style.transform = 'translateX(100%)';
+                }
+              }
+          
+              applyStyles();
+              screen.addListener(applyStyles);
+            }
+          
+            defineScreen();
+          }, 1000);
 
-    // Крок 3: Зникнення слайдерів через 1500 мс
-    setTimeout(() => {
-      wrapSlide.style.display='none';
-    }, 3500);
+  setTimeout(() => {
+    wrapSlide.style.display = 'none';
+  }, 3100);
 
-    // Крок 4: Запуск анімації елементів меню через 2 секунди
-    setTimeout(() => {
-      menuItems.forEach((item, index) => {
-        item.style.transition = 'transform 0.5s ease';
-        item.style.animation = `menuButton${index + 1} 2s forwards`;
-      });
-    }, 3500);
-  } else {
-    // Крок 5: Анімація елементів меню у зворотному порядку
+  setTimeout(() => {
     menuItems.forEach((item, index) => {
-      item.style.transition = 'transform 5s ease';
-      item.style.animationName = `menuButton${index + 1}`;
-      item.style.animation = `menuButton${index - 1} 2s reverse forwards`;
-      item.style.transform = 'translate(0,0)';
-      buttonLeft2.style.opacity = "0";
-      buttonRight2.style.opacity = "0"; // Повернення в початкове положення
+      item.style.transition = 'transform 0.5s ease';
+      item.style.animation = `menuButton${index + 1} 2s forwards`;
     });
-       // Крок 6: Поява слайдерів 
-    setTimeout(() => {
-      wrapSlide.style.display='block';
-    }, 500);
-    // Крок 7: Повернення слайдерів назад
-    setTimeout(() => {
-      // Крок 7: Повернення слайдерів назад
-      menuButton.style.transform = 'rotate(180deg)';
-      leftSlide.style.transform = 'translateX(0%)';
-      rightSlide.style.transform = 'translateX(0%)';
-      leftSlide.style.transition = 'transform 2s ease';
-      rightSlide.style.transition = 'transform 2s ease';
-     }, 1500);
+  }, 3000);
+} else {
+  // Крок 5: Анімація елементів меню у зворотному порядку
+  setTimeout(() => {
+  menuItems.forEach((item, index) => {
+    item.style.transition = 'transform 0.5s ease';
+    item.style.animation = `menuButton${index - 1} 2s reverse forwards`;
+ 
+  });
+}, 500);
+setTimeout(() => {
+    wrapSlide.style.display = 'block';
+    buttonLeft2.style.opacity = "0";
+    buttonRight2.style.opacity = "0";
+  }, 2000);
 
-    // Крок 8: Запуск анімації слайдерів через 2.3 секунди
-    setTimeout(() => {
-      wrapLeftSlide.style.animationPlayState = 'running';
-      wrapRightSlide.style.animationPlayState = 'running';
-    }, 3000);
-  }
+  setTimeout(() => {
+    leftSlide.style.transition = 'transform 2s ease';
+    rightSlide.style.transition = 'transform 2s ease';
+    menuButton.style.transform = 'rotate(180deg)';
+    function defineScreenTwo() {
+      let screen = window.matchMedia("(min-width: 1200px)");
+  
+      function applyStylesTwo() {
+        if (screen.matches) {
 
+    leftSlide.style.transform = 'translateY(0%)';
+    rightSlide.style.transform = 'translateY(0%)';
+    
+  } else {
+    leftSlide.style.transform = 'translateX(0%)';
+    rightSlide.style.transform = 'translateX(0%)';
+
+  }}    applyStylesTwo();
+  screen.addListener(applyStylesTwo)} defineScreenTwo()}, 2300);
+
+  setTimeout(() => {
+    wrapLeftSlide.style.animationPlayState = 'running';
+    wrapRightSlide.style.animationPlayState = 'running';
+  }, 5000);
   isAnimationPaused = !isAnimationPaused;
-});
+}
+} )
+

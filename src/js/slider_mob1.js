@@ -1,13 +1,8 @@
-const toggleButton = document.querySelector('.button__menu-open-mob');
-const mobslide = document.querySelector('.swiper__hero');
-const upSlide = document.querySelector('.wrap__left-slide');
-const downSlide = document.querySelector('.wrap__right-slide');
-const buttonLeft = document.querySelector('.button__left-mob');
-const buttonRight = document.querySelector('.button__right-mob');
+
+/*
 const containerslideUp = document.querySelector('.wrap-container__left-slide');
 const containerslideDown = document.querySelector('.wrap-container__right-slide');
-const menuButton = document.querySelector('.icon__menu-button-mob');
-const menuItems = document.querySelectorAll('.menu-button__item');
+
 let isAnimationPaused = false;
 
 toggleButton.addEventListener('click', () => {
@@ -72,4 +67,4 @@ toggleButton.addEventListener('click', () => {
   }
 
   isAnimationPaused = !isAnimationPaused;
-});
+});*/

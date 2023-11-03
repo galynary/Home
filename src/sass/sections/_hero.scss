@@ -106,7 +106,7 @@
   .logo__text-desctop {
     color: #fff;
     font-family: deserta, sans-serif;
-    font-size: 26px;
+    font-size: 20px;
     line-height: 1.2;
   }
   .logo__text-mob {
@@ -115,9 +115,19 @@
     font-size: 25px;
     line-height: 1.2;
   }
+  .icon__phone-black {
+    display: none;
+    z-index: 63;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
   .icon__phone-desc {
     position: absolute;
     top: 20px;
+    z-index: 52;
+    display: block;
     right: 20px;
     width: 50px;
     height: 50px;
@@ -135,15 +145,27 @@
     text-transform: uppercase;
     opacity: 0;
   }
- .toggle-button2 {
+ #toggle-button2 {
     display: none;
-   }
-   .button__menu-open2,
-   .button__menu-open {
+    position: absolute;
+    z-index: 70;
     display: none;
-   }
+    top: 44%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 127px;
+    height: 127px;
+    border-radius: 100%;
+    background-color: #000000b3;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 3px solid #fff;
+    transition: transform 0.3s ease;
+    transform: rotate(180deg);
+}
   
-  .button__menu-open-mob {
+ .button__menu-open-mob {
       position: absolute;
       z-index: 70;
       display: none;
@@ -154,6 +176,23 @@
       height: 127px;
       border-radius: 100%;
       background-color: #000000b3;
+     justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border: 3px solid #fff;
+      transition: transform 0.3s ease;
+      transform: rotate(180deg);
+    }
+    .button__menu-open {
+      position: absolute;
+      z-index: 70;
+    top: 44%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 127px;
+      height: 127px;
+      border-radius: 100%;
+      background-color: rgb(0, 0, 0, 70%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -162,10 +201,8 @@
       transition: transform 0.3s ease;
       transform: rotate(180deg);
     }
-    .button__menu-open,
-    .button__menu-open2 {
-      display: none;
-    }
+  
+   
     .button__menu-open-mob2 {
       position: absolute;
       z-index: 70;
@@ -216,7 +253,7 @@
   }
   .wrap__about-us-link {
     z-index: 42;
-    background-color: rgba(0,0,0,0);
+    background-color: transparent;
     padding: 0;
     position: absolute;
     bottom: 0px;
@@ -227,11 +264,19 @@
     background-color: rgba(0,0,0,0);
     padding: 0;
     position: absolute;
-    bottom: 20px;
-    left: -30px;
     transform: rotate(-90deg);
   }
-
+  .contacts-link__content {
+  width: 100%;
+  flex-direction: column;
+   justify-content: center;
+   align-items: flex-end;
+   gap: 5px;
+  left: 100px;
+   display: flex;
+   position: absolute;
+   bottom: -40px;
+  }
   .list-item__text {
     font-size: 30px;
     line-height: 1.2;
@@ -252,6 +297,7 @@
   .menu__icon {
     display: none;
   }
+  
 
   .menu-button__item {
     transition: transform 0.5s ease;
@@ -290,7 +336,7 @@
       }
    
       100% {
-          top: 4%;
+          top: 15%;
           left: 50%;
           transform: translate(-50%);
           opacity: 1;
@@ -323,7 +369,7 @@
       }
    
       100% {
-          top: 20%;
+          top: 28%;
           left: 20%;
           transform: translateX(-50%);
           opacity: 1;
@@ -389,7 +435,7 @@
       }
      
       100% {
-          top:20%;
+          top:28%;
           left: 80%;
           transform: translateX(-50%);
           opacity: 1;
@@ -512,6 +558,17 @@
     top: 50%;
     left: 48%;
   }
+  .about-us-link__content {
+    width: 100%;
+   flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+    right: -60px;
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+  }
   .wrap__page-links-mob {
    width: 100%;
     z-index: 40;
@@ -562,6 +619,10 @@
      width: 126px;
      height: 104px;
     }
+    .icon__phone-desc {
+    display: block;
+    }
+   
     .logo__text-desctop,
     .logo__text-black { 
       font-size: 36px;
@@ -587,6 +648,13 @@
       border: 3px solid #fff;
       transition: transform 0.3s ease;
       transform: rotate(-90deg);
+    }
+  
+    .contacts-link__content {
+      top:20px;
+      right: 0px;
+      bottom: 0px;
+      left: 0;
     }
     .wrap__about-us-link {
       width: 100%;
@@ -618,9 +686,6 @@
       transform: rotate(180deg);
     }
   
-    .button__menu-open-mob {
-      display: none;
-     }
     .wrap-menu-button__list{
     position: absolute;
     }
@@ -748,6 +813,7 @@ height: 180px;
     transform: none;
     position: absolute;
     z-index: 24;
+    background-color: #000;
     bottom: 0px;
     top: 0px;
     right: 0px;
@@ -761,7 +827,7 @@ height: 180px;
     padding: 0;
     top: 0px;
     left: 0;
-    right: 0;
+    right: 20px;
     transform: rotate(0deg);
   }
 
@@ -814,14 +880,7 @@ height: 180px;
   }
 
   .about-us-link__content {
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 5px;
     right: 20px;
-    display: flex;
-    position: absolute;
     bottom: 20px;
   }
   .wrap__icon-about-us {

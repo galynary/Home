@@ -18,7 +18,8 @@
   .selling__container {
     position: relative;
     height: 100vh;
-  right:20px;
+ /* right:20px;
+  left: 20px;*/
   overflow: hidden;
   }
 .open-about-us {
@@ -70,6 +71,8 @@ transform: rotate(-90deg);
 }
   .js-open-about-us {
     text-align: right;
+    padding: 0;
+  width: 170px;
     text-transform: uppercase;
     cursor: pointer;
     color: #fff;
@@ -100,8 +103,8 @@ transform: translateX(-140%) translateY(100%);
 }
 .page__about-us {
   display: block;
-top: 50px;
-right: 20px;
+top: 100px;
+right: 0px;
 width: 100%;
 height: 100%;
 position: absolute;
@@ -180,7 +183,7 @@ transition: transform 0.5s ease;*/
       cursor: pointer;
       color: #fff;
       z-index: 1;
-     border: none;
+    border: none;
       outline: none;
       padding-top: 0;
       font-size: 24px;

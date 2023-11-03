@@ -1,11 +1,15 @@
 @media screen and (min-width: 480px) {
   .page__section > .discover-house {
-  padding: 0px 20px 90px;
+  padding-bottom:90px;
 }
 .descover-house__contant {
-  padding: 200px 50px;
+  padding-top: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+margin-bottom: 200px;
 }
 .about__house {
+ padding-left: 20px;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -30,9 +34,12 @@
   text-align: right;
 }
 .house__images {
+height: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .house__img {
   width: 100%;
@@ -40,6 +47,7 @@
 
 .descover-house__button {
   float: right;
+  margin-right: 20px;
   text-transform: uppercase;
   background-color: #0000;
   justify-content: center;
@@ -50,4 +58,13 @@
   margin-top: 20px;
   border: 1px solid#2e2d2d;
 }
+}
+@media screen and (min-width: 1200px) {
+.descover-house__contant {
+padding-left: 40px;
+margin-right: 0px;
+margin-bottom: 200px;
+}
+
+
 }
