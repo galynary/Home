@@ -26,8 +26,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const openSelling = document.querySelector('[data-open-selling]');
   const openFaq = document.querySelector('[data-open-faq]');
   const openDiscover = document.querySelector('[data-discover-open]');
-  const slideFaq = document.querySelector('[data-faq]');
-  const slideDiscover = document.querySelector('[data-discover]');
+  const opendescriptionHouse = document.querySelector('[data-open-consulting]');
+  const openGallery = document.querySelector('[data-open-gallery]');
+  
 
   pageContainer.addEventListener('wheel', (e) => {
     const scrollSpeed = 5;
@@ -61,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   iconPhone.style.display = 'block';
                   toggleButton2.style.transform = 'translate(-50%, -280%)';
                 } else {
-          toggleButton2.style.transform = 'translate(-50%, -350%)';
+          toggleButton2.style.transform = 'translate(-50%, -300%)';
         }
       }
       pageStyles();
@@ -127,6 +128,36 @@ setTimeout(() => {
         slide.style.display = 'flex';
         slide.style.zIndex = "62";
         paginationItems[2].classList.add('active');
+      }
+      else if (buttonItem === opendescriptionHouse) {
+        let slide = document.querySelector('[data-description-house]');
+        pageSection.forEach((section) => {
+          section.style.opacity = '0';
+          if (section === document.querySelector('[data-discover-page]')) {
+            section.style.opacity = '1';
+            section.style.display = 'block';
+            section.style.animation = 'openPage 5s linear forwards';
+            section.style.transition = 'transform 5s ease';
+          }
+        });
+        slide.style.display = 'flex';
+        slide.style.zIndex = "62";
+        paginationItems[3].classList.add('active');
+      }
+      else if (buttonItem === openGallery) {
+        let slide = document.querySelector('[data-gallery]');
+        pageSection.forEach((section) => {
+          section.style.opacity = '0';
+          if (section === document.querySelector('[data-gallery-page]')) {
+            section.style.opacity = '1';
+            section.style.display = 'block';
+            section.style.animation = 'openPage 5s linear forwards';
+            section.style.transition = 'transform 5s ease';
+          }
+        });
+        slide.style.display = 'flex';
+        slide.style.zIndex = "62";
+        paginationItems[4].classList.add('active');
       }
     }, 2100);
     setTimeout(() => {
@@ -194,7 +225,6 @@ setTimeout(() => {
     });
       logoWhite.style.display = 'block';
       swiperArrows.style.display = 'none'; 
-     swiperPagination.style.zIndex = "1";
       backgroundContactsLink.style.background ="#000";
       contactsLink.style.color ="#fff";
       backgroundAboutUsLink.style.background ="#000";
@@ -216,17 +246,7 @@ setTimeout(() => {
         iconPhone.style.zIndex = "52";
       },8000)})})
 
-   /*   window.addEventListener('scroll', function() {
-        const mySwiper = document.querySelector('.wrap-swiper__slide');
-        const swiperPagination = document.querySelector('.wrap__swiper-pagination');
-        
-        // Перевірка, чи прокручено до самого низу сторінки
-        if (mySwiper.offsetHeight - window.innerHeight - window.scrollY <= 0) {
-          swiperPagination.style.display = 'block'; // Показуємо пагінацію
-        } else {
-          swiperPagination.style.display = 'none'; // Приховуємо пагінацію
-        }
-    });*/
+ 
 
 
 

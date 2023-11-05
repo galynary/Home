@@ -1,6 +1,6 @@
 
-/*
-const containerslideUp = document.querySelector('.wrap-container__left-slide');
+
+/*const containerslideUp = document.querySelector('.wrap-container__left-slide');
 const containerslideDown = document.querySelector('.wrap-container__right-slide');
 
 let isAnimationPaused = false;
@@ -67,4 +67,4 @@ toggleButton.addEventListener('click', () => {
   }
 
   isAnimationPaused = !isAnimationPaused;
-});*/
+})*/
