@@ -7,6 +7,7 @@ import { slide_page } from './js/slide_page';
 import { write_us } from './js/write_us ';
 import { discover_house } from './js/discover_house';
 import { slideGallery } from './js/slideGallery';
+import { openGallery } from './js/openGallery';
 
 
 

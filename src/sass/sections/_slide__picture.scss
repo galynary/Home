@@ -89,32 +89,50 @@ position: relative;
  display: flex;
 transform: translateX(0%);
   flex-direction:row;
-  transition: transform 20s;
+  transition: transform 1s ease-in-out;
+ transition: transform 16s;
   animation: animationRight 16s linear infinite forwards alternate;
 }
 @keyframes animationRight {
   0%, 100% {
-    transform: translateX(0%);
-  }
-  16.66667% {
-    transform: translateX(0%); /* Пауза між третьою і першою картинкою */
-  }
-  25% {
-    transform: translateX(-33%);
-  }
-  41.66667% {
-    transform: translateX(-33%); /* Пауза між першою і другою картинкою */
-  }
-  50% {
     transform: translateX(-66.7%);
   }
-  66.66667% {
-    transform: translateX(-66.7%); /* Пауза між другою і третьою картинкою */
+  10%, 90% {
+    transform: translateX(-66.7%); 
   }
-}
-
-
-
+  20%, 80% {
+    transform: translateX(-33%);
+  }
+  30%, 70% {
+    transform: translateX(-33%); 
+  }
+  40%, 60% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  }
+  @keyframes animationLeft {
+    0%, 100% {
+      transform: translateX(0%);
+    }
+    10%,90% {
+      transform: translateX(0%); 
+    }
+    20%, 80% {
+      transform: translateX(-35%);
+    }
+    30%, 70% {
+      transform: translateX(-35%); 
+    }
+    40%, 60% {
+      transform: translateX(-66.7%);
+    }
+    50% {
+      transform: translateX(-66.7%); 
+    }
+  }
 
 .mob__img-slide {
   width: 100%;
@@ -124,15 +142,11 @@ display: block;
  
 
 }
-
 .img-slide__mob {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   display: block;
- 
-  
-}
+ }
 
 .swiper__hero {
   position: absolute;
@@ -150,14 +164,14 @@ display: block;
 }
 }
 @media (min-width: 768px) {
- /* .swiper-slide__left {
+  .swiper-slide__left {
     width: 100%;
     height: 100%;
     flex: 1;
     justify-content: center;
     align-items: center;
     display: block;
- }*/
+ }
 
  .swiper-slide__left,
  .swiper-slide__right {
@@ -192,46 +206,46 @@ display: block;
   0%, 100% {
     transform: translateX(-66.7%);
   }
-  16.66667% {
-    transform: translateX(-66.7%); /* Пауза між третьою і першою картинкою */
+  10%, 90% {
+    transform: translateX(-66.7%); 
   }
-  25% {
+  20%, 80% {
     transform: translateX(-33%);
   }
-  41.66667% {
-    transform: translateX(-33%); /* Пауза між першою і другою картинкою */
+  30%, 70% {
+    transform: translateX(-33%); 
+  }
+  40%, 60% {
+    transform: translateX(0%);
   }
   50% {
     transform: translateX(0%);
   }
-  66.66667% {
-    transform: translateX(0%); /* Пауза між другою і третьою картинкою */
-  } /* Пауза між другою і третьою картинкою */
   }
   .wrap__left-slide { 
     transform: translateX(0%);
     flex-direction: row;
-    transition: transform 20s;
-    animation: animationLeft 16s linear infinite forwards alternate;
+    transition: transform 16s;
+   animation: animationLeft 16s linear infinite forwards alternate;
   }
   @keyframes animationLeft {
     0%, 100% {
       transform: translateX(0%);
     }
-    16.66667% {
-      transform: translateX(0%); /* Пауза між третьою і першою картинкою */
+    10%,90% {
+      transform: translateX(0%); 
     }
-    25% {
+    20%, 80% {
       transform: translateX(-35%);
     }
-    41.66667% {
-      transform: translateX(-35%); /* Пауза між першою і другою картинкою */
+    30%, 70% {
+      transform: translateX(-35%); 
     }
-    50% {
+    40%, 60% {
       transform: translateX(-66.7%);
     }
-    66.66667% {
-      transform: translateX(-66.7%); /* Пауза між другою і третьою картинкою */
+    50% {
+      transform: translateX(-66.7%); 
     }
   }
   
@@ -309,26 +323,27 @@ display: block;
   transform: translateY(0%);
   flex-direction: column;
   transition: transform 20s;
+  animation-direction: normal;
   animation: animationLeft 16s linear infinite forwards alternate;
 }
 @keyframes animationLeft {
   0%, 100% {
     transform: translateY(0%);
   }
-  16.66667% {
-    transform: translateY(0%); /* Пауза між третьою і першою картинкою */
+ 10%, 90% {
+    transform: translateY(0%);
   }
-  25% {
+  20%, 80% {
     transform: translateY(-100%);
   }
-  41.66667% {
-    transform: translateY(-100%); /* Пауза між першою і другою картинкою */
+  30%, 70% {
+    transform: translateY(-100%);
   }
-  50% {
+  40%, 60% {
     transform: translateY(-200%);
   }
-  66.66667% {
-    transform: translateY(-200%); /* Пауза між другою і третьою картинкою */
+ 50% {
+    transform: translateY(-200%); 
   }
 }
 
@@ -347,33 +362,33 @@ display: block;
   position: relative;
   margin: 0;
  display: flex;
-transform: translateY(0%);
-  flex-direction: column;
+flex-direction: column;
   transition: transform 20s;
-  animation: animationRight 16s linear infinite forwards alternate;
+  animation-direction: reverse;
+
+animation: animationRight 16s linear infinite forwards alternate;
 }
 @keyframes animationRight {
   0%, 100% {
     transform: translateY(-200%);
   }
-  16.66% {
-    transform: translateY(-200%); /* Пауза між третьою і першою картинкою */
+  10%, 90% {
+    transform: translateY(-200%); 
   }
-  25% {
+  20%, 80% {
     transform: translateY(-100%);
   }
-  41.66% {
-    transform: translateY(-100%); /* Пауза між першою і другою картинкою */
+  30%, 70% {
+    transform: translateY(-100%);
   }
-  50% {
+  40%, 60% {
     transform: translateY(0%);
   }
-  66.66% {
-    transform: translateY(0%); /* Пауза між другою і третьою картинкою */
-  }
+  50% {
+    transform: translateY(0%); 
 }
 
-
+}
 .wrap__img {
   position: relative;
   object-fit: cover;
@@ -425,13 +440,13 @@ animationLeft {
 .img__left-slide {
   position: relative;
 }
-/*wrap__img {
+.wrap__img {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
   height: 100%; 
-}*/
+}
 
 .img-slide__desc {
   position: relative;

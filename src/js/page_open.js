@@ -86,8 +86,8 @@ setTimeout(() => {
           item.classList.remove('active');
         });
         pageSection.forEach((section) => {
-          section.style.opacity = '0';
-          if (section === document.querySelector('[data-selling-page]')) {
+         
+          if (section === document.querySelector('.data-selling-page')) {
             section.style.opacity = '1';
             section.style.display = 'block';
             section.style.animation = 'openPage 4s linear forwards';
@@ -103,8 +103,8 @@ setTimeout(() => {
           item.classList.remove('active');
         });
         pageSection.forEach((section) => {
-          section.style.opacity = '0';
-          if (section === document.querySelector('[data-faq-page]')) {
+         
+          if (section === document.querySelector('.data-faq-page')) {
             section.style.animation = 'openPage 4s linear forwards';
             section.style.opacity = '1';
             section.style.display = 'block';
@@ -117,8 +117,8 @@ setTimeout(() => {
       } else if (buttonItem === openDiscover) {
         let slide = document.querySelector('[data-discover]');
         pageSection.forEach((section) => {
-          section.style.opacity = '0';
-          if (section === document.querySelector('[data-discover-page]')) {
+         
+          if (section === document.querySelector('.data-discover-page')) {
             section.style.opacity = '1';
             section.style.display = 'block';
             section.style.animation = 'openPage 5s linear forwards';
@@ -132,8 +132,8 @@ setTimeout(() => {
       else if (buttonItem === opendescriptionHouse) {
         let slide = document.querySelector('[data-description-house]');
         pageSection.forEach((section) => {
-          section.style.opacity = '0';
-          if (section === document.querySelector('[data-discover-page]')) {
+         
+          if (section === document.querySelector('.data-description-house-page')) {
             section.style.opacity = '1';
             section.style.display = 'block';
             section.style.animation = 'openPage 5s linear forwards';
@@ -147,7 +147,7 @@ setTimeout(() => {
       else if (buttonItem === openGallery) {
         let slide = document.querySelector('[data-gallery]');
         pageSection.forEach((section) => {
-          section.style.opacity = '0';
+         
           if (section === document.querySelector('[data-gallery-page]')) {
             section.style.opacity = '1';
             section.style.display = 'block';
