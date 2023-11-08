@@ -43,33 +43,25 @@ document.addEventListener('DOMContentLoaded', function () {
       toggleButton.style.display = 'none';
       toggleButton2.style.display = 'flex';
       toggleButton2.style.opacity = "1";
-     mySwiper.style.display = 'block';
+      mySwiper.style.display = 'block';
       mySwiper.style.zIndex = "62";
       buttonLeft.style.opacity = "0";
       buttonRight.style.opacity = "0";
       pageContainer.style.zIndex = "62";
+      toggleButton2.style.transition = 'transform 5s ease';
+      toggleButton2.style.top = '2%';
+    
+   
     
     setTimeout(() => {
+      menuButton.style.transform = 'rotate(180deg)';
+      menuButton.style.transition = 'transform 1s ease';
           leftContainer.style.transition = 'transform 5s ease';
           rightContainer.style.transition = 'transform 5s ease';
           leftContainer.style.transform = 'translateX(0%)';
           rightContainer.style.transform = 'translateX(0%)';
-          toggleButton2.style.transition = 'transform 4s ease';
-          function pageScreen() {
-            let screen = window.matchMedia("(max-width: 1200px)");
-            function pageStyles() {
-                if (screen.matches) {
-                  iconPhone.style.display = 'block';
-                  toggleButton2.style.transform = 'translate(-50%, -280%)';
-                } else {
-          toggleButton2.style.transform = 'translate(-50%, -300%)';
-        }
-      }
-      pageStyles();
-      screen.addListener(pageStyles);
-    }
-     pageScreen();
-  },150);
+        
+  },1050);
 setTimeout(() => {
       backgroundContactsLink.style.background ="#fff";
       backgroundAboutUsLink.style.background ="#fff";
@@ -78,7 +70,7 @@ setTimeout(() => {
       aboutUsLink.style.color ="#000";
       aboutUsLink.style.zIndex = "63";
      
-    }, 2000);
+    }, 3000);
       setTimeout(() => {
       if (buttonItem === openSelling) {
         let slide = document.querySelector('[data-selling]');
@@ -86,11 +78,11 @@ setTimeout(() => {
           item.classList.remove('active');
         });
         pageSection.forEach((section) => {
-         
+          section.style.opacity = '0';
           if (section === document.querySelector('.data-selling-page')) {
             section.style.opacity = '1';
             section.style.display = 'block';
-            section.style.animation = 'openPage 4s linear forwards';
+            section.style.animation = 'openPage 5s linear forwards';
             section.style.transition = 'transform 5s ease';
           }
         });
@@ -103,9 +95,9 @@ setTimeout(() => {
           item.classList.remove('active');
         });
         pageSection.forEach((section) => {
-         
+          section.style.opacity = '0';
           if (section === document.querySelector('.data-faq-page')) {
-            section.style.animation = 'openPage 4s linear forwards';
+            section.style.animation = 'openPage 5s linear forwards';
             section.style.opacity = '1';
             section.style.display = 'block';
             section.style.transition = 'transform 5s ease';
@@ -117,7 +109,7 @@ setTimeout(() => {
       } else if (buttonItem === openDiscover) {
         let slide = document.querySelector('[data-discover]');
         pageSection.forEach((section) => {
-         
+          section.style.opacity = '0';
           if (section === document.querySelector('.data-discover-page')) {
             section.style.opacity = '1';
             section.style.display = 'block';
@@ -132,7 +124,7 @@ setTimeout(() => {
       else if (buttonItem === opendescriptionHouse) {
         let slide = document.querySelector('[data-description-house]');
         pageSection.forEach((section) => {
-         
+          section.style.opacity = '0';
           if (section === document.querySelector('.data-description-house-page')) {
             section.style.opacity = '1';
             section.style.display = 'block';
@@ -147,7 +139,7 @@ setTimeout(() => {
       else if (buttonItem === openGallery) {
         let slide = document.querySelector('[data-gallery]');
         pageSection.forEach((section) => {
-         
+          section.style.opacity = '0';
           if (section === document.querySelector('[data-gallery-page]')) {
             section.style.opacity = '1';
             section.style.display = 'block';
@@ -159,7 +151,7 @@ setTimeout(() => {
         slide.style.zIndex = "62";
         paginationItems[4].classList.add('active');
       }
-    }, 2100);
+    }, 2200);
     setTimeout(() => {
       function defineScreen() {
         let screen = window.matchMedia("(max-width: 1200px)");
@@ -179,7 +171,7 @@ setTimeout(() => {
       
         // Call the defineScreen function
         defineScreen();
-      },2500);
+      },3000);
       setTimeout(() => {
         swiperArrows.style.display = 'block'; 
         logoWhite.style.display = 'none';
@@ -202,21 +194,21 @@ setTimeout(() => {
         section.style.transition = 'transform 5s ease';
         section.style.opacity = "0";
       });
-
-    menuButton.style.transform = 'rotate(-90deg)';
+   
+   
     setTimeout(() => {
      mySwiper.style.right = "0px";
-    }, 3200);
+   }, 3000);
 
     setTimeout(() => {
-      leftContainer.style.transition = 'transform 5s ease';
-      rightContainer.style.transition = 'transform 5s ease';
+      menuButton.style.transform = 'rotate(90deg)';
+      menuButton.style.transition = 'transform 1s ease';
+    leftContainer.style.transition = 'transform 4s ease';
+      rightContainer.style.transition = 'transform 4s ease';
       toggleButton2.style.transition = 'transform 4s ease';
-      toggleButton2.style.transform = 'translate(-50%, 0%)';
       leftContainer.style.transform = 'translateX(-100%)';
       rightContainer.style.transform = 'translateX(100%)';
-   },3300);
-
+   },3000);
  setTimeout(() => {
       swiperPagination.style.display = 'none';
       iconPhone.style.display = 'none';
@@ -229,7 +221,11 @@ setTimeout(() => {
       contactsLink.style.color ="#fff";
       backgroundAboutUsLink.style.background ="#000";
       aboutUsLink.style.color ="#fff";
-    },3300);
+    },4000);
+    setTimeout(() => {
+      toggleButton2.style.top = '50%';
+      toggleButton2.style.transition = 'transform 25s ease';
+    },4500);
   setTimeout(() => {
     slidePage.forEach(slide => {
       slide.style.display = 'none';
@@ -244,7 +240,7 @@ setTimeout(() => {
         buttonLeft.style.opacity="1";
         buttonRight.style.opacity="1";
         iconPhone.style.zIndex = "52";
-      },8000)})})
+      },7000)})})
 
  
 

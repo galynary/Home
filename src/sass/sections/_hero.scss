@@ -150,7 +150,7 @@
     position: absolute;
     z-index: 70;
     display: none;
-    top: 44%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%);
     width: 127px;
@@ -628,7 +628,7 @@
       font-size: 36px;
     }
     .icon__menu-button2 {
-      transform: rotate(-90deg);
+      transform: rotate(90deg);
     }
     .button__menu-open2 { 
       position: absolute;
@@ -770,6 +770,9 @@
   }
   .hero__header {
 height: 180px;
+  }
+  .icon__logo-white {
+    display: block;
   }
   .wrap__page-links-mob {
     position: absolute;
@@ -963,7 +966,7 @@ height: 180px;
   .menu-button__item:nth-child(1).reverse {
       animation: menuButton1 2s reverse forwards 2s;
       transition: transform 0.5s ease;
-      animation-delay: 2000ms;
+      animation-delay: 4000ms;
   }
   
   .menu-button__item:nth-child(2) {
@@ -990,7 +993,7 @@ height: 180px;
   .menu-button__item:nth-child(2).reverse {
       animation: menuButton2 2s reverse forwards 2s;
       transition: transform 0.5s ease;
-      animation-delay: 1800ms;
+      animation-delay: 3800ms;
   }
   
   .menu-button__item:nth-child(3) {
@@ -1017,7 +1020,7 @@ height: 180px;
   .menu-button__item:nth-child(3).reverse {
       animation: menuButton3 2s reverse forwards 2s;
       transition: transform 0.5s ease;
-      animation-delay: 1600ms;
+      animation-delay: 3600ms;
   }
   
   .menu-button__item:nth-child(4) {
@@ -1044,7 +1047,7 @@ height: 180px;
   .menu-button__item:nth-child(4).reverse {
       animation: menuButton4 2s reverse forwards 2s;
       transition: transform 0.5s ease;
-      animation-delay: 1400ms;
+      animation-delay: 3400ms;
   }
   
   .menu-button__item:nth-child(5) {
@@ -1071,7 +1074,7 @@ height: 180px;
   .menu-button__item:nth-child(5).reverse {
       animation: menuButton5 2s reverse forwards 2s;
       transition: transform 0.5s ease;
-      animation-delay: 1200ms;
+      animation-delay: 3200ms;
   }
   
   .menu-button__item:nth-child(6) {
@@ -1098,7 +1101,7 @@ height: 180px;
   .menu-button__item:nth-child(6).reverse {
       animation: menuButton6 2s reverse forwards 2s;
       transition: transform 0.5s ease;
-      animation-delay: 1000ms;
+      animation-delay: 3000ms;
   }
 .menu-button__item:nth-child(5)::after,
   .menu-button__item:nth-child(6)::after,
