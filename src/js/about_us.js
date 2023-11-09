@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   aboutUsLink.style.transition = "bottom 2.5s ease"; // Змініть час і тип анімації за потребою
   buttonContacts.disabled = false;
   buttonAboutUs.addEventListener('click', () => {
-    aboutUsLink.style.bottom = '92%';
+    aboutUsLink.style.bottom = '90%';
     iconAboutUs.style.display = 'block';
     pageContact.style.zIndex = '21';
     pageAboutUs.style.zIndex = '22';
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   iconAboutUs.addEventListener('click', () => {
    
     iconAboutUs.style.display = 'none';
-    aboutUsLink.style.bottom = '20px';
+    aboutUsLink.style.bottom = '0px';
     pageAboutUs.style.zIndex = '22';
     buttonContacts.disabled = false;
     isUp = true;
