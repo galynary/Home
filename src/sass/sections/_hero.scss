@@ -252,7 +252,7 @@
   z-index: 15;
   }
   .wrap__about-us-link {
-    z-index: 42;
+    z-index: 52;
     background-color: transparent;
     padding: 0;
     position: absolute;
@@ -560,7 +560,7 @@
   }
   .about-us-link__content {
     width: 100%;
-   flex-direction: column;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     gap: 5px;
@@ -575,10 +575,13 @@
    position: absolute;
   bottom: 20px;
   }
-  .page__item-aboutus-mob,
-  .page-item-contact-mob {
+  .page__item-aboutus-mob {
     width: 100%;
     height: 100%;
+  }
+  .page-item-contact-mob {
+    width: 100%;
+  
   }
 .page__links-mob {
     position: relative;
@@ -662,7 +665,7 @@
     .wrap__about-us-link {
       width: 100%;
       height: 100%;
-      z-index: 42;
+     /* z-index: 42;*/
       background-color: #000;
       padding: 0;
       position: absolute;
@@ -777,7 +780,7 @@ height: 180px;
   .page-item-contact-mob {
     top:0px;
     width: 100%;
-   bottom: 80px;
+   bottom: 100px;
    z-index: 1;
   position: absolute;
   overflow: hidden;
@@ -791,7 +794,7 @@ height: 180px;
     height: 100%;
     z-index: 15;
     padding-left: 5px;
-    bottom: 0;
+    bottom: 70px;
     transform: translate(0%);
 }
   .wrap__page-item-contact {
@@ -859,7 +862,8 @@ left: 0;
    right: 20px;
     left: 0px;
     transform: none;
-  }
+    bottom: 70px;
+   }
 
   .about-us-link__content {
     right: 20px;

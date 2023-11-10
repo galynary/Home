@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     iconAboutUs.style.display = 'none';
     aboutUsLink.style.bottom = '0px';
     pageAboutUs.style.zIndex = '22';
+    pageContact.style.zIndex = '21';
     buttonContacts.disabled = false;
     isUp = true;
   });
