@@ -9,25 +9,39 @@ document.addEventListener('DOMContentLoaded', () => {
   let isUp = true;
 
   // Встановлюємо transition для top
-  aboutUsLink.style.transition = "bottom 2.5s ease"; // Змініть час і тип анімації за потребою
-  buttonContacts.disabled = false;
+  aboutUsLink.style.transition = "bottom 2s ease"; // Змініть час і тип анімації за потребою
+
   buttonAboutUs.addEventListener('click', () => {
-    aboutUsLink.style.bottom = '90%';
     iconAboutUs.style.display = 'block';
     pageContact.style.zIndex = '21';
     pageAboutUs.style.zIndex = '22';
     wrapContactsLink.style.top = '10px';
-    buttonContacts.disabled = true;
+    buttonContacts.removeEventListener('click', () => {});
     isUp = false;
+    function defineScreen() {
+      let screen = window.matchMedia("(max-width: 768px)");
+      function applyStyles() {
+          if (screen.matches) {
+            aboutUsLink.style.bottom = '60%';
+           
+          } else {
+            aboutUsLink.style.bottom = '85%';
+          }
+        }
+  
+        applyStyles();
+        screen.addListener(applyStyles);
+      }
+    
+      // Call the defineScreen function
+      defineScreen();
+   
   });
 
   iconAboutUs.addEventListener('click', () => {
-   
+    aboutUsLink.style.bottom = '60px';
     iconAboutUs.style.display = 'none';
-    aboutUsLink.style.bottom = '0px';
     pageAboutUs.style.zIndex = '22';
-    pageContact.style.zIndex = '21';
-    buttonContacts.disabled = false;
     isUp = true;
   });
 });

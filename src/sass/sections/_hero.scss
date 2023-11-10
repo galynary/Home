@@ -256,7 +256,7 @@
     background-color: transparent;
     padding: 0;
     position: absolute;
-    bottom: 0px;
+    bottom: 0%;
     right: 0px;
   }
   .wrap__contacts-link {
@@ -560,14 +560,14 @@
   }
   .about-us-link__content {
     width: 100%;
-    flex-direction: column;
+   flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     gap: 5px;
     right: -60px;
     display: flex;
     position: absolute;
-    bottom: 80px;
+  bottom: 20px;
   }
   .wrap__page-links-mob {
    width: 100%;
@@ -669,8 +669,8 @@
       background-color: #000;
       padding: 0;
       position: absolute;
-      bottom: 0px;
       right: 0;
+     bottom: 60px;
   }
    
  .wrap-menu-button__list{
