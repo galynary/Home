@@ -224,9 +224,27 @@ transition: transform 0.5s ease;*/
     display: flex;
     justify-content: center;
     flex-direction: column;
-  /*  overflow-x: hidden;
-    overflow-y: scroll*/
+   overflow-x: hidden;
+    overflow-y: scroll;
  }
+ .wrap__about-us-container::-webkit-scrollbar {
+  width: 5px;
+  height: 40px;
+}
+.wrap__about-us-container::-webkit-scrollbar:hover  {
+  width: 10px;
+  cursor: pointer;
+}
+.wrap__about-us-container::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: #fff; /* Колір самого скролбару */
+  border-radius: 50px;
+}
+.wrap__about-us-container::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  width: 10px;
+  cursor: pointer;
+}
 .page-about-us__container {
   display: none;
   position: absolute;
