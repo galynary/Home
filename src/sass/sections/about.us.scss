@@ -239,6 +239,7 @@ transition: transform 0.5s ease;*/
 }
 .wrap__about-us-container::-webkit-scrollbar-thumb {
   width: 2px;
+  padding:150px 15px;
   background-color: #a59e9e; /* Колір самого скролбару */
   border-radius: 50px;
 }
