@@ -109,7 +109,7 @@ height: 100%;
 position: absolute;
 background-color: #000;
 padding-bottom: 20px;
-overflow-x: hidden;
+/*overflow-x: hidden;
 overflow-y: scroll;
 /* position: absolute;
 transform: translateY(20%);
@@ -226,9 +226,7 @@ transition: transform 0.5s ease;*/
     display: flex;
     justify-content: center;
     flex-direction: column;
-   overflow-x: hidden;
-    overflow-y: scroll;
- }
+}
 
   .page__about-us::-webkit-scrollbar {
     width: 5px;
@@ -239,7 +237,7 @@ transition: transform 0.5s ease;*/
     cursor: pointer;
   }
   .page__about-us::-webkit-scrollbar-thumb {
-    background-color: #c5c4c4; /* Колір самого скролбару */
+    background-color: #c5c4c4; 
     border-radius: 50px;
   }
   .page__about-us::-webkit-scrollbar-thumb:hover {

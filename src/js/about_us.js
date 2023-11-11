@@ -6,25 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const wrapContactsLink = document.querySelector('.wrap__page-item-contact');
   const buttonContacts = document.querySelector('#contacts__link');
   const pageAboutUs = document.querySelector('.page__item-aboutus-mob');
-  const aboutUsContainer = document.querySelector('.wrap__about-us-container');
+  const aboutUsContainer = document.querySelector('.page__about-us');
 
   let isUp = true;
 
- /* aboutUsContainer.addEventListener('wheel', (e) => {
-    const scrollSpeed = 3;
+  aboutUsContainer.addEventListener('wheel', (e) => {
+    const scrollSpeed = 5;
     if (e.deltaY !== 0) {
       aboutUsContainer.scrollTop += e.deltaY * scrollSpeed;
       e.preventDefault();
     }
-  });*/
-  
-  aboutUsContainer.addEventListener('wheel', (e) => {
-      const scrollSpeed = 5;
-      if (e.deltaY !== 0) {
-        pageContainer.scrollTop += e.deltaY * scrollSpeed;
-        e.preventDefault();
-      }
-    });
+  });
 
 
   // Встановлюємо transition для top
