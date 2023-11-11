@@ -19,17 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });*/
   
   aboutUsContainer.addEventListener('wheel', (e) => {
-    e.preventDefault();
-    scrollToBottom();
-});
-
-// Прокрутка до самого низу сторінки
-function scrollToBottom() {
-    window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: 'smooth'
+      const scrollSpeed = 5;
+      if (e.deltaY !== 0) {
+        pageContainer.scrollTop += e.deltaY * scrollSpeed;
+        e.preventDefault();
+      }
     });
-}
 
 
   // Встановлюємо transition для top

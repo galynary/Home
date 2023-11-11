@@ -229,31 +229,24 @@ transition: transform 0.5s ease;*/
    overflow-x: hidden;
     overflow-y: scroll;
  }
- .page__about-us::-webkit-scrollbar {
-  width: 2px;
-  height: 40px;
-  background-color: #555353;
-  border-radius: 5px;
-  cursor:pointer;
-}
 
-.page__about-us::-webkit-scrollbar:hover {
-  width: 15px;
-  cursor: pointer;
-  background-color: #fff;
-}
-
-.page__about-us::-webkit-scrollbar-thumb {
-  background-color: #a59e9e;
-  border-radius: 5px;
-  cursor:pointer;
-}
-
-.page__about-us::-webkit-scrollbar-thumb:hover {
-  cursor: pointer;
-  width: 15px;
-  background-color: #fff;
-}
+  .page__about-us::-webkit-scrollbar {
+    width: 5px;
+    height: 40px;
+  }
+  .page__about-us::-webkit-scrollbar:hover  {
+    width: 5px;
+    cursor: pointer;
+  }
+  .page__about-us::-webkit-scrollbar-thumb {
+    background-color: #c5c4c4; /* Колір самого скролбару */
+    border-radius: 50px;
+  }
+  .page__about-us::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    width: 5px;
+    cursor: pointer;
+  }
 .page-about-us__container {
   display: none;
   position: absolute;
