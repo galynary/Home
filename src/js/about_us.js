@@ -10,13 +10,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let isUp = true;
 
-  aboutUsContainer.addEventListener('wheel', (e) => {
+ /* aboutUsContainer.addEventListener('wheel', (e) => {
     const scrollSpeed = 3;
     if (e.deltaY !== 0) {
       aboutUsContainer.scrollTop += e.deltaY * scrollSpeed;
       e.preventDefault();
     }
-  });
+  });*/
+  
+  aboutUsContainer.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    scrollToBottom();
+});
+
+// Прокрутка до самого низу сторінки
+function scrollToBottom() {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+}
+
 
   // Встановлюємо transition для top
   aboutUsLink.style.transition = "bottom 2s ease"; // Змініть час і тип анімації за потребою

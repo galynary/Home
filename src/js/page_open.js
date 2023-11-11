@@ -224,7 +224,7 @@ setTimeout(() => {
     },4000);
     setTimeout(() => {
       toggleButton2.style.top = '50%';
-      toggleButton2.style.transition = 'transform 25s ease';
+      toggleButton2.style.transition = 'transform 5s ease';
     },4500);
   setTimeout(() => {
     slidePage.forEach(slide => {
