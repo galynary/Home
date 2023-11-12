@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let isUp = true;
 
-  aboutUsContainer.addEventListener('wheel', (e) => {
+aboutUsContainer.addEventListener('wheel', (e) => {
     const scrollSpeed = 5;
     if (e.deltaY !== 0) {
       aboutUsContainer.scrollTop += e.deltaY * scrollSpeed;
