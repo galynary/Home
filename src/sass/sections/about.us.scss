@@ -8,12 +8,33 @@
   right: 20px;
 }
 .page__item-aboutus {
+  top:50px;
   width: 100%;
   height: 100%;
   z-index: 15;
   padding-left: 5px;
   position: absolute;
   bottom: 30px;
+  overflow-x: hidden;
+overflow-y: scroll;
+overflow-block: auto;
+}
+.page__item-aboutus::-webkit-scrollbar {
+  width: 5px;
+  height: 40px;
+}
+.page__item-aboutus::-webkit-scrollbar:hover  {
+  width: 5px;
+  cursor: pointer;
+}
+.page__item-aboutus::-webkit-scrollbar-thumb {
+  background-color: #fff; 
+  border-radius: 50px;
+}
+.page__item-aboutus::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  width: 5px;
+  cursor: pointer;
 }
   .selling__container {
     position: relative;
@@ -82,7 +103,7 @@ transform: rotate(-90deg);
     border: none;
     outline: none;
     padding-top: 0;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2;
 }
@@ -109,9 +130,7 @@ height: 100%;
 position: absolute;
 background-color: #000;
 padding-bottom: 20px;
-overflow-x: hidden;
-overflow-y: scroll;
-overflow-block: auto;
+
 /* position: absolute;
 transform: translateY(20%);
 position: relative;
@@ -131,7 +150,7 @@ transition: transform 0.5s ease;*/
   height: 100%;
   z-index: 15;
   right: 20px;
-  top:50px;
+  top:0px;
   /*margin-right: -129px;*/
   padding-left: 5px;
  }
@@ -181,7 +200,7 @@ transition: transform 0.5s ease;*/
     border: none;
       outline: none;
       padding-top: 0;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
       line-height: 1.2;
       transform: rotate(0deg);
@@ -230,23 +249,7 @@ transition: transform 0.5s ease;*/
     flex-direction: column;
 }
 
-  .page__about-us::-webkit-scrollbar {
-    width: 5px;
-    height: 40px;
-  }
-  .page__about-us::-webkit-scrollbar:hover  {
-    width: 5px;
-    cursor: pointer;
-  }
-  .page__about-us::-webkit-scrollbar-thumb {
-    background-color: #fff; 
-    border-radius: 50px;
-  }
-  .page__about-us::-webkit-scrollbar-thumb:hover {
-    cursor: pointer;
-    width: 5px;
-    cursor: pointer;
-  }
+ 
 .page-about-us__container {
   display: none;
   position: absolute;

@@ -577,8 +577,15 @@
   }
   .page__item-aboutus-mob {
     width: 100%;
-    height: 100%;
-  }
+    top:60px;
+    bottom: 0;
+  left: 0;
+    z-index: 2;
+    float: right;
+    position: absolute;
+    overflow: hidden;
+    }
+ 
   .page-item-contact-mob {
     width: 100%;
   
