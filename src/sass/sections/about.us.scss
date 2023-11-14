@@ -8,8 +8,7 @@
   right: 20px;
 }
 .page__item-aboutus {
-  top:50px;
-  width: 100%;
+width: 100%;
   height: 100%;
   z-index: 15;
   padding-left: 5px;
@@ -18,24 +17,7 @@
   overflow: hidden;
 
 }
-/*.page__item-aboutus::-webkit-scrollbar {
-  width: 5px;
-  height: 40px;
-}
-.page__item-aboutus::-webkit-scrollbar:hover  {
-  width: 5px;
-  cursor: pointer;
-}
-.page__item-aboutus::-webkit-scrollbar-thumb {
-  background-color: #fff; 
-  border-radius: 50px;
-}
-.page__item-aboutus::-webkit-scrollbar-thumb:hover {
-  cursor: pointer;
-  width: 5px;
-  cursor: pointer;
-}*/
-  .selling__container {
+.selling__container {
     position: relative;
     height: 100vh;
  /* right:20px;
@@ -129,9 +111,8 @@ height: 100%;
 position: absolute;
 background-color: #000;
 padding-bottom: 20px;
-overflow: hidden;
-overflow-x: hidden;
-overflow-y: scroll;
+overflow: auto;
+
 
 
 /* position: absolute;
@@ -139,29 +120,28 @@ transform: translateY(20%);
 position: relative;
 transition: transform 0.5s ease;*/
 }
-.scrollable-container {
-  max-height: 300px; /* або будь-яка інша висота, при якій починає відображатися скролл */
-  overflow-y: scroll;
-  padding: 10px; /* опціонально для додаткового простору в середині контейнера */
-}
+
 
 /* Стилізація скролбара */
-.scrollable-container::-webkit-scrollbar {
-  width: 12px; /* ширина скролбара */
+.page__about-us::-webkit-scrollbar {
+  width:5px; 
+}
+.page__about-us::-webkit-scrollbar:hover {
+  width:10px; 
 }
 
-.scrollable-container::-webkit-scrollbar-thumb {
-  background-color: #888; /* колір самого скролбара */
+.page__about-us::-webkit-scrollbar-thumb {
+  background-color: #c4c2c2; /* колір самого скролбара */
   border-radius: 6px; /* закруглені кути */
 }
 
-.scrollable-container::-webkit-scrollbar-track {
-  background-color: #eee; /* колір фону за скролбаром */
-  border-radius: 8px; /* закруглені кути */
+.page__about-us::-webkit-scrollbar-track {
+  background-color: #4d4c4c; /* колір фону за скролбаром */
+  border-radius: 50%; /* закруглені кути */
 }
 
 /* Стилізація стрілок в кінці скролбара (якщо потрібно) */
-.scrollable-container::-webkit-scrollbar-button {
+.page__about-us::-webkit-scrollbar-button {
   display: none; /* приховати стрілки */
 }
 }
@@ -171,16 +151,12 @@ transition: transform 0.5s ease;*/
 
 .selling__container {
   position: relative;
-  overflow: hidden;
 }
  .page__item-aboutus {
   width: 100%;
   height: 100%;
   z-index: 15;
   right: 20px;
-  top:0px;
-
-  /*margin-right: -129px;*/
   padding-left: 5px;
  }
 .wrap__about-us-link-mob {

@@ -10,13 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let isUp = true;
 
-aboutUsContainer.addEventListener('wheel', (e) => {
-    const scrollSpeed = 5;
-    if (e.deltaY !== 0) {
-      aboutUsContainer.scrollTop += e.deltaY * scrollSpeed;
+ 
+  aboutUsContainer.addEventListener('wheel', (e) => {
       e.preventDefault();
-    }
+      scrollToBottom();
   });
+  
+  // Прокрутка до самого низу сторінки
+  function scrollToBottom() {
+      window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: 'smooth'
+      })}
+  
 
 
   // Встановлюємо transition для top
