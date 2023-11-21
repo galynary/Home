@@ -8,14 +8,16 @@
   right: 20px;
 }
 .page__item-aboutus {
-  width: 100%;
+width: 100%;
   height: 100%;
   z-index: 15;
   padding-left: 5px;
-  position: absolute;
-  bottom: -20px;
+  position: relative;
+  bottom: 30px;
+  overflow: hidden;
+
 }
-  .selling__container {
+.selling__container {
     position: relative;
     height: 100vh;
  /* right:20px;
@@ -82,7 +84,7 @@ transform: rotate(-90deg);
     border: none;
     outline: none;
     padding-top: 0;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2;
 }
@@ -102,6 +104,7 @@ transform: translateX(-140%) translateY(100%);
   display: block;
 }
 .page__about-us {
+ top:30px ;
 display: block;
 right: 0px;
 width: 100%;
@@ -109,10 +112,40 @@ height: 100%;
 position: absolute;
 background-color: #000;
 padding-bottom: 20px;
+overflow: auto;
+
+
+
 /* position: absolute;
 transform: translateY(20%);
 position: relative;
 transition: transform 0.5s ease;*/
+}
+
+
+/* Стилізація скролбара */
+.page__about-us::-webkit-scrollbar {
+  width:3px;
+  height: 200px; 
+}
+.page__about-us::-webkit-scrollbar:hover {
+  width:10px; 
+  height: 500px; 
+}
+
+.page__about-us::-webkit-scrollbar-thumb {
+  background-color: #c4c2c2; /* колір самого скролбара */
+  border-radius: 6px; /* закруглені кути */
+}
+
+.page__about-us::-webkit-scrollbar-track {
+  background-color: #4d4c4c; /* колір фону за скролбаром */
+  border-radius: 50%; /* закруглені кути */
+}
+
+/* Стилізація стрілок в кінці скролбара (якщо потрібно) */
+.page__about-us::-webkit-scrollbar-button {
+  display: none; /* приховати стрілки */
 }
 }
 
@@ -121,14 +154,12 @@ transition: transform 0.5s ease;*/
 
 .selling__container {
   position: relative;
-  overflow: hidden;
 }
  .page__item-aboutus {
   width: 100%;
   height: 100%;
   z-index: 15;
   right: 20px;
-  /*margin-right: -129px;*/
   padding-left: 5px;
  }
 .wrap__about-us-link-mob {
@@ -177,7 +208,7 @@ transition: transform 0.5s ease;*/
     border: none;
       outline: none;
       padding-top: 0;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
       line-height: 1.2;
       transform: rotate(0deg);
@@ -219,13 +250,14 @@ transition: transform 0.5s ease;*/
   transform: none;
 }
 .wrap__about-us-container {
-padding-bottom: 70px;
-  width: 100%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
- }
+}
+
+ 
 .page-about-us__container {
   display: none;
   position: absolute;
