@@ -365,7 +365,6 @@ display: block;
 flex-direction: column;
   transition: transform 20s;
   animation-direction: reverse;
-
 animation: animationRight 16s linear infinite forwards alternate;
 }
 @keyframes animationRight {
