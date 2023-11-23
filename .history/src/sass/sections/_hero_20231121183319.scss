@@ -81,35 +81,37 @@
 .logo__mob-black {
   display: none;
 }
- .logo__desktop-black {
+ .logo__desctop-black {
   display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
  gap: 5px;
   }
-  .logo__desktop  {
+  .logo__desctop  {
     flex-direction: column;
     align-items: center;
     display: flex;
     gap: 5px;
 }
-  
+  .logo-icon__desctop{
+    fill:#000;
+  }
   .logo__text-black {
     color: #000;
-    font-family: deserts, sans-serif;
+    font-family: deserta, sans-serif;
     font-size: 36px;
     line-height: 1.2;
   }
-  .logo__text-desktop {
+  .logo__text-desctop {
     color: #fff;
-    font-family: deserts, sans-serif;
+    font-family: deserta, sans-serif;
     font-size: 20px;
     line-height: 1.2;
   }
   .logo__text-mob {
     color: #fff;
-    font-family: deserts, sans-serif;
+    font-family: deserta, sans-serif;
     font-size: 25px;
     line-height: 1.2;
   }
@@ -616,7 +618,7 @@
       .button__menu-open-mob2 {
         display: none;
        }
-     .logo__desktop {
+     .logo__desctop {
       display: none;
       flex-direction: column;
       align-items: center;
@@ -635,7 +637,7 @@
     display: block;
     }
    
-    .logo__text-desktop,
+    .logo__text-desctop,
     .logo__text-black { 
       font-size: 28px;
     }

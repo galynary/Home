@@ -18,6 +18,7 @@
     "url": "https://github.com/galynary/Home/issues"
   },
   "dependencies": {
+    "image-webpack-loader": "^8.1.0",
     "infinite-scroll": "^4.0.1",
     "infinitescroll": "^0.1.9",
     "modern-normalize": "^1.1.0",
