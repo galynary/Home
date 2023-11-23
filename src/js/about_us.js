@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const buttonContacts = document.querySelector('#contacts__link');
   const pageAboutUs = document.querySelector('.page__item-aboutus-mob');
   const aboutUsContainer = document.querySelector('.page__about-us');
+  const wrapPageAboutUs = document.querySelector('.wrap__page-about-us');
+  const pageItemAboutus = document.querySelector('.page__item-aboutus ');
+
+
 
   let isUp = true;
 
@@ -33,16 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
     pageContact.style.zIndex = '21';
     pageAboutUs.style.zIndex = '22';
     wrapContactsLink.style.top = '10px';
+    wrapPageAboutUs.style.transition = "bottom 5s ease";
     buttonContacts.removeEventListener('click', () => {});
     isUp = false;
     function defineScreen() {
       let screen = window.matchMedia("(max-width: 768px)");
       function applyStyles() {
           if (screen.matches) {
-            aboutUsLink.style.bottom = '60%';
+          
+            wrapPageAboutUs.style.bottom = '60%';
            
           } else {
-            aboutUsLink.style.bottom = '85%';
+            wrapPageAboutUs.style.bottom = '80%';
           }
         }
   
@@ -52,11 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
       // Call the defineScreen function
       defineScreen();
-   
+    
   });
 
   iconAboutUs.addEventListener('click', () => {
-    aboutUsLink.style.bottom = '60px';
+    wrapPageAboutUs.style.bottom = '0px';
     iconAboutUs.style.display = 'none';
     pageAboutUs.style.zIndex = '22';
     isUp = true;
