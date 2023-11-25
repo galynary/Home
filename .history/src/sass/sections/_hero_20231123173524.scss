@@ -144,10 +144,10 @@
     opacity: 0;
   }
   .button__right2 {
-    padding-right: 8px;
+    padding-right: 7px;
   }
   .button__left2 {
-    padding-left: 8px;
+    padding-left: 7px;
   }
 
  #toggle-button2 {
@@ -587,8 +587,8 @@
   left: 0;
     z-index: 2;
     float: right;
-    position: relative;
-   /* overflow: hidden;*/
+    position: absolute;
+    overflow: hidden;
     }
  
   .page-item-contact-mob {
@@ -844,8 +844,8 @@ height: 180px;
 left: 0;
   z-index: 2;
   float: right;
- /* position: absolute;*/
- /* overflow: hidden;*/
+  position: absolute;
+  overflow: hidden;
   }
 
 
