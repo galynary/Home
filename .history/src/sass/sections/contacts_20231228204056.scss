@@ -11,6 +11,7 @@ align-items: flex-end;
 .page__contacts {
   display: flex;
   justify-content: center;
+  display: block;
 width: 100%;
 height: 100%;
 background-color: #000;
@@ -40,7 +41,6 @@ background-color: #000;
  {
  
 .page-contacts__container {
-align-items:center;
   width: 100%;
   height: 100%;
   display: flex;

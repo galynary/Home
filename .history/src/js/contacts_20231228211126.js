@@ -12,7 +12,7 @@ const aboutUsLink = document.querySelector('.wrap__about-us-link');
 
   buttonContacts.addEventListener('click', () => {
     iconContacts.style.display = 'block';
-    wrapContactsLink.style.top = '73%';
+    wrapContactsLink.style.top = '80%';
     pageAboutUs.style.zIndex = '21';
     pageContact.style.zIndex = '22';
     buttonAboutUs.removeEventListener('click', () => {});
