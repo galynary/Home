@@ -1,0 +1,210 @@
+@charset "UTF-8";
+@media screen and (min-width: 480px) {
+  /*-------- swiper --------*/
+  .swiper.my__swiper {
+    z-index: 33;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    position: relative;
+  }
+  .my__swiper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0); /* Змініть цей колір на потрібний вам */
+    z-index: -1;
+  }
+  .swiper__wrapper {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition-property: transform;
+    transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+    box-sizing: content-box;
+    z-index: 31;
+  }
+  .swiper__container {
+    padding: 20px 0px;
+  }
+  /*-------- swiper-slide --------*/
+  .swiper__slide {
+    width: 100%;
+    height: 100%;
+  }
+  .page__section {
+    display: inline-block;
+    position: fixed;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 4px;
+    min-width: 480px;
+    max-width: 682px;
+    height: auto;
+    margin: 0 auto;
+    background-color: #fff;
+    z-index: 4;
+  }
+  .close-page__button {
+    position: absolute;
+    cursor: pointer;
+    margin: 0 auto;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+  .close-page__icon {
+    position: absolute;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    cursor: pointer;
+    fill: #000;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .page__container {
+    padding: 0px 15px;
+    padding-bottom: 40px;
+    position: relative;
+  } /*-------- swiper-slide -header--------*/
+  .page-header__container {
+    position: relative;
+    padding-top: 40px;
+    gap: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo__content-mob {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo__text {
+    font-family: "deserta", sans-serif;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #000;
+  }
+  .mob-menu__button {
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    z-index: 3;
+    background-color: #000;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    left: 54%;
+  }
+  .icon__phone {
+    position: absolute;
+    right: 0px;
+    width: 74px;
+    height: 74px;
+  }
+  .wrap__page-links {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+  }
+  .page__links {
+    position: relative;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .page__link {
+    font-size: 20px;
+    color: #000;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+  .page__item-aboutus {
+    margin-left: 35px;
+    transform: rotate(-90deg) translate(-20%, -20%);
+  }
+  .page-item-contact {
+    margin-right: -129px;
+    transform: rotate(-90deg) translate(-10%, -55%);
+  }
+  /*-------- swiper-slide-pagination--------*/
+  .pagination__container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 10px;
+    padding: 30px 0px;
+  }
+  .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: -1;
+    border: 1px solid #000;
+  }
+  .number {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    font-size: 24px;
+    color: #000;
+    z-index: 1;
+  }
+  .pagination__list {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    display: flex;
+    gap: 5px;
+    position: relative;
+  }
+  .pagination__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    color: #000;
+    border: 1px solid #000;
+  }
+  .pagination__number {
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+  }
+}/*# sourceMappingURL=swiper-slider.css.map */

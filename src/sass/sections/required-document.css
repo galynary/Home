@@ -1,0 +1,29 @@
+.required-document__contant {
+  padding: 30px 0px;
+}
+
+.required-document__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.required-document__title {
+  font-size: 25px;
+  padding-bottom: 50px;
+}
+
+.required-document__item {
+  display: flex;
+  gap: 5px;
+}
+
+.required-document__text {
+  padding-left: 5px;
+  font-size: 16px;
+}
+
+.pagination__container.required-document__container {
+  padding-top: 150px;
+  padding-bottom: 0px;
+}/*# sourceMappingURL=required-document.css.map */
