@@ -1,0 +1,365 @@
+@media screen and (min-width: 380px) {
+.wrap__about-us-link-mob {
+  z-index: 64;
+  background-color: transparent;
+  padding: 0;
+ position: absolute;
+  bottom: 40px;
+  right: 20px;
+}
+.page__item-aboutus {
+  position: relative;
+width: 100%;
+  height: 100%;
+  z-index: 15;
+  padding-left: 5px;
+  position: relative;
+  overflow-y: scroll;
+  padding-top: 50px;
+ /* bottom: 30px;*/
+ 
+
+
+}
+.selling__container {
+    position: relative;
+    height: 100vh;
+ /* right:20px;
+  left: 20px;*/
+  overflow: hidden;
+  }
+.open-about-us {
+  text-align: right;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #000;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-top: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  transform: rotate(-90deg);
+}
+.open-about-us-mob {
+text-align: right;
+text-transform: uppercase;
+cursor: pointer;
+color: #000;
+z-index: 38;
+background-color: rgba(0,0,0,0);
+border: none;
+outline: none;
+padding-top: 0;
+font-size: 24px;
+font-weight: 400;
+line-height: 1.2;
+transform: rotate(-90deg);
+}
+.wrap__icon-about-us-mob, .wrap__contacts-icon {
+  cursor: pointer;
+  display: none;
+  bottom: 3px;
+  right: 0;
+}
+
+.about-us-link__content-mob {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+  display: flex;
+  position: absolute;
+  bottom: 200px;
+  right: 20px;
+}
+  .js-open-about-us {
+    text-align: right;
+    padding: 0;
+  width: 170px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    z-index: 1;
+    transform: rotate(-90deg);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-top: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.page-hero__link-mob {
+  color: #000;
+  text-transform: uppercase;
+  width: 150px;
+  text-align: right;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  outline: none;
+  font-size: 20px;
+  line-height: 1.1;
+  position: absolute;
+transform: translateX(-140%) translateY(100%);
+  z-index: 64;
+  display: block;
+}
+.page__about-us {
+ top:30px ;
+display: block;
+right: 0px;
+width: 100%;
+height: 100%;
+position: absolute;
+background-color: #000;
+padding-bottom: 20px;
+
+
+
+
+/* position: absolute;
+transform: translateY(20%);
+position: relative;
+transition: transform 0.5s ease;*/
+}
+
+
+
+.page__about-us::-webkit-scrollbar {
+  width:3px;
+  height: 200px; 
+}
+.page__about-us::-webkit-scrollbar:hover {
+  width:10px; 
+  height: 500px; 
+}
+
+.page__about-us::-webkit-scrollbar-thumb {
+  background-color: #c4c2c2; 
+  border-radius: 6px; 
+}
+
+.page__about-us::-webkit-scrollbar-track {
+  background-color: #4d4c4c;
+  border-radius: 50%; 
+}
+
+
+.page__about-us::-webkit-scrollbar-button {
+  display: none; 
+}
+}
+
+@media screen and (min-width: 1200px) {
+  
+
+.selling__container {
+  position: relative;
+}
+ .page__item-aboutus {
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  right: 20px;
+  padding-left: 5px;
+ }
+.wrap__about-us-link-mob {
+  width: 100%;
+  height: 100%;
+  z-index: 64;
+  background-color: transparent;
+  padding: 0;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+}
+
+.open-about-us-mob {
+  text-align: right;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #000;
+    z-index: 64;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-top: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    transform: rotate(0deg);
+}
+
+.wrap-page__link-contacts {
+      width: 100%;
+      height: 100%;
+      transition: top 1000s;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      transform: none;
+    }
+    .js-open-about-us {
+      text-align: right;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: #fff;
+      z-index: 1;
+    border: none;
+      outline: none;
+      padding-top: 0;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.2;
+      transform: rotate(0deg);
+  }
+  
+    .page-item-contact {
+      width: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 80px;
+    overflow: hidden;
+      margin-right: -129px;
+     /* transform: rotate(-90deg) translate(0%, 950%);*/
+    }
+.wrap__page-item-contact-mob {
+  width: 100%;
+  height: 100%;
+  transition: top 1000s;
+  position: absolute;
+  bottom: 0px;
+  top: 20px;
+/* transform:  translateX(100%) translateY(10%);*/
+  right: 20px;
+  transform: none;
+}
+
+.page-hero__link-mob {
+  color: #000;
+  text-transform: uppercase;
+  width: 150px;
+  text-align: right;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  outline: none;
+  font-size: 20px;
+  line-height: 1.1;
+  display: block;
+  transform: none;
+}
+.wrap__about-us-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+ 
+.page-about-us__container {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  right: 20px;
+}
+
+.wrap__button-about-us {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  outline: none;
+}
+
+.icon__about-us-mob {
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+.wrap__icon-about-us::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  right: 0;
+  
+ 
+}
+
+.button__about-us {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+  display: flex;
+  position: relative;
+}
+
+.js-open-about-us:focus + .icon__about-us {
+  display: block;
+  /* transform: rotate(180deg);*/
+}
+
+.about-us__inner {
+  max-width: 800px;
+ display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+}
+.about-us-item__text,
+.about-us__text {
+  font-family: JournalSans;
+  font-weight: 400;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.about-us__list {
+ color: #fff;
+  list-style-type: disc;
+}
+.about-us-item__text {
+  line-height: 1.6;
+}
+.ceo__description { 
+  font-style: italic;
+}
+
+.ceo__block {
+padding-top: 20px;
+  display: flex;
+ flex-direction: row;
+  gap: 20px;
+}
+.ceo__text {
+  font-family: JournalSans;
+  font-weight: 400;
+  color: #fff;
+}
+.ceo__photo {
+  max-width: 400px;
+  height: auto;
+}
+.ceo__text1 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.ceo__role {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.ceo__name {
+  font-size: 24px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+ }
