@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             aboutUsLink.style.bottom = '60%';
            
           } else {
-            aboutUsLink.style.bottom = '85vh';
+            aboutUsLink.style.bottom = '90%';
           }
         }
   
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   iconAboutUs.addEventListener('click', () => {
-    aboutUsLink.style.bottom = '60px';
+    aboutUsLink.style.bottom = '0px';
     iconAboutUs.style.display = 'none';
     pageAboutUs.style.zIndex = '22';
     isUp = true;
