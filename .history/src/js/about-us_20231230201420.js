@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   iconAboutUs.addEventListener('click', () => {
-    aboutUsLink.style.bottom = '0px';
+    aboutUsLink.style.bottom = '20px';
     iconAboutUs.style.display = 'none';
     pageAboutUs.style.zIndex = '22';
     isUp = true;

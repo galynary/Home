@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     iconAboutUs.style.display = 'block';
     pageContact.style.zIndex = '21';
     pageAboutUs.style.zIndex = '22';
-    wrapContactsLink.style.top = '10px';
     buttonContacts.removeEventListener('click', () => {});
     isUp = false;
     function defineScreen() {
@@ -42,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             aboutUsLink.style.bottom = '60%';
            
           } else {
-            aboutUsLink.style.bottom = '85%';
+            aboutUsLink.style.bottom = '90%';
           }
         }
   
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   iconAboutUs.addEventListener('click', () => {
-    aboutUsLink.style.bottom = '60px';
+    aboutUsLink.style.bottom = '0px';
     iconAboutUs.style.display = 'none';
     pageAboutUs.style.zIndex = '22';
     isUp = true;
