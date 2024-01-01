@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             aboutUsLink.style.bottom = '60%';
            
           } else {
-            aboutUsLink.style.bottom = '88%';
+            aboutUsLink.style.bottom = '85%';
           }
         }
   

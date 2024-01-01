@@ -584,7 +584,7 @@
     float: right;
     width: 100%;
     position: absolute;
-    top: 70;
+    top: 50px;
     bottom: 0px;
     overflow: hidden;
   }
@@ -669,7 +669,7 @@
     .contacts-link__content {
       top:40px;
       right: 0px;
-      bottom: 0px;
+      bottom: 20px;
       left: 0;
     }
     .wrap__about-us-link {
@@ -782,8 +782,8 @@ height: 180px;
     z-index: 1;
     width: 100%;
    position: absolute;
-    top: 20px;
-    bottom: 100px;
+    top: 0px;
+    bottom: 50px;
     overflow: hidden;
  }
   .page-item__contact  {
@@ -796,7 +796,7 @@ height: 180px;
     position: absolute;
     z-index: 21;
     background-color: #000;
-    bottom: 0px;
+    bottom: 20px;
     top: 0px;
     right: 0px;
     width: 100%;
@@ -807,7 +807,7 @@ height: 180px;
   .wrap__contacts-link {
     z-index: 52;
     padding: 0;
-    top: 20px;
+    top: 0px;
     left: 0;
     right: 20px;
     transform: rotate(0deg);
