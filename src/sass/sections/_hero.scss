@@ -120,7 +120,7 @@
   .icon__phone-black {
     z-index: 63;
     position: absolute;
-    right: 50px;
+    right: 20px;
 
 }
   
@@ -622,6 +622,11 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .icon__phone-black {
+ 
+    right: 50px;
+
+}
 }
   @media screen and (min-width: 1200px) {
     .logo__mob { 
