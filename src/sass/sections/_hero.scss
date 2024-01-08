@@ -193,7 +193,7 @@
     .button__menu-open {
       position: absolute;
       z-index: 70;
-    top: 43%;
+    top: 45%;
       left: 50%;
       transform: translateX(-50%);
       width: 127px;
@@ -811,6 +811,7 @@ height: 180px;
     left: 0;
     right: 20px;
     transform: rotate(0);
+    position: absolute;
   }
 
  

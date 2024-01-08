@@ -180,7 +180,7 @@ setTimeout(() => {
     swiperArrows.style.display = 'none'; 
  },4000);
   setTimeout(() => {
-    toggleButton2.style.top = '43%';
+    toggleButton2.style.top = '45%';
     toggleButton2.style.transition = 'transform 10s ease';
   },4500);
 setTimeout(() => {
