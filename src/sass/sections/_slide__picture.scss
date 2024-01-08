@@ -58,6 +58,7 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  transform:perspective(500px);
 }
 .wrap__mob-slide {
   width: 100%;

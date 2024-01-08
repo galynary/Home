@@ -223,6 +223,11 @@ transform: translateX(-140%) translateY(100%);
       line-height: 1.2;
       transform: rotate(0deg);
   }
+  .js-open-about-us:hover,
+  .js-open-about-us:focus {
+    color: #fff;
+    transform: scale(1.03);
+  }
   
     .page-item-contact {
       width: 100%;

@@ -23,7 +23,7 @@ overflow: auto;
 
 }
   .page-hero__link {
-    color: #fff;
+    color: #dddbdb;
     text-transform: uppercase;
     width: 150px;
     text-align: right;
@@ -33,6 +33,11 @@ overflow: auto;
     display: block;
     border: none;
     outline: none;
+}
+.page-hero__link:hover,
+.page-hero__link:focus  {
+  color: #fff;
+  transform: scale(1.03);
 }
 .wrap__icon-about-us,
 .wrap__contacts-icon {

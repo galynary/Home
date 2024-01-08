@@ -169,7 +169,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%);
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
   
  .button__menu-open-mob {
@@ -533,7 +533,7 @@
   }
   .menu__button {
     background: transparent;
-    color: #fff;
+    color: #dbd5d5;
     font-size: 18px;
     line-height: 1.2;
     font-weight: 700;
@@ -542,6 +542,11 @@
     cursor: pointer;
     display: inline-block;
     position: absolute;
+  }
+  .menu__button:hover,
+  .menu__button:focus {
+    color: #fff;
+    transform: scale(1.03);
   }
 
   .menu-button__item:nth-child(5)::after,

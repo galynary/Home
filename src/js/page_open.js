@@ -48,13 +48,13 @@ const swiperPagination = document.querySelector('.wrap__swiper-pagination');
     
     setTimeout(() => {
       menuButton.style.transform = 'rotate(180deg)';
-      menuButton.style.transition = 'transform 1s ease';
+      menuButton.style.transition = 'transform 2s ease';
           leftContainer.style.transition = 'transform 5s ease';
           rightContainer.style.transition = 'transform 5s ease';
           leftContainer.style.transform = 'translateX(0%)';
           rightContainer.style.transform = 'translateX(0%)';
         
-  },1050);
+  },500);
 
       setTimeout(() => {
       if (buttonItem === openSelling) {
@@ -163,7 +163,7 @@ const swiperPagination = document.querySelector('.wrap__swiper-pagination');
  
 setTimeout(() => {
     menuButton.style.transform = 'rotate(90deg)';
-    menuButton.style.transition = 'transform 1s ease';
+    menuButton.style.transition = 'transform 2,5s ease';
   leftContainer.style.transition = 'transform 4s ease';
     rightContainer.style.transition = 'transform 4s ease';
     toggleButton2.style.transition = 'transform 4s ease';
