@@ -1,22 +1,21 @@
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .page__section > .discover-house {
   padding-bottom:90px;
 }
-.wrap__descover-container {
+.wrap__descover-container{
   width: 100%;
   height: 100%;
-  padding: 0 20px;
   position: relative;
   overflow: auto;
  
  }
-.descover-house__contant {
-  padding-top: 200px;
-  margin-left: 20px;
-  margin-right: 20px;
-margin-bottom: 200px;
-overflow: auto;
-}
+ .descover-house__contant {
+  position: relative;
+  overflow: auto;
+  padding-top: 40px;
+ }
+
+
 .about__house {
  padding-left: 20px;
   display: flex;
@@ -47,8 +46,6 @@ height: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 .house__img {
   width: 100%;

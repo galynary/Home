@@ -8,6 +8,11 @@ align-items: flex-end;
   display: flex;
   position: relative; 
 }
+.wrap__page-contact  {
+  position: relative;
+  top:0%;
+  display: none;
+ }
 .page__contacts {
   display: flex;
   justify-content: center;
@@ -37,9 +42,13 @@ overflow: auto;
   display: none;
 }
 }
-@media screen and (min-width: 1100px)
+@media screen and (min-width: 1200px)
  {
- 
+ .wrap__page-contact  {
+ top:12%;
+ display: block;
+ }
+
 .page-contacts__container {
 align-items:center;
   width: 100%;
@@ -51,6 +60,7 @@ align-items:center;
 flex-direction: column;
   gap: 20px;
   padding-top: 20px;
+  padding-left: 10px;
   position: relative;
 }
 .mail__link,

@@ -705,10 +705,6 @@ body {
     position: relative;
     list-style: none;
   }
-  .wrap__page-contact {
-    width: 100%;
-    height: 100%;
-  }
   .wrap__about-us-link {
     z-index: 52;
     background-color: transparent;
@@ -997,7 +993,7 @@ body {
     right: -60px;
     display: flex;
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
   }
   .wrap__page-links-mob {
     width: 100%;
@@ -1008,14 +1004,15 @@ body {
   .wrap__page-item-aboutus {
     position: relative;
     overflow: hidden;
+    top: 90px;
   }
   .page__item-aboutus-mob {
     z-index: 2;
     float: right;
     width: 100%;
-    height: 100%;
     position: relative;
-    left: 0;
+    top: 50px;
+    bottom: 0px;
     overflow: hidden;
   }
   .page-item-contact-mob {
@@ -1023,7 +1020,8 @@ body {
   }
   .page__links-mob {
     position: relative;
-    display: flex;
+    display: block;
+    flex-direction: column;
     justify-content: space-between;
     width: 100%;
     height: 100%;
@@ -1098,7 +1096,7 @@ body {
   .wrap__about-us-link {
     width: 100%;
     height: 100%;
-    /* z-index: 42;*/
+    bottom: 0px;
     background-color: #000;
     padding: 0;
     position: absolute;
@@ -1188,20 +1186,12 @@ body {
     padding-left: 150px;
     z-index: 40;
   }
-  .page__links-mob {
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-    display: flex;
-    position: relative;
-    padding-right: 20px;
-  }
   .page-item-contact-mob {
     z-index: 1;
     width: 100%;
-    height: 100%;
-    position: relative;
-    top: 0;
+    position: absolute;
+    top: 0px;
+    bottom: 50px;
     overflow: hidden;
   }
   .page-item__contact {
@@ -1213,7 +1203,7 @@ body {
     position: absolute;
     z-index: 21;
     background-color: #000;
-    bottom: 0px;
+    bottom: 20px;
     top: 0px;
     right: 0px;
     width: 100%;
@@ -1222,7 +1212,6 @@ body {
   }
   .wrap__contacts-link {
     z-index: 52;
-    background-color: #000;
     padding: 0;
     top: 0px;
     left: 0;
@@ -1261,6 +1250,7 @@ body {
   }
   .about-us-link__content {
     right: 20px;
+    bottom: 20px;
   }
   .wrap__icon-about-us {
     cursor: pointer;
@@ -1498,6 +1488,7 @@ body {
     height: 100%;
     z-index: 15;
     padding-left: 5px;
+    overflow: auto;
   }
   .selling__container {
     position: relative;
@@ -1585,13 +1576,12 @@ body {
     display: block;
   }
   .page__about-us {
-    top: 100px;
-    display: block;
-    right: 0px;
     width: 100%;
     height: 100%;
-    position: relative;
-    background-color: #000;
+    background-color: rgb(0, 0, 0);
+    justify-content: center;
+    display: flex;
+    overflow: auto;
   }
   .page__about-us::-webkit-scrollbar {
     width: 3px;
@@ -1618,13 +1608,12 @@ body {
     position: relative;
   }
   .page__item-aboutus {
+    padding-right: 10px;
+    position: relative;
     width: 100%;
     height: 100%;
-    z-index: 15;
-    right: 20px;
-    padding-left: 5px;
-    overflow-x: hidden;
-    overflow: auto;
+    display: flex;
+    justify-content: center;
   }
   ::-webkit-scrollbar {
     width: 10px;
@@ -1768,23 +1757,23 @@ body {
     /* transform: rotate(180deg);*/
   }
   .about-us__inner {
-    max-width: 800px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-left: 20px;
   }
   .about-us-item__text,
   .about-us__text {
     font-family: JournalSans;
     font-weight: 400;
     color: #fff;
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 14px;
+    line-height: 1.5;
   }
   .about-us__list {
     color: #fff;
     list-style-type: disc;
+    padding-left: 20px;
   }
   .about-us-item__text {
     line-height: 1.6;
@@ -1794,6 +1783,7 @@ body {
   }
   .ceo__block {
     padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -1837,6 +1827,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: #000;
+    overflow: auto;
   }
   .page-hero__link {
     color: #fff;
